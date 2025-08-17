@@ -1,8 +1,7 @@
-name: 🤝 提携・協力の提案
-description: パートナーシップや協力関係についてのご提案
+name: "🤝 提携・協力の提案"
+description: "パートナーシップや協力関係についてのご提案"
 title: "[PARTNERSHIP] "
 labels: ["partnership", "collaboration", "business"]
-assignees: []
 body:
   - type: markdown
     attributes:

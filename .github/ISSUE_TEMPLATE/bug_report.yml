@@ -1,8 +1,7 @@
-name: 🐛 バグ報告
-description: バグや不具合を報告してください
+name: "🐛 バグ報告"
+description: "バグや不具合を報告してください"
 title: "[BUG] "
 labels: ["bug", "needs-triage"]
-assignees: []
 body:
   - type: markdown
     attributes:

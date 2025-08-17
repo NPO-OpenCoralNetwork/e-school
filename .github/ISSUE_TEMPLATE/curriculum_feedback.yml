@@ -1,8 +1,7 @@
-name: 📚 カリキュラム・教材のフィードバック
-description: カリキュラムや教材についてのご意見・感想をお聞かせください
+name: "📚 カリキュラム・教材のフィードバック"
+description: "カリキュラムや教材についてのご意見・感想をお聞かせください"
 title: "[CURRICULUM] "
 labels: ["curriculum", "feedback", "education"]
-assignees: []
 body:
   - type: markdown
     attributes:

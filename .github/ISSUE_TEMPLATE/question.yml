@@ -1,8 +1,7 @@
-name: ❓ 質問・お問い合わせ
-description: サービスや技術的な質問をしてください
+name: "❓ 質問・お問い合わせ"
+description: "サービスや技術的な質問をしてください"
 title: "[QUESTION] "
 labels: ["question", "help-wanted"]
-assignees: []
 body:
   - type: markdown
     attributes:
