@@ -22,45 +22,45 @@ export default function BusinessPlanPage() {
 
         {/* 目次 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">📋 目次</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">📋 目次</h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer">
-              <h3 className="font-semibold mb-2">🚀 30日間アクションプラン</h3>
-              <p className="text-sm text-gray-600">最速での事業立ち上げ戦略</p>
+            <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer bg-gray-800 border-gray-700">
+              <h3 className="font-semibold mb-2 text-white">🚀 30日間アクションプラン</h3>
+              <p className="text-sm text-gray-300">最速での事業立ち上げ戦略</p>
             </Card>
-            <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer">
-              <h3 className="font-semibold mb-2">🎯 NPO法人特別戦略</h3>
-              <p className="text-sm text-gray-600">Google Ad Grants完全攻略</p>
+            <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer bg-gray-800 border-gray-700">
+              <h3 className="font-semibold mb-2 text-white">🎯 NPO法人特別戦略</h3>
+              <p className="text-sm text-gray-300">Google Ad Grants完全攻略</p>
             </Card>
-            <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer">
-              <h3 className="font-semibold mb-2">🌟 AI Kids Lab</h3>
-              <p className="text-sm text-gray-600">子ども向けデジタル創造スクール</p>
+            <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer bg-gray-800 border-gray-700">
+              <h3 className="font-semibold mb-2 text-white">🌟 AI Kids Lab</h3>
+              <p className="text-sm text-gray-300">子ども向けデジタル創造スクール</p>
             </Card>
           </div>
         </section>
 
         {/* 30日間アクションプラン */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">🚀 立ち上げ30日間アクションプラン</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">🚀 立ち上げ30日間アクションプラン</h2>
           
           <div className="space-y-8">
             {/* Week 1 */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-blue-800">🗓️ Week 1（Day 1-7）: 基盤構築</h3>
+            <div className="bg-gray-800 border border-gray-600 rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4 text-white">🗓️ Week 1（Day 1-7）: 基盤構築</h3>
               
               <div className="grid md:grid-cols-2 gap-6">
-                <Card className="p-4">
-                  <h4 className="font-semibold mb-3">Day 1-2: ビジネス設計</h4>
+                <Card className="p-4 bg-gray-700 border-gray-600">
+                  <h4 className="font-semibold mb-3 text-white">Day 1-2: ビジネス設計</h4>
                   <div className="space-y-2">
-                    <h5 className="font-medium text-sm">午前（4時間）</h5>
-                    <ul className="text-sm space-y-1 ml-4">
+                    <h5 className="font-medium text-sm text-blue-400">午前（4時間）</h5>
+                    <ul className="text-sm space-y-1 ml-4 text-gray-300">
                       <li>• ビジョン・ミッションの文書化</li>
                       <li>• ターゲット顧客の明確化（ペルソナ3つ）</li>
                       <li>• 競合分析シート作成（5社以上）</li>
                       <li>• 独自価値提案（USP）の定義</li>
                     </ul>
-                    <h5 className="font-medium text-sm mt-3">午後（4時間）</h5>
-                    <ul className="text-sm space-y-1 ml-4">
+                    <h5 className="font-medium text-sm mt-3 text-green-400">午後（4時間）</h5>
+                    <ul className="text-sm space-y-1 ml-4 text-gray-300">
                       <li>• 収支計画Excel作成</li>
                       <li>• 初期投資：50万円想定</li>
                       <li>• 月間収支シミュレーション</li>
@@ -69,9 +69,9 @@ export default function BusinessPlanPage() {
                   </div>
                 </Card>
 
-                <Card className="p-4">
-                  <h4 className="font-semibold mb-3">Day 3-4: 法的準備</h4>
-                  <ul className="text-sm space-y-1">
+                <Card className="p-4 bg-gray-700 border-gray-600">
+                  <h4 className="font-semibold mb-3 text-white">Day 3-4: 法的準備</h4>
+                  <ul className="text-sm space-y-1 text-gray-300">
                     <li>• 事業形態の決定（個人→法人化）</li>
                     <li>• 屋号の決定と商標調査</li>
                     <li>• ドメイン取得（.com/.jp）</li>
@@ -83,12 +83,12 @@ export default function BusinessPlanPage() {
                 </Card>
               </div>
 
-              <Card className="p-4 mt-4">
-                <h4 className="font-semibold mb-3">Day 5-7: Web基盤構築</h4>
+              <Card className="p-4 mt-4 bg-gray-700 border-gray-600">
+                <h4 className="font-semibold mb-3 text-white">Day 5-7: Web基盤構築</h4>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <h5 className="font-medium text-sm mb-2">必須ページ作成</h5>
-                    <ul className="text-sm space-y-1">
+                    <h5 className="font-medium text-sm mb-2 text-purple-400">必須ページ作成</h5>
+                    <ul className="text-sm space-y-1 text-gray-300">
                       <li>• トップページ</li>
                       <li>• コース紹介</li>
                       <li>• 料金表</li>
@@ -98,8 +98,8 @@ export default function BusinessPlanPage() {
                     </ul>
                   </div>
                   <div>
-                    <h5 className="font-medium text-sm mb-2">SNSアカウント開設</h5>
-                    <ul className="text-sm space-y-1">
+                    <h5 className="font-medium text-sm mb-2 text-pink-400">SNSアカウント開設</h5>
+                    <ul className="text-sm space-y-1 text-gray-300">
                       <li>• X (Twitter) - @AICreatorLabTokyo</li>
                       <li>• Instagram - @ai.creator.lab.tokyo</li>
                       <li>• YouTube - AI Creator Lab Tokyo</li>
@@ -112,35 +112,35 @@ export default function BusinessPlanPage() {
             </div>
 
             {/* Week 2 */}
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-green-800">🗓️ Week 2（Day 8-14）: コンテンツ制作</h3>
+            <div className="bg-gray-800 border border-gray-600 rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4 text-white">🗓️ Week 2（Day 8-14）: コンテンツ制作</h3>
               
-              <Card className="p-4 mb-4">
-                <h4 className="font-semibold mb-3">最初の講座：「ChatGPT/Claude 仕事効率化 3日間集中講座」</h4>
+              <Card className="p-4 mb-4 bg-gray-700 border-gray-600">
+                <h4 className="font-semibold mb-3 text-white">最初の講座：「ChatGPT/Claude 仕事効率化 3日間集中講座」</h4>
                 <div className="overflow-x-auto">
-                  <table className="min-w-full text-sm">
-                    <thead className="bg-gray-50">
+                  <table className="min-w-full text-sm bg-gray-800 rounded">
+                    <thead className="bg-gray-600">
                       <tr>
-                        <th className="px-3 py-2 text-left">日程</th>
-                        <th className="px-3 py-2 text-left">内容</th>
-                        <th className="px-3 py-2 text-left">時間配分</th>
+                        <th className="px-3 py-2 text-left text-white">日程</th>
+                        <th className="px-3 py-2 text-left text-white">内容</th>
+                        <th className="px-3 py-2 text-left text-white">時間配分</th>
                       </tr>
                     </thead>
-                    <tbody className="divide-y">
+                    <tbody className="divide-y divide-gray-600">
                       <tr>
-                        <td className="px-3 py-2">Day 1: 基礎編</td>
-                        <td className="px-3 py-2">AIの仕組み、アカウント作成、基本操作、演習</td>
-                        <td className="px-3 py-2">30分×4セッション（計2時間）</td>
+                        <td className="px-3 py-2 text-gray-300">Day 1: 基礎編</td>
+                        <td className="px-3 py-2 text-gray-300">AIの仕組み、アカウント作成、基本操作、演習</td>
+                        <td className="px-3 py-2 text-gray-300">30分×4セッション（計2時間）</td>
                       </tr>
                       <tr>
-                        <td className="px-3 py-2">Day 2: 実践編</td>
-                        <td className="px-3 py-2">文書作成自動化、データ分析、画像生成連携</td>
-                        <td className="px-3 py-2">40分×3セッション（計2時間）</td>
+                        <td className="px-3 py-2 text-gray-300">Day 2: 実践編</td>
+                        <td className="px-3 py-2 text-gray-300">文書作成自動化、データ分析、画像生成連携</td>
+                        <td className="px-3 py-2 text-gray-300">40分×3セッション（計2時間）</td>
                       </tr>
                       <tr>
-                        <td className="px-3 py-2">Day 3: 応用編</td>
-                        <td className="px-3 py-2">カスタムGPT作成、API連携基礎、業務適用計画</td>
-                        <td className="px-3 py-2">40分×3セッション（計2時間）</td>
+                        <td className="px-3 py-2 text-gray-300">Day 3: 応用編</td>
+                        <td className="px-3 py-2 text-gray-300">カスタムGPT作成、API連携基礎、業務適用計画</td>
+                        <td className="px-3 py-2 text-gray-300">40分×3セッション（計2時間）</td>
                       </tr>
                     </tbody>
                   </table>
@@ -148,18 +148,18 @@ export default function BusinessPlanPage() {
               </Card>
 
               <div className="grid md:grid-cols-2 gap-4">
-                <Card className="p-4">
-                  <h4 className="font-semibold mb-3">Day 11-12: 無料コンテンツ制作</h4>
-                  <ul className="text-sm space-y-1">
+                <Card className="p-4 bg-gray-700 border-gray-600">
+                  <h4 className="font-semibold mb-3 text-white">Day 11-12: 無料コンテンツ制作</h4>
+                  <ul className="text-sm space-y-1 text-gray-300">
                     <li>• 無料PDF：「AIで仕事を10倍速にする7つの方法」</li>
                     <li>• YouTube動画5本撮影</li>
                     <li>• ブログ記事3本（SEO対策）</li>
                     <li>• 各2000文字程度</li>
                   </ul>
                 </Card>
-                <Card className="p-4">
-                  <h4 className="font-semibold mb-3">Day 13-14: システム構築</h4>
-                  <ul className="text-sm space-y-1">
+                <Card className="p-4 bg-gray-700 border-gray-600">
+                  <h4 className="font-semibold mb-3 text-white">Day 13-14: システム構築</h4>
+                  <ul className="text-sm space-y-1 text-gray-300">
                     <li>• Stripe（決済システム）</li>
                     <li>• Calendly（予約システム）</li>
                     <li>• Google Classroom（LMS）</li>
@@ -170,52 +170,42 @@ export default function BusinessPlanPage() {
             </div>
 
             {/* 初期投資 */}
-            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4 text-yellow-800">💰 初期投資内訳（最小限版）</h3>
+            <div className="bg-yellow-900 border border-yellow-700 rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4 text-yellow-300">💰 初期投資内訳（最小限版）</h3>
               <div className="overflow-x-auto">
-                <table className="min-w-full text-sm">
-                  <thead className="bg-gray-50">
+                <table className="min-w-full text-sm bg-gray-800 rounded">
+                  <thead className="bg-gray-700">
                     <tr>
-                      <th className="px-3 py-2 text-left">項目</th>
-                      <th className="px-3 py-2 text-left">金額</th>
-                      <th className="px-3 py-2 text-left">備考</th>
+                      <th className="px-3 py-2 text-left text-white">項目</th>
+                      <th className="px-3 py-2 text-left text-white">金額</th>
+                      <th className="px-3 py-2 text-left text-white">備考</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y">
+                  <tbody className="divide-y divide-gray-600">
                     <tr>
-                      <td className="px-3 py-2">ドメイン・サーバー</td>
-                      <td className="px-3 py-2">5,000円</td>
-                      <td className="px-3 py-2">年間</td>
+                      <td className="px-3 py-2 text-gray-300">ドメイン・サーバー</td>
+                      <td className="px-3 py-2 text-gray-300">5,000円</td>
+                      <td className="px-3 py-2 text-gray-300">年間</td>
                     </tr>
                     <tr>
-                      <td className="px-3 py-2">Zoom Pro</td>
-                      <td className="px-3 py-2">2,000円</td>
-                      <td className="px-3 py-2">月額</td>
+                      <td className="px-3 py-2 text-gray-300">Zoom Pro</td>
+                      <td className="px-3 py-2 text-gray-300">2,000円</td>
+                      <td className="px-3 py-2 text-gray-300">月額</td>
                     </tr>
                     <tr>
-                      <td className="px-3 py-2">Canva Pro</td>
-                      <td className="px-3 py-2">1,500円</td>
-                      <td className="px-3 py-2">月額</td>
+                      <td className="px-3 py-2 text-gray-300">ChatGPT Plus</td>
+                      <td className="px-3 py-2 text-gray-300">3,000円</td>
+                      <td className="px-3 py-2 text-gray-300">月額</td>
                     </tr>
                     <tr>
-                      <td className="px-3 py-2">ChatGPT Plus</td>
-                      <td className="px-3 py-2">3,000円</td>
-                      <td className="px-3 py-2">月額</td>
+                      <td className="px-3 py-2 text-gray-300">広告費</td>
+                      <td className="px-3 py-2 text-gray-300">30,000円</td>
+                      <td className="px-3 py-2 text-gray-300">Facebook/Google</td>
                     </tr>
-                    <tr>
-                      <td className="px-3 py-2">広告費</td>
-                      <td className="px-3 py-2">30,000円</td>
-                      <td className="px-3 py-2">Facebook/Google</td>
-                    </tr>
-                    <tr>
-                      <td className="px-3 py-2">雑費</td>
-                      <td className="px-3 py-2">8,500円</td>
-                      <td className="px-3 py-2">名刺等</td>
-                    </tr>
-                    <tr className="bg-yellow-100 font-semibold">
-                      <td className="px-3 py-2">合計</td>
-                      <td className="px-3 py-2">50,000円</td>
-                      <td className="px-3 py-2"></td>
+                    <tr className="bg-yellow-800 font-semibold">
+                      <td className="px-3 py-2 text-yellow-200">合計</td>
+                      <td className="px-3 py-2 text-yellow-200">50,000円</td>
+                      <td className="px-3 py-2 text-yellow-200"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -226,38 +216,38 @@ export default function BusinessPlanPage() {
 
         {/* NPO法人特別戦略 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">🎯 NPO法人向け特別戦略</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">🎯 NPO法人向け特別戦略</h2>
           
-          <div className="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-6">
-            <h3 className="text-xl font-semibold mb-4">NPO法人の強力な優位性</h3>
-            <p className="mb-4">NPO法人をお持ちなら、一般的な営利企業では不可能な特典が山ほどあります！</p>
+          <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mb-6">
+            <h3 className="text-xl font-semibold mb-4 text-white">NPO法人の強力な優位性</h3>
+            <p className="mb-4 text-gray-300">NPO法人をお持ちなら、一般的な営利企業では不可能な特典が山ほどあります！</p>
             
             <div className="grid md:grid-cols-3 gap-4">
-              <Card className="p-4 text-center">
-                <h4 className="font-semibold text-purple-600">Google Ad Grants</h4>
-                <div className="text-2xl font-bold text-purple-600 mt-2">月150万円</div>
-                <p className="text-sm text-gray-600 mt-1">年間1,800万円分無料</p>
+              <Card className="p-4 text-center bg-gray-700 border-gray-600">
+                <h4 className="font-semibold text-purple-400">Google Ad Grants</h4>
+                <div className="text-2xl font-bold text-purple-400 mt-2">月150万円</div>
+                <p className="text-sm text-gray-300 mt-1">年間1,800万円分無料</p>
               </Card>
-              <Card className="p-4 text-center">
-                <h4 className="font-semibold text-blue-600">各種助成金</h4>
-                <div className="text-2xl font-bold text-blue-600 mt-2">500万円</div>
-                <p className="text-sm text-gray-600 mt-1">複数申請可能</p>
+              <Card className="p-4 text-center bg-gray-700 border-gray-600">
+                <h4 className="font-semibold text-blue-400">各種助成金</h4>
+                <div className="text-2xl font-bold text-blue-400 mt-2">500万円</div>
+                <p className="text-sm text-gray-300 mt-1">複数申請可能</p>
               </Card>
-              <Card className="p-4 text-center">
-                <h4 className="font-semibold text-green-600">ツール無料化</h4>
-                <div className="text-2xl font-bold text-green-600 mt-2">150万円</div>
-                <p className="text-sm text-gray-600 mt-1">年間コスト削減</p>
+              <Card className="p-4 text-center bg-gray-700 border-gray-600">
+                <h4 className="font-semibold text-green-400">ツール無料化</h4>
+                <div className="text-2xl font-bold text-green-400 mt-2">150万円</div>
+                <p className="text-sm text-gray-300 mt-1">年間コスト削減</p>
               </Card>
             </div>
           </div>
 
           <div className="space-y-6">
-            <Card className="p-6">
-              <h4 className="font-semibold mb-4 text-blue-600">Google Ad Grants 完全攻略法</h4>
+            <Card className="p-6 bg-gray-800 border-gray-600">
+              <h4 className="font-semibold mb-4 text-blue-400">Google Ad Grants 完全攻略法</h4>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <h5 className="font-medium mb-2">申請準備（1週間）</h5>
-                  <ul className="text-sm space-y-1">
+                  <h5 className="font-medium mb-2 text-white">申請準備（1週間）</h5>
+                  <ul className="text-sm space-y-1 text-gray-300">
                     <li>• TechSoup Japan で団体確認</li>
                     <li>• Google for Nonprofits 申請</li>
                     <li>• NPO法人のWebサイト（必須）</li>
@@ -265,8 +255,8 @@ export default function BusinessPlanPage() {
                   </ul>
                 </div>
                 <div>
-                  <h5 className="font-medium mb-2">高価値キーワード戦略</h5>
-                  <ul className="text-sm space-y-1">
+                  <h5 className="font-medium mb-2 text-white">高価値キーワード戦略</h5>
+                  <ul className="text-sm space-y-1 text-gray-300">
                     <li>• 「生成AI 学習」（月8,100回）</li>
                     <li>• 「ChatGPT 使い方」（月27,100回）</li>
                     <li>• 「AI 副業」（月4,400回）</li>
@@ -276,37 +266,32 @@ export default function BusinessPlanPage() {
               </div>
             </Card>
 
-            <Card className="p-6">
-              <h4 className="font-semibold mb-4 text-green-600">その他の無料・割引サービス</h4>
+            <Card className="p-6 bg-gray-800 border-gray-600">
+              <h4 className="font-semibold mb-4 text-green-400">その他の無料・割引サービス</h4>
               <div className="overflow-x-auto">
-                <table className="min-w-full text-sm">
-                  <thead className="bg-gray-50">
+                <table className="min-w-full text-sm bg-gray-700 rounded">
+                  <thead className="bg-gray-600">
                     <tr>
-                      <th className="px-3 py-2 text-left">ツール</th>
-                      <th className="px-3 py-2 text-left">割引率</th>
-                      <th className="px-3 py-2 text-left">月額節約額</th>
+                      <th className="px-3 py-2 text-left text-white">ツール</th>
+                      <th className="px-3 py-2 text-left text-white">割引率</th>
+                      <th className="px-3 py-2 text-left text-white">月額節約額</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y">
+                  <tbody className="divide-y divide-gray-600">
                     <tr>
-                      <td className="px-3 py-2">Microsoft 365 Business Premium</td>
-                      <td className="px-3 py-2">無料</td>
-                      <td className="px-3 py-2">約33万円（年間）</td>
+                      <td className="px-3 py-2 text-gray-300">Microsoft 365 Business Premium</td>
+                      <td className="px-3 py-2 text-gray-300">無料</td>
+                      <td className="px-3 py-2 text-gray-300">約33万円（年間）</td>
                     </tr>
                     <tr>
-                      <td className="px-3 py-2">Slack</td>
-                      <td className="px-3 py-2">85%割引</td>
-                      <td className="px-3 py-2">約15,000円</td>
+                      <td className="px-3 py-2 text-gray-300">Slack</td>
+                      <td className="px-3 py-2 text-gray-300">85%割引</td>
+                      <td className="px-3 py-2 text-gray-300">約15,000円</td>
                     </tr>
                     <tr>
-                      <td className="px-3 py-2">Adobe Creative Cloud</td>
-                      <td className="px-3 py-2">60%割引</td>
-                      <td className="px-3 py-2">約4,000円</td>
-                    </tr>
-                    <tr>
-                      <td className="px-3 py-2">Canva for Nonprofits</td>
-                      <td className="px-3 py-2">無料</td>
-                      <td className="px-3 py-2">1,500円</td>
+                      <td className="px-3 py-2 text-gray-300">Adobe Creative Cloud</td>
+                      <td className="px-3 py-2 text-gray-300">60%割引</td>
+                      <td className="px-3 py-2 text-gray-300">約4,000円</td>
                     </tr>
                   </tbody>
                 </table>
@@ -317,19 +302,19 @@ export default function BusinessPlanPage() {
 
         {/* AI Kids Lab */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">🌟 AI Kids Lab - みらいの創造工房</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">🌟 AI Kids Lab - みらいの創造工房</h2>
           
-          <div className="bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 rounded-lg p-6 mb-6">
-            <h3 className="text-xl font-semibold mb-4">ビジョン・ミッション</h3>
+          <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mb-6">
+            <h3 className="text-xl font-semibold mb-4 text-white">ビジョン・ミッション</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold text-pink-600 mb-2">ビジョン</h4>
-                <p className="text-sm">「すべての子どもたちに、テクノロジーで創造する喜びを」</p>
-                <p className="text-sm mt-2">デジタル格差をなくし、家庭環境に関わらず、すべての子どもたちが最先端技術に触れ、自由に創造できる第三の居場所（サードプレイス）を提供します。</p>
+                <h4 className="font-semibold text-pink-400 mb-2">ビジョン</h4>
+                <p className="text-sm text-gray-300">「すべての子どもたちに、テクノロジーで創造する喜びを」</p>
+                <p className="text-sm mt-2 text-gray-300">デジタル格差をなくし、家庭環境に関わらず、すべての子どもたちが最先端技術に触れ、自由に創造できる第三の居場所（サードプレイス）を提供します。</p>
               </div>
               <div>
-                <h4 className="font-semibold text-purple-600 mb-2">ミッション</h4>
-                <ul className="text-sm space-y-1">
+                <h4 className="font-semibold text-purple-400 mb-2">ミッション</h4>
+                <ul className="text-sm space-y-1 text-gray-300">
                   <li>• 安心・安全な放課後の居場所づくり</li>
                   <li>• 創造性とテクノロジーの融合教育</li>
                   <li>• 地域コミュニティの活性化</li>
@@ -339,90 +324,12 @@ export default function BusinessPlanPage() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Card className="p-6">
-              <h4 className="font-semibold mb-4">📊 社会的背景と必要性</h4>
-              <div className="space-y-3">
-                <div>
-                  <h5 className="font-medium text-red-600">デジタル格差</h5>
-                  <p className="text-sm">世帯年収300万未満の家庭の40%がPC未所有</p>
-                </div>
-                <div>
-                  <h5 className="font-medium text-orange-600">放課後の居場所不足</h5>
-                  <p className="text-sm">学童保育待機児童1.6万人</p>
-                </div>
-                <div>
-                  <h5 className="font-medium text-yellow-600">創造的活動の減少</h5>
-                  <p className="text-sm">子どもの自由時間30年で40%減</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <h4 className="font-semibold mb-4">🎯 ターゲット層</h4>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium">小学1-3年生</span>
-                  <Badge className="bg-green-100 text-green-800">40名</Badge>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium">小学4-6年生</span>
-                  <Badge className="bg-blue-100 text-blue-800">60名</Badge>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium">中学生</span>
-                  <Badge className="bg-purple-100 text-purple-800">40名</Badge>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium">高校生</span>
-                  <Badge className="bg-orange-100 text-orange-800">20名</Badge>
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold mb-4">📚 カリキュラム構成例</h4>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div>
-                <h5 className="font-medium text-green-600 mb-2">🐣 ビギナーコース（小1-3年生）</h5>
-                <ul className="text-sm space-y-1">
-                  <li>• AIとあそぼう</li>
-                  <li>• はじめてのプログラミング</li>
-                  <li>• デジタルアート</li>
-                  <li>• ロボット・電子工作</li>
-                  <li>• 自由制作デー</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-medium text-blue-600 mb-2">🚀 ジュニアコース（小4-6年生）</h5>
-                <ul className="text-sm space-y-1">
-                  <li>• AI活用マスター</li>
-                  <li>• 本格プログラミング</li>
-                  <li>• 3DCG・メタバース</li>
-                  <li>• STEM総合</li>
-                  <li>• プロジェクト学習</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-medium text-purple-600 mb-2">💫 アドバンスコース（中高生）</h5>
-                <ul className="text-sm space-y-1">
-                  <li>• 機械学習入門</li>
-                  <li>• Web開発（React/Next.js）</li>
-                  <li>• ゲームエンジン</li>
-                  <li>• サイバーセキュリティ</li>
-                  <li>• キャリア開発</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-            <h4 className="font-semibold mb-4">💰 収支計画（年間）</h4>
+          <div className="bg-green-900 border border-green-700 rounded-lg p-6">
+            <h4 className="font-semibold mb-4 text-green-300">💰 収支計画（年間）</h4>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h5 className="font-medium text-green-600 mb-2">収入（2,520万円）</h5>
-                <ul className="text-sm space-y-1">
+                <h5 className="font-medium text-green-400 mb-2">収入（2,520万円）</h5>
+                <ul className="text-sm space-y-1 text-gray-300">
                   <li>• 受講料収入：960万円</li>
                   <li>• 助成金：800万円</li>
                   <li>• 企業協賛：400万円</li>
@@ -432,8 +339,8 @@ export default function BusinessPlanPage() {
                 </ul>
               </div>
               <div>
-                <h5 className="font-medium text-blue-600 mb-2">支出（2,200万円）</h5>
-                <ul className="text-sm space-y-1">
+                <h5 className="font-medium text-blue-400 mb-2">支出（2,200万円）</h5>
+                <ul className="text-sm space-y-1 text-gray-300">
                   <li>• 人件費：1,320万円</li>
                   <li>• 機材・教材費：300万円</li>
                   <li>• システム費：180万円</li>
@@ -443,36 +350,36 @@ export default function BusinessPlanPage() {
                 </ul>
               </div>
             </div>
-            <div className="mt-4 p-4 bg-white rounded border-2 border-green-300 text-center">
-              <p className="font-bold text-green-700">年間収支：+320万円（次年度拡大資金）</p>
+            <div className="mt-4 p-4 bg-green-800 rounded border-2 border-green-600 text-center">
+              <p className="font-bold text-green-300">年間収支：+320万円（次年度拡大資金）</p>
             </div>
           </div>
         </section>
 
         {/* 今すぐ始めるアクション */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">🎯 今すぐ始めるアクション</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">🎯 今すぐ始めるアクション</h2>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6 bg-red-50 border-red-200">
-              <h4 className="font-semibold mb-3 text-red-600">今日中に（30分で）</h4>
-              <ul className="text-sm space-y-1">
+            <Card className="p-6 bg-red-900 border-red-700">
+              <h4 className="font-semibold mb-3 text-red-300">今日中に（30分で）</h4>
+              <ul className="text-sm space-y-1 text-gray-300">
                 <li>1. Xアカウント作成</li>
                 <li>2. 最初のツイート投稿</li>
                 <li>3. Notionで計画管理ページ作成</li>
               </ul>
             </Card>
-            <Card className="p-6 bg-orange-50 border-orange-200">
-              <h4 className="font-semibold mb-3 text-orange-600">明日までに（2時間で）</h4>
-              <ul className="text-sm space-y-1">
+            <Card className="p-6 bg-orange-900 border-orange-700">
+              <h4 className="font-semibold mb-3 text-orange-300">明日までに（2時間で）</h4>
+              <ul className="text-sm space-y-1 text-gray-300">
                 <li>1. ドメイン取得</li>
                 <li>2. Canvaでロゴ作成</li>
                 <li>3. 体験会の日程決定</li>
               </ul>
             </Card>
-            <Card className="p-6 bg-green-50 border-green-200">
-              <h4 className="font-semibold mb-3 text-green-600">今週中に（10時間で）</h4>
-              <ul className="text-sm space-y-1">
+            <Card className="p-6 bg-green-900 border-green-700">
+              <h4 className="font-semibold mb-3 text-green-300">今週中に（10時間で）</h4>
+              <ul className="text-sm space-y-1 text-gray-300">
                 <li>1. Webサイト公開</li>
                 <li>2. 最初の教材作成</li>
                 <li>3. 無料体験会の告知開始</li>
@@ -480,14 +387,14 @@ export default function BusinessPlanPage() {
             </Card>
           </div>
 
-          <div className="mt-8 bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200 rounded-lg p-6">
-            <h4 className="font-semibold mb-4 text-purple-800">🌟 成功の秘訣</h4>
+          <div className="mt-8 bg-gradient-to-r from-purple-900 to-pink-900 border border-purple-700 rounded-lg p-6">
+            <h4 className="font-semibold mb-4 text-purple-300">🌟 成功の秘訣</h4>
             <div className="grid md:grid-cols-2 gap-4">
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm space-y-1 text-gray-300">
                 <li>• 完璧を求めない（70%で走り出す）</li>
                 <li>• 毎日1つは必ず前進する</li>
               </ul>
-              <ul className="text-sm space-y-1">
+              <ul className="text-sm space-y-1 text-gray-300">
                 <li>• フィードバックは即反映</li>
                 <li>• 最初の1人を大切にする</li>
               </ul>
@@ -497,22 +404,22 @@ export default function BusinessPlanPage() {
 
         {/* 関連ドキュメント */}
         <section>
-          <h2 className="text-3xl font-bold mb-6">🔗 関連ドキュメント</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">🔗 関連ドキュメント</h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <Card className="p-6">
-              <h3 className="font-semibold mb-2">連携戦略ガイド</h3>
-              <p className="text-sm text-gray-600 mb-4">NPO×株式会社の法人構造設計</p>
-              <a href="/docs/strategy" className="text-blue-600 hover:underline text-sm">詳細を見る →</a>
+            <Card className="p-6 bg-gray-800 border-gray-600">
+              <h3 className="font-semibold mb-2 text-white">連携戦略ガイド</h3>
+              <p className="text-sm text-gray-300 mb-4">NPO×合同会社の法人構造設計</p>
+              <a href="/docs/strategy" className="text-blue-400 hover:underline text-sm">詳細を見る →</a>
             </Card>
-            <Card className="p-6">
-              <h3 className="font-semibold mb-2">助成金活用ガイド</h3>
-              <p className="text-sm text-gray-600 mb-4">利用可能な助成金制度の詳細</p>
-              <a href="/docs/grants" className="text-blue-600 hover:underline text-sm">詳細を見る →</a>
+            <Card className="p-6 bg-gray-800 border-gray-600">
+              <h3 className="font-semibold mb-2 text-white">助成金活用ガイド</h3>
+              <p className="text-sm text-gray-300 mb-4">利用可能な助成金制度の詳細</p>
+              <a href="/docs/grants" className="text-blue-400 hover:underline text-sm">詳細を見る →</a>
             </Card>
-            <Card className="p-6">
-              <h3 className="font-semibold mb-2">サービス仕様</h3>
-              <p className="text-sm text-gray-600 mb-4">技術仕様とAPI設計</p>
-              <a href="/docs/services" className="text-blue-600 hover:underline text-sm">詳細を見る →</a>
+            <Card className="p-6 bg-gray-800 border-gray-600">
+              <h3 className="font-semibold mb-2 text-white">サービス仕様</h3>
+              <p className="text-sm text-gray-300 mb-4">技術仕様とAPI設計</p>
+              <a href="/docs/services" className="text-blue-400 hover:underline text-sm">詳細を見る →</a>
             </Card>
           </div>
         </section>

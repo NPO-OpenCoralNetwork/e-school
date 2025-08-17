@@ -22,25 +22,25 @@ export default function GrantsPage() {
 
         {/* 概要セクション */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">🎯 助成金活用戦略</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">🎯 助成金活用戦略</h2>
           
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
-            <h3 className="text-xl font-semibold mb-4">年間助成金獲得目標</h3>
+          <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mb-6">
+            <h3 className="text-xl font-semibold mb-4 text-white">年間助成金獲得目標</h3>
             <div className="grid md:grid-cols-3 gap-4">
-              <Card className="p-4 text-center">
-                <h4 className="font-semibold text-green-600">NPO法人</h4>
-                <div className="text-2xl font-bold text-green-600 mt-2">800万円</div>
-                <p className="text-sm text-gray-600 mt-1">複数助成金採択</p>
+              <Card className="p-4 text-center bg-gray-700 border-gray-600">
+                <h4 className="font-semibold text-green-400">NPO法人</h4>
+                <div className="text-2xl font-bold text-green-400 mt-2">800万円</div>
+                <p className="text-sm text-gray-300 mt-1">複数助成金採択</p>
               </Card>
-              <Card className="p-4 text-center">
-                <h4 className="font-semibold text-blue-600">企業協賛</h4>
-                <div className="text-2xl font-bold text-blue-600 mt-2">400万円</div>
-                <p className="text-sm text-gray-600 mt-1">10社×40万円</p>
+              <Card className="p-4 text-center bg-gray-700 border-gray-600">
+                <h4 className="font-semibold text-blue-400">企業協賛</h4>
+                <div className="text-2xl font-bold text-blue-400 mt-2">400万円</div>
+                <p className="text-sm text-gray-300 mt-1">10社×40万円</p>
               </Card>
-              <Card className="p-4 text-center">
-                <h4 className="font-semibold text-purple-600">合計効果</h4>
-                <div className="text-2xl font-bold text-purple-600 mt-2">1,200万円</div>
-                <p className="text-sm text-gray-600 mt-1">年間資金調達</p>
+              <Card className="p-4 text-center bg-gray-700 border-gray-600">
+                <h4 className="font-semibold text-purple-400">合計効果</h4>
+                <div className="text-2xl font-bold text-purple-400 mt-2">1,200万円</div>
+                <p className="text-sm text-gray-300 mt-1">年間資金調達</p>
               </Card>
             </div>
           </div>
@@ -48,29 +48,29 @@ export default function GrantsPage() {
 
         {/* 子どもゆめ基金 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">🌟 子どもゆめ基金（最重要）</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">🌟 子どもゆめ基金（最重要）</h2>
           
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+          <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mb-6">
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xl font-semibold">教材開発・普及活動助成金</h3>
+              <h3 className="text-xl font-semibold text-white">教材開発・普及活動助成金</h3>
               <Badge className="bg-blue-600">最大1,000万円</Badge>
             </div>
-            <p className="mb-4">子どもの体験活動や読書活動を支援するインターネット教材の開発・普及活動に対する助成</p>
+            <p className="mb-4 text-gray-300">子どもの体験活動や読書活動を支援するインターネット教材の開発・普及活動に対する助成</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Card className="p-6">
-              <h4 className="font-semibold mb-4 text-green-600">対象となる教材</h4>
-              <ul className="space-y-2 text-sm">
+            <Card className="p-6 bg-gray-700 border-gray-600">
+              <h4 className="font-semibold mb-4 text-green-400">対象となる教材</h4>
+              <ul className="space-y-2 text-sm text-gray-300">
                 <li>• Webブラウザ上で使用する教材</li>
                 <li>• スマートフォン・タブレット用アプリ</li>
                 <li>• インターネット経由の学習コンテンツ</li>
                 <li>• 既存ソフトウェアの改修も対象</li>
               </ul>
             </Card>
-            <Card className="p-6">
-              <h4 className="font-semibold mb-4 text-orange-600">必須要件</h4>
-              <ul className="space-y-2 text-sm">
+            <Card className="p-6 bg-gray-700 border-gray-600">
+              <h4 className="font-semibold mb-4 text-orange-400">必須要件</h4>
+              <ul className="space-y-2 text-sm text-gray-300">
                 <li>• 専門人材の参画（学識経験者等）</li>
                 <li>• トライアウト（試行）の実施</li>
                 <li>• 最低3年間の無償提供義務</li>
@@ -79,18 +79,18 @@ export default function GrantsPage() {
             </Card>
           </div>
 
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold mb-2 text-yellow-800">📅 申請スケジュール</h4>
-            <ul className="space-y-1 text-sm text-yellow-700">
-              <li><strong>申請期間：</strong>令和6年10月1日（火）～11月7日（木）17時締切</li>
-              <li><strong>開発期間：</strong>令和7年4月1日～令和8年1月31日</li>
-              <li><strong>普及期間：</strong>開発完了後30日経過日、または令和8年2月28日まで</li>
+          <div className="bg-yellow-900 border border-yellow-700 rounded-lg p-6 mb-6">
+            <h4 className="font-semibold mb-2 text-yellow-300">📅 申請スケジュール</h4>
+            <ul className="space-y-1 text-sm text-gray-300">
+              <li><strong className="text-yellow-400">申請期間：</strong>令和6年10月1日（火）～11月7日（木）17時締切</li>
+              <li><strong className="text-yellow-400">開発期間：</strong>令和7年4月1日～令和8年1月31日</li>
+              <li><strong className="text-yellow-400">普及期間：</strong>開発完了後30日経過日、または令和8年2月28日まで</li>
             </ul>
           </div>
 
-          <div className="bg-red-50 border border-red-200 rounded-lg p-6">
-            <h4 className="font-semibold mb-2 text-red-800">⚠️ 注意事項</h4>
-            <ul className="space-y-1 text-sm text-red-700">
+          <div className="bg-red-900 border border-red-700 rounded-lg p-6">
+            <h4 className="font-semibold mb-2 text-red-300">⚠️ 注意事項</h4>
+            <ul className="space-y-1 text-sm text-gray-300">
               <li>• 申請は電子申請のみ（郵送・持参不可）</li>
               <li>• 予算成立前提の募集（変更の可能性あり）</li>
               <li>• 他の国の助成金との同時申請は不可</li>
@@ -101,27 +101,27 @@ export default function GrantsPage() {
 
         {/* その他の助成金 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">💰 その他の重要助成金</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">💰 その他の重要助成金</h2>
           
           <div className="grid gap-6">
-            <Card className="p-6">
+            <Card className="p-6 bg-gray-800 border-gray-600">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-xl font-semibold">ベネッセこども基金</h3>
+                <h3 className="text-xl font-semibold text-white">ベネッセこども基金</h3>
                 <Badge className="bg-purple-600">100-300万円</Badge>
               </div>
-              <p className="text-sm text-gray-600 mb-4">重い病気を抱えるこどもの学び支援活動助成</p>
+              <p className="text-sm text-gray-300 mb-4">重い病気を抱えるこどもの学び支援活動助成</p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <h4 className="font-semibold mb-2">対象</h4>
-                  <ul className="text-sm space-y-1">
+                  <h4 className="font-semibold mb-2 text-white">対象</h4>
+                  <ul className="text-sm space-y-1 text-gray-300">
                     <li>• 重い病気の子どもの学習支援</li>
                     <li>• 経済困難家庭への支援</li>
                     <li>• オンライン学習環境整備</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">申請時期</h4>
-                  <ul className="text-sm space-y-1">
+                  <h4 className="font-semibold mb-2 text-white">申請時期</h4>
+                  <ul className="text-sm space-y-1 text-gray-300">
                     <li>• 年2回募集</li>
                     <li>• 経済困難家庭重点</li>
                     <li>• 継続的な活動を評価</li>
@@ -196,8 +196,8 @@ export default function GrantsPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">📋 申請戦略・タイムライン</h2>
           
-          <div className="bg-gray-50 rounded-lg p-6 mb-6">
-            <h3 className="text-xl font-semibold mb-4">年間申請スケジュール</h3>
+          <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mb-6">
+            <h3 className="text-xl font-semibold mb-4 text-white">年間申請スケジュール</h3>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <Badge className="bg-blue-600 min-w-fit">4月</Badge>

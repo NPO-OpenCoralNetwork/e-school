@@ -157,6 +157,20 @@ e-school/
 4. ブランチにプッシュ (`git push origin feature/AmazingFeature`)
 5. プルリクエストを作成
 
+## 📊 プロジェクト管理
+
+### GitHub Project Board
+- **プロジェクトボード**: [AI Creator Lab - e-school](https://github.com/orgs/NPO-OpenCoralNetwork/projects/9)
+- **Issue管理**: テンプレートを使用して課題・提案を報告してください
+  - 🐛 [バグ報告](https://github.com/NPO-OpenCoralNetwork/e-school/issues/new?template=bug_report.yml)
+  - ✨ [機能要望](https://github.com/NPO-OpenCoralNetwork/e-school/issues/new?template=feature_request.yml)
+  - 📚 [カリキュラムフィードバック](https://github.com/NPO-OpenCoralNetwork/e-school/issues/new?template=curriculum_feedback.yml)
+  - ❓ [質問](https://github.com/NPO-OpenCoralNetwork/e-school/issues/new?template=question.yml)
+  - 🤝 [提携提案](https://github.com/NPO-OpenCoralNetwork/e-school/issues/new?template=partnership.yml)
+
+### コントリビューション
+プロジェクトへの貢献方法は [CONTRIBUTING.md](.github/CONTRIBUTING.md) をご覧ください。
+
 ## 📄 ライセンス
 
 このプロジェクトはMITライセンスの下で公開されています。詳細は [LICENSE](LICENSE) ファイルをご覧ください。
