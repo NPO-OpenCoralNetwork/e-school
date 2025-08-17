@@ -20,6 +20,32 @@ export default function DocsPage() {
       ]
     },
     {
+      id: "strategy",
+      title: "事業戦略",
+      description: "NPO法人×株式会社連携戦略と助成金活用",
+      icon: FileText,
+      docs: [
+        {
+          title: "連携戦略ガイド",
+          description: "NPO法人×株式会社の最適な法人構造設計",
+          href: "/docs/strategy",
+          color: "bg-purple-600"
+        },
+        {
+          title: "助成金活用ガイド",
+          description: "利用可能な助成金制度の詳細情報",
+          href: "/docs/grants",
+          color: "bg-green-600"
+        },
+        {
+          title: "事業企画書",
+          description: "AI Creator Lab Tokyo 30日間立ち上げ計画",
+          href: "/docs/business-plan",
+          color: "bg-orange-600"
+        }
+      ]
+    },
+    {
       id: "services",
       title: "サービス詳細",
       description: "各事業の詳細なサービス内容と料金体系",
