@@ -1,0 +1,125 @@
+name: ❓ 質問・お問い合わせ
+description: サービスや技術的な質問をしてください
+title: "[QUESTION] "
+labels: ["question", "help-wanted"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 質問・お問い合わせ
+        
+        AI Creator Labに関するご質問やお困りごとがございましたら、
+        お気軽にお聞かせください。コミュニティメンバーやスタッフがサポートいたします。
+
+  - type: checkboxes
+    id: preliminary-checks
+    attributes:
+      label: 事前確認
+      description: 質問前に以下をご確認ください
+      options:
+        - label: ドキュメントやFAQを確認しました
+          required: true
+        - label: 既存のIssueで同じ質問がされていないか確認しました
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 質問カテゴリ
+      description: どの分野の質問ですか？
+      options:
+        - サービス内容・料金について
+        - 申し込み・受講手続きについて
+        - カリキュラム・教材について
+        - 技術的な質問（AI・プログラミング）
+        - ウェブサイト・システムの使い方
+        - イベント・体験会について
+        - 法人向けサービスについて
+        - 助成金・NPO連携について
+        - その他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-service
+    attributes:
+      label: 対象サービス
+      description: どのサービスについての質問ですか？
+      options:
+        - 大人向けAIスクール
+        - AI Kids Lab（子ども向け）
+        - 法人向けサービス
+        - NPO向けサービス
+        - ウェブサイト全般
+        - 特定のサービスではない
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容
+      description: 具体的にお聞きしたいことを教えてください
+      placeholder: 例：受講に必要な事前知識はありますか？オンライン受講は可能ですか？
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: あなたの立場
+      description: どの立場からの質問ですか？
+      options:
+        - 受講を検討中（大人）
+        - 受講を検討中（子ども・保護者）
+        - 現在の受講生
+        - 法人担当者
+        - NPO関係者
+        - 講師・パートナー希望
+        - メディア・取材関係
+        - その他
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景・状況
+      description: 質問の背景や現在の状況を教えてください（任意）
+      placeholder: |
+        例：
+        - 会社でAI導入を検討している
+        - 子どもにプログラミングを学ばせたい
+        - 転職のためにスキルアップしたい
+
+  - type: textarea
+    id: tried-solutions
+    attributes:
+      label: 試したこと・調べたこと
+      description: この質問について、既に試したことや調べたことがあれば教えてください
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: 回答の緊急度
+      description: いつ頃回答が必要ですか？
+      options:
+        - 急がない（時間がある時で良い）
+        - 1週間以内
+        - 数日以内
+        - 緊急（24時間以内）
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 追加情報
+      description: その他、回答に役立ちそうな情報があれば教えてください
+
+  - type: checkboxes
+    id: follow-up
+    attributes:
+      label: フォローアップ
+      description: 必要に応じて選択してください
+      options:
+        - label: 個別相談・説明会の案内が欲しい
+        - label: 資料やより詳しい情報が欲しい
+        - label: 体験会・見学の案内が欲しい

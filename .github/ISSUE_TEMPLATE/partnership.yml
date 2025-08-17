@@ -1,0 +1,186 @@
+name: 🤝 提携・協力の提案
+description: パートナーシップや協力関係についてのご提案
+title: "[PARTNERSHIP] "
+labels: ["partnership", "collaboration", "business"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 提携・協力の提案
+        
+        AI Creator Labとの提携や協力関係をご検討いただき、ありがとうございます。
+        お互いの強みを活かした協力関係を築けるよう、詳細をお聞かせください。
+
+  - type: dropdown
+    id: partnership-type
+    attributes:
+      label: 提携・協力の種類
+      description: どのような協力関係をお考えですか？
+      options:
+        - 講師・メンター協力
+        - 会場・施設提供
+        - 教材・コンテンツ開発
+        - 企業研修・法人サービス
+        - 技術協力・システム開発
+        - マーケティング・広報協力
+        - 資金協力・スポンサーシップ
+        - NPO・助成金連携
+        - イベント・ワークショップ共催
+        - その他
+    validations:
+      required: true
+
+  - type: input
+    id: organization
+    attributes:
+      label: 組織・団体名
+      description: 提携をご提案いただく組織・団体名を教えてください
+    validations:
+      required: true
+
+  - type: dropdown
+    id: organization-type
+    attributes:
+      label: 組織の種類
+      description: どのような組織ですか？
+      options:
+        - 株式会社・有限会社
+        - NPO法人・一般社団法人
+        - 教育機関（学校・大学）
+        - 自治体・公的機関
+        - 個人事業主・フリーランス
+        - コミュニティ・団体
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: organization-description
+    attributes:
+      label: 組織の概要・事業内容
+      description: 貴組織の主な事業内容や特徴を教えてください
+      placeholder: |
+        例：
+        - 主力サービス・事業
+        - 規模（従業員数・売上等）
+        - 得意分野・強み
+        - 対象顧客層
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal-details
+    attributes:
+      label: 提携・協力の具体的な内容
+      description: 具体的にどのような協力をご提案いただけますか？
+      placeholder: |
+        例：
+        - 提供可能なリソース・サービス
+        - 協力の範囲・期間
+        - 想定する協力プロセス
+        - 期待する成果・効果
+    validations:
+      required: true
+
+  - type: textarea
+    id: mutual-benefits
+    attributes:
+      label: 相互のメリット
+      description: この提携によって、お互いにどのようなメリットがあると考えますか？
+      placeholder: |
+        AI Creator Labにとってのメリット：
+        
+        貴組織にとってのメリット：
+        
+        利用者・社会にとってのメリット：
+
+  - type: textarea
+    id: resources
+    attributes:
+      label: 提供可能なリソース
+      description: 貴組織から提供可能なリソースを具体的に教えてください
+      placeholder: |
+        例：
+        - 人的リソース（講師、スタッフ等）
+        - 物的リソース（会場、機材等）
+        - 技術リソース（システム、ノウハウ等）
+        - 資金リソース
+        - ネットワーク・顧客基盤
+
+  - type: textarea
+    id: past-experience
+    attributes:
+      label: 類似の提携・協力実績
+      description: 教育分野や類似の分野での提携実績があれば教えてください
+
+  - type: dropdown
+    id: timeline
+    attributes:
+      label: 希望する開始時期
+      description: いつ頃から協力を開始したいですか？
+      options:
+        - すぐにでも
+        - 1ヶ月以内
+        - 3ヶ月以内
+        - 半年以内
+        - 1年以内
+        - 時期未定（要相談）
+
+  - type: dropdown
+    id: duration
+    attributes:
+      label: 協力期間
+      description: どの程度の期間の協力を想定していますか？
+      options:
+        - 単発・短期（1-3ヶ月）
+        - 中期（3-12ヶ月）
+        - 長期（1年以上）
+        - 継続的・永続的
+        - 要相談
+
+  - type: input
+    id: contact-person
+    attributes:
+      label: 担当者名
+      description: 今回の提案の担当者名を教えてください
+    validations:
+      required: true
+
+  - type: input
+    id: contact-email
+    attributes:
+      label: 連絡先メールアドレス
+      description: 後日連絡させていただくためのメールアドレス
+    validations:
+      required: true
+
+  - type: input
+    id: contact-phone
+    attributes:
+      label: 連絡先電話番号
+      description: 緊急時等の連絡先（任意）
+
+  - type: textarea
+    id: questions
+    attributes:
+      label: ご質問・確認したいこと
+      description: AI Creator Labについて質問や確認したいことがあれば教えてください
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: 追加情報・メッセージ
+      description: その他、お伝えしたいことがあれば自由にお書きください
+
+  - type: checkboxes
+    id: next-steps
+    attributes:
+      label: 希望する次のステップ
+      description: 今後どのように進めたいですか？（複数選択可）
+      options:
+        - label: オンライン面談・説明会の実施
+        - label: 資料・企画書の交換
+        - label: 訪問・見学の実施
+        - label: パイロット企画の実施
+        - label: 正式な提携契約の検討
