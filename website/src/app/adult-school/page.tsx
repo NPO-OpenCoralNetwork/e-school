@@ -7,10 +7,16 @@ export default function AdultSchoolPage() {
   return (
     <div className="min-h-screen">
       {/* ヒーローセクション */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 px-4">
-        <div className="container mx-auto text-center">
+      <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-20 px-4 overflow-hidden">
+        {/* 背景装飾 */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-blue-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-indigo-400/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            大人向け<span className="text-blue-600">AIスクール</span>
+            大人向け<span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AIスクール</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             仕事で使えるAIスキルを短期間で習得。ChatGPT/Claudeを活用して業務効率を劇的に向上させます。

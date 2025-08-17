@@ -1,0 +1,67 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0.9" />
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#0891b2;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  
+  <!-- AI Brain representation -->
+  <g transform="translate(400,300)">
+    <!-- Main brain shape -->
+    <path d="M-80,-60 Q-100,-80 -60,-90 Q-20,-95 20,-85 Q60,-75 80,-50 Q90,-20 85,20 Q80,60 50,80 Q20,85 -20,80 Q-60,75 -80,50 Q-85,20 -80,-20 Q-82,-40 -80,-60 Z" 
+          fill="url(#brainGrad)" opacity="0.8"/>
+    
+    <!-- Neural network nodes -->
+    <circle cx="-40" cy="-20" r="8" fill="url(#nodeGrad)"/>
+    <circle cx="0" cy="-30" r="6" fill="url(#nodeGrad)"/>
+    <circle cx="40" cy="-10" r="7" fill="url(#nodeGrad)"/>
+    <circle cx="-30" cy="20" r="5" fill="url(#nodeGrad)"/>
+    <circle cx="20" cy="30" r="6" fill="url(#nodeGrad)"/>
+    
+    <!-- Connections -->
+    <g stroke="#60a5fa" stroke-width="2" opacity="0.6">
+      <line x1="-40" y1="-20" x2="0" y2="-30"/>
+      <line x1="0" y1="-30" x2="40" y2="-10"/>
+      <line x1="-40" y1="-20" x2="-30" y2="20"/>
+      <line x1="40" y1="-10" x2="20" y2="30"/>
+      <line x1="-30" y1="20" x2="20" y2="30"/>
+    </g>
+  </g>
+  
+  <!-- Floating data particles -->
+  <g opacity="0.4">
+    <circle cx="200" cy="150" r="4" fill="#3b82f6">
+      <animate attributeName="cy" values="150;120;150" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="200" r="3" fill="#06b6d4">
+      <animate attributeName="cy" values="200;180;200" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="400" r="5" fill="#6366f1">
+      <animate attributeName="cy" values="400;370;400" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="450" r="4" fill="#8b5cf6">
+      <animate attributeName="cy" values="450;420;450" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Code-like elements -->
+  <g opacity="0.3" fill="#60a5fa" font-family="monospace" font-size="14">
+    <text x="100" y="500">{'{'} AI: "learning" {'}'}</text>
+    <text x="500" y="100">function predict() {'{'}...{'}'}</text>
+    <text x="50" y="250">model.train(data)</text>
+    <text x="550" y="550">neural_network.forward()</text>
+  </g>
+  
+  <!-- Glowing effect -->
+  <circle cx="400" cy="300" r="120" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.2">
+    <animate attributeName="r" values="120;140;120" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.1;0.2" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

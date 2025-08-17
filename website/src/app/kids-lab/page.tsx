@@ -7,10 +7,16 @@ export default function KidsLabPage() {
   return (
     <div className="min-h-screen">
       {/* ヒーローセクション */}
-      <section className="bg-gradient-to-br from-green-50 to-blue-100 py-20 px-4">
-        <div className="container mx-auto text-center">
+      <section className="relative min-h-[70vh] flex items-center bg-gradient-to-br from-green-50 via-blue-50 to-indigo-50 py-20 px-4 overflow-hidden">
+        {/* 背景装飾 */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-48 h-48 bg-green-400/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-blue-400/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            <span className="text-green-600">AI Kids Lab</span><br />
+            <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">AI Kids Lab</span><br />
             みらいの創造工房
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">

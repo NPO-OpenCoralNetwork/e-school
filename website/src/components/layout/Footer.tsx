@@ -121,28 +121,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* NPO向けサービス・その他 */}
+          {/* 法人向けサービス・その他 */}
           <div className="space-y-4">
-            <h4 className="font-semibold">NPO向けサービス</h4>
+            <h4 className="font-semibold">法人向けサービス</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/npo-services/google-grants" className="text-gray-400 hover:text-white transition-colors">
-                  Google Ad Grants
+                <Link href="/corporate/training" className="text-gray-400 hover:text-white transition-colors">
+                  AI研修プログラム
                 </Link>
               </li>
               <li>
-                <Link href="/npo-services/azure-guide" className="text-gray-400 hover:text-white transition-colors">
-                  Azure活用法
+                <Link href="/corporate/consultation" className="text-gray-400 hover:text-white transition-colors">
+                  導入コンサルティング
                 </Link>
               </li>
               <li>
-                <Link href="/npo-services/funding-database" className="text-gray-400 hover:text-white transition-colors">
-                  助成金データベース
+                <Link href="/corporate/case-studies" className="text-gray-400 hover:text-white transition-colors">
+                  導入事例
                 </Link>
               </li>
               <li>
-                <Link href="/npo-services/consultation" className="text-gray-400 hover:text-white transition-colors">
-                  無料相談
+                <Link href="/corporate/contact" className="text-gray-400 hover:text-white transition-colors">
+                  お問い合わせ
                 </Link>
               </li>
             </ul>

@@ -7,13 +7,19 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* ヒーローセクション */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            AIで未来を創る<br />
-            <span className="text-blue-600">学びの場</span>
+      <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 py-20 px-4 overflow-hidden">
+        {/* 背景装飾 */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <span className="text-white">AIで未来を創る</span><br />
+            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">学びの場</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             すべての人にAI時代を生き抜く力を。大人から子どもまで、NPO法人まで、
             包括的なAI教育プラットフォームで未来をサポートします。
           </p>
@@ -34,37 +40,39 @@ export default function HomePage() {
       </section>
 
       {/* 3つの事業紹介 */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-gray-800">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">3つの事業でAI時代をサポート</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
+            3つの事業で<span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">AI時代</span>をサポート
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* 大人向けスクール */}
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-gray-800 border-gray-700">
               <CardHeader className="text-center">
-                <div className="mx-auto mb-4 p-3 bg-blue-100 rounded-full w-fit">
-                  <Brain className="h-8 w-8 text-blue-600" />
+                <div className="mx-auto mb-4 p-3 bg-blue-900/50 rounded-full w-fit">
+                  <Brain className="h-8 w-8 text-blue-400" />
                 </div>
-                <CardTitle className="text-xl">大人向けAIスクール</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-xl text-white">大人向けAIスクール</CardTitle>
+                <CardDescription className="text-gray-300">
                   仕事で使えるAIスキルを短期間で習得
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-2 text-sm">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     3日間集中講座
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     ChatGPT/Claude活用術
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     実践的なプロンプトエンジニアリング
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     業務効率化の実現
                   </li>
                 </ul>
@@ -80,32 +88,32 @@ export default function HomePage() {
             </Card>
 
             {/* 子ども向けスクール */}
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-gray-800 border-gray-700">
               <CardHeader className="text-center">
-                <div className="mx-auto mb-4 p-3 bg-green-100 rounded-full w-fit">
-                  <Users className="h-8 w-8 text-green-600" />
+                <div className="mx-auto mb-4 p-3 bg-green-900/50 rounded-full w-fit">
+                  <Users className="h-8 w-8 text-green-400" />
                 </div>
-                <CardTitle className="text-xl">子ども向けスクール</CardTitle>
-                <CardDescription>
+                <CardTitle className="text-xl text-white">子ども向けスクール</CardTitle>
+                <CardDescription className="text-gray-300">
                   遊びながら学ぶデジタル創造教育
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-2 text-sm">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     年齢別プログラム（小1〜高校生）
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     AI・プログラミング・3DCG
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     公民館×オンラインのハイブリッド
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     安心・安全なサードプレイス
                   </li>
                 </ul>
@@ -121,37 +129,37 @@ export default function HomePage() {
             </Card>
 
             {/* NPO向けサービス */}
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-gray-800 border-gray-700">
               <CardHeader className="text-center">
-                <div className="mx-auto mb-4 p-3 bg-purple-100 rounded-full w-fit">
-                  <Building2 className="h-8 w-8 text-purple-600" />
+                <div className="mx-auto mb-4 p-3 bg-purple-900/50 rounded-full w-fit">
+                  <Building2 className="h-8 w-8 text-purple-400" />
                 </div>
-                <CardTitle className="text-xl">NPO向けサービス</CardTitle>
-                <CardDescription>
-                  Google Ad Grants等の活用支援
+                <CardTitle className="text-xl text-white">法人向けサービス</CardTitle>
+                <CardDescription className="text-gray-300">
+                  企業のDX推進・AI導入支援
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-2 text-sm">
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    月150万円の広告無料活用
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    カスタムAI研修プログラム
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    Azure年52万円クレジット
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    AI導入コンサルティング
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    助成金データベース
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    DX戦略策定支援
                   </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                    技術サポート・コンサルティング
+                  <li className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                    継続的な技術サポート
                   </li>
                 </ul>
                 <div className="pt-4">
-                  <Link href="/npo-services">
+                  <Link href="/corporate">
                     <Button className="w-full">
                       詳細を見る
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -164,17 +172,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 特徴・強み - 新しいデザイン */}
-      <section className="py-20 px-4 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
+      {/* 特徴・強み - ダークモードデザイン */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-800 to-gray-900">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-16 text-white">AI Creator Labの強み</h2>
+          <h2 className="text-3xl font-bold text-center mb-16 text-white">
+            AI Creator Labの<span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">強み</span>
+          </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* 実践重視の教育 */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:transform hover:scale-105 transition duration-300">
+              <div className="bg-gray-800 border border-blue-800/50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-blue-600/50">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-br from-blue-400 to-cyan-300 p-3 rounded-xl">
+                  <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-3 rounded-xl shadow-lg">
                     <span className="text-2xl font-bold text-white">実践</span>
                   </div>
                   <div className="flex-1">
@@ -190,10 +199,9 @@ export default function HomePage() {
 
             {/* 個別サポート */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:transform hover:scale-105 transition duration-300">
+              <div className="bg-gray-800 border border-emerald-800/50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-emerald-600/50">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-br from-emerald-400 to-teal-300 p-3 rounded-xl">
+                  <div className="bg-gradient-to-br from-emerald-500 to-teal-500 p-3 rounded-xl shadow-lg">
                     <span className="text-2xl font-bold text-white">個別</span>
                   </div>
                   <div className="flex-1">
@@ -209,10 +217,9 @@ export default function HomePage() {
 
             {/* 継続学習支援 */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:transform hover:scale-105 transition duration-300">
+              <div className="bg-gray-800 border border-purple-800/50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-purple-600/50">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-br from-purple-400 to-pink-300 p-3 rounded-xl">
+                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 p-3 rounded-xl shadow-lg">
                     <span className="text-2xl font-bold text-white">継続</span>
                   </div>
                   <div className="flex-1">
@@ -228,10 +235,9 @@ export default function HomePage() {
 
             {/* 最新技術対応 */}
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-500 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:transform hover:scale-105 transition duration-300">
+              <div className="bg-gray-800 border border-amber-800/50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:border-amber-600/50">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-br from-amber-400 to-orange-300 p-3 rounded-xl">
+                  <div className="bg-gradient-to-br from-amber-500 to-orange-500 p-3 rounded-xl shadow-lg">
                     <span className="text-2xl font-bold text-white">最新</span>
                   </div>
                   <div className="flex-1">
@@ -249,10 +255,12 @@ export default function HomePage() {
       </section>
 
       {/* 実績・数字 - 新しいデザイン */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-slate-50">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">数字で見る実績</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              数字で見る<span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">実績</span>
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               多くの受講生に選ばれ、高い満足度を維持し続けています
             </p>
@@ -327,47 +335,49 @@ export default function HomePage() {
       </section>
 
       {/* 利用者の声 */}
-      <section className="bg-gray-50 py-20 px-4">
+      <section className="bg-gradient-to-b from-slate-50 to-gray-50 py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">利用者の声</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            利用者の<span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">声</span>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card>
+            <Card className="bg-gray-800 border-gray-700">
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   "3日間でChatGPTを業務に活用できるようになりました。作業効率が3倍になり、残業時間も大幅に削減できました。"
                 </p>
-                <div className="font-semibold">田中さん（30代・営業職）</div>
+                <div className="font-semibold text-white">田中さん（30代・営業職）</div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-gray-800 border-gray-700">
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   "息子が楽しそうにプログラミングを学んでいます。創造力と論理的思考力が身についているのを感じます。"
                 </p>
-                <div className="font-semibold">佐藤さん（保護者）</div>
+                <div className="font-semibold text-white">佐藤さん（保護者）</div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-gray-800 border-gray-700">
               <CardContent className="p-6">
                 <div className="flex mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-600 mb-4">
-                  "Google Ad Grantsの活用で、年間1,800万円分の広告を無料で運用できるようになりました。"
+                <p className="text-gray-300 mb-4">
+                  "AI研修により社員のスキルが向上し、業務プロセスの自動化で年間2000万円のコスト削減を実現できました。"
                 </p>
-                <div className="font-semibold">NPO法人理事長</div>
+                <div className="font-semibold text-white">IT企業CEO</div>
               </CardContent>
             </Card>
           </div>
@@ -375,7 +385,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA セクション */}
-      <section className="bg-blue-600 text-white py-20 px-4">
+      <section className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-20 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">今すぐAI学習を始めませんか？</h2>
           <p className="text-xl mb-8 opacity-90">

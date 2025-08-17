@@ -17,10 +17,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="border-b bg-white sticky top-0 z-50">
+    <header className="border-b border-gray-800 bg-gray-900/90 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
         {/* ロゴ */}
-        <Link href="/" className="font-bold text-xl text-primary">
+        <Link href="/" className="font-bold text-xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
           AI Creator Lab
         </Link>
 
@@ -113,41 +113,41 @@ export default function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            {/* NPO向けサービス */}
+            {/* 法人向けサービス */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger>NPO向けサービス</NavigationMenuTrigger>
+              <NavigationMenuTrigger>法人向けサービス</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid gap-3 p-4 w-[400px] grid-cols-2">
                   <div className="grid gap-1">
-                    <h3 className="font-medium leading-none">支援サービス</h3>
+                    <h3 className="font-medium leading-none">企業研修・コンサル</h3>
                     <p className="text-sm text-muted-foreground">
-                      NPO法人の活動を技術でサポート
+                      企業のDX推進を包括的にサポート
                     </p>
                   </div>
                   <div className="grid gap-3">
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/npo-services/google-grants"
+                        href="/corporate/training"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent"
                       >
                         <div className="text-sm font-medium leading-none">
-                          Google Ad Grants
+                          AI研修プログラム
                         </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          月150万円の広告無料
+                          カスタム企業研修
                         </p>
                       </Link>
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/npo-services/azure-guide"
+                        href="/corporate/consultation"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent"
                       >
                         <div className="text-sm font-medium leading-none">
-                          Azure活用法
+                          導入コンサルティング
                         </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          年52万円のクレジット
+                          AI導入戦略策定
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -173,10 +173,10 @@ export default function Header() {
         {/* 右側のボタン（デスクトップ） */}
         <div className="hidden md:flex items-center space-x-4">
           <Link href="/contact">
-            <Button variant="ghost">お問い合わせ</Button>
+            <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">お問い合わせ</Button>
           </Link>
           <Link href="/login">
-            <Button>ログイン</Button>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">ログイン</Button>
           </Link>
         </div>
 
@@ -193,21 +193,21 @@ export default function Header() {
 
       {/* モバイルメニュー */}
       {isMenuOpen && (
-        <div className="md:hidden border-t bg-white">
+        <div className="md:hidden border-t border-gray-800 bg-gray-900">
           <div className="container mx-auto px-4 py-4 space-y-4">
             <div className="space-y-2">
-              <h3 className="font-medium">大人向けスクール</h3>
+              <h3 className="font-medium text-white">大人向けスクール</h3>
               <div className="pl-4 space-y-1">
                 <Link
                   href="/adult-school/courses"
-                  className="block py-2 text-sm text-muted-foreground hover:text-foreground"
+                  className="block py-2 text-sm text-gray-400 hover:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   3日間集中講座
                 </Link>
                 <Link
                   href="/adult-school/pricing"
-                  className="block py-2 text-sm text-muted-foreground hover:text-foreground"
+                  className="block py-2 text-sm text-gray-400 hover:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   料金プラン
@@ -216,18 +216,18 @@ export default function Header() {
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-medium">子ども向けスクール</h3>
+              <h3 className="font-medium text-white">子ども向けスクール</h3>
               <div className="pl-4 space-y-1">
                 <Link
                   href="/kids-lab/programs"
-                  className="block py-2 text-sm text-muted-foreground hover:text-foreground"
+                  className="block py-2 text-sm text-gray-400 hover:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   年齢別プログラム
                 </Link>
                 <Link
                   href="/kids-lab/locations"
-                  className="block py-2 text-sm text-muted-foreground hover:text-foreground"
+                  className="block py-2 text-sm text-gray-400 hover:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   拠点・アクセス
@@ -236,33 +236,33 @@ export default function Header() {
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-medium">NPO向けサービス</h3>
+              <h3 className="font-medium text-white">法人向けサービス</h3>
               <div className="pl-4 space-y-1">
                 <Link
-                  href="/npo-services/google-grants"
-                  className="block py-2 text-sm text-muted-foreground hover:text-foreground"
+                  href="/corporate/training"
+                  className="block py-2 text-sm text-gray-400 hover:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Google Ad Grants
+                  AI研修プログラム
                 </Link>
                 <Link
-                  href="/npo-services/azure-guide"
-                  className="block py-2 text-sm text-muted-foreground hover:text-foreground"
+                  href="/corporate/consultation"
+                  className="block py-2 text-sm text-gray-400 hover:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Azure活用法
+                  導入コンサルティング
                 </Link>
               </div>
             </div>
 
             <div className="pt-4 border-t space-y-2">
               <Link href="/docs" onClick={() => setIsMenuOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start">
+                <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white hover:bg-gray-800">
                   ドキュメント
                 </Button>
               </Link>
               <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-                <Button variant="ghost" className="w-full justify-start">
+                <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white hover:bg-gray-800">
                   お問い合わせ
                 </Button>
               </Link>
