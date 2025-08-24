@@ -14,7 +14,8 @@ import {
   Settings, 
   Code,
   Search,
-  ArrowUp
+  ArrowUp,
+  Users
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { SearchModal } from '@/components/docs/SearchModal';
@@ -31,26 +32,51 @@ const docSections: DocSection[] = [
   {
     id: 'overview',
     title: 'プロジェクト概要',
-    href: '/docs/readme',
+    href: '/docs/project-background',
     icon: BookOpen,
+    children: [
+      { id: 'project-background', title: 'プロジェクト背景書', href: '/docs/project-background', icon: FileText },
+      { id: 'educational-proposal', title: '教育事業企画書', href: '/docs/educational-proposal', icon: FileText },
+      { id: 'readme', title: 'README', href: '/docs/readme', icon: FileText },
+    ]
+  },
+  {
+    id: 'strategy',
+    title: '事業戦略',
+    href: '/docs/strategy',
+    icon: FileText,
+    children: [
+      { id: 'strategy', title: '連携戦略ガイド', href: '/docs/strategy', icon: FileText },
+      { id: 'grants', title: '助成金活用ガイド', href: '/docs/grants', icon: FileText },
+      { id: 'business-plan', title: '事業企画書', href: '/docs/business-plan', icon: FileText },
+    ]
   },
   {
     id: 'services',
     title: 'サービス詳細',
     href: '/docs/services',
-    icon: FileText,
+    icon: Users,
+    children: [
+      { id: 'services', title: 'サービス詳細', href: '/docs/services', icon: FileText },
+    ]
   },
   {
-    id: 'setup',
-    title: 'セットアップガイド',
+    id: 'development',
+    title: '開発ガイド',
     href: '/docs/setup',
     icon: Settings,
+    children: [
+      { id: 'setup', title: 'セットアップガイド', href: '/docs/setup', icon: Settings },
+    ]
   },
   {
     id: 'api',
     title: 'API仕様',
     href: '/docs/api',
     icon: Code,
+    children: [
+      { id: 'api', title: 'API仕様書', href: '/docs/api', icon: Code },
+    ]
   },
 ];
 
@@ -92,13 +118,27 @@ export function DocLayout({ children, title }: DocLayoutProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const getCurrentDocIndex = () => {
-    return docSections.findIndex(section => section.href === pathname);
+  const getAllDocs = () => {
+    const allDocs: DocSection[] = [];
+    docSections.forEach(section => {
+      if (section.children) {
+        allDocs.push(...section.children);
+      } else {
+        allDocs.push(section);
+      }
+    });
+    return allDocs;
   };
 
+  const getCurrentDocIndex = () => {
+    const allDocs = getAllDocs();
+    return allDocs.findIndex(doc => doc.href === pathname);
+  };
+
+  const allDocs = getAllDocs();
   const currentIndex = getCurrentDocIndex();
-  const prevDoc = currentIndex > 0 ? docSections[currentIndex - 1] : null;
-  const nextDoc = currentIndex < docSections.length - 1 ? docSections[currentIndex + 1] : null;
+  const prevDoc = currentIndex > 0 ? allDocs[currentIndex - 1] : null;
+  const nextDoc = currentIndex < allDocs.length - 1 ? allDocs[currentIndex + 1] : null;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
@@ -159,25 +199,70 @@ export function DocLayout({ children, title }: DocLayoutProps) {
 
             {/* ナビゲーション */}
             <nav className="flex-1 overflow-y-auto p-4">
-              <ul className="space-y-2">
+              <ul className="space-y-1">
                 {docSections.map((section) => {
-                  const isActive = pathname === section.href;
+                  const hasActiveChild = section.children?.some(child => pathname === child.href);
+                  const isSectionActive = pathname === section.href || hasActiveChild;
+                  
                   return (
                     <li key={section.id}>
-                      <Link
-                        href={section.href}
-                        className={`
-                          flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors
-                          ${isActive 
-                            ? 'bg-blue-600 text-white' 
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                          }
-                        `}
-                        onClick={() => setSidebarOpen(false)}
-                      >
-                        <section.icon className="h-5 w-5" />
-                        <span className="text-sm font-medium">{section.title}</span>
-                      </Link>
+                      {/* セクションヘッダー */}
+                      <div className={`
+                        flex items-center space-x-2 px-3 py-2 text-xs font-semibold uppercase tracking-wide
+                        ${isSectionActive ? 'text-blue-400' : 'text-gray-500'}
+                      `}>
+                        <section.icon className="h-4 w-4" />
+                        <span>{section.title}</span>
+                      </div>
+                      
+                      {/* 子項目 */}
+                      {section.children && (
+                        <ul className="ml-6 space-y-1 mb-4">
+                          {section.children.map((child) => {
+                            const isChildActive = pathname === child.href;
+                            return (
+                              <li key={child.id}>
+                                <Link
+                                  href={child.href}
+                                  className={`
+                                    flex items-center space-x-2 px-3 py-2 rounded-md transition-colors text-sm
+                                    ${isChildActive 
+                                      ? 'bg-blue-600 text-white border-l-2 border-blue-400' 
+                                      : 'text-gray-300 hover:bg-gray-700 hover:text-white border-l-2 border-transparent hover:border-gray-600'
+                                    }
+                                  `}
+                                  onClick={() => setSidebarOpen(false)}
+                                >
+                                  <child.icon className="h-4 w-4" />
+                                  <span>{child.title}</span>
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      )}
+                      
+                      {/* 子項目がない場合は直接リンク */}
+                      {!section.children && (
+                        <ul className="ml-6 space-y-1 mb-4">
+                          <li>
+                            <Link
+                              href={section.href}
+                              className={`
+                                flex items-center space-x-2 px-3 py-2 rounded-md transition-colors text-sm
+                                ${pathname === section.href
+                                  ? 'bg-blue-600 text-white border-l-2 border-blue-400' 
+                                  : 'text-gray-300 hover:bg-gray-700 hover:text-white border-l-2 border-transparent hover:border-gray-600'
+                                }
+                              `}
+                              onClick={() => setSidebarOpen(false)}
+                            >
+                              <section.icon className="h-4 w-4" />
+                              <span>{section.title}</span>
+                            </Link>
+                          </li>
+                        </ul>
+                      )}
                     </li>
                   );
                 })}

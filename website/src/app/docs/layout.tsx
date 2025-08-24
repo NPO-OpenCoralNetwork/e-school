@@ -5,5 +5,12 @@ export default function DocsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <div className="min-h-screen">
+      {/* メインコンテンツ */}
+      <main>
+        {children}
+      </main>
+    </div>
+  );
 }

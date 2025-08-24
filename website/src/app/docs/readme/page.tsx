@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 import { DocLayout } from '@/components/docs/DocLayout';
-import { MarkdownRenderer } from '@/components/docs/MarkdownRenderer';
+import MarkdownRenderer from '@/components/docs/MarkdownRenderer';
 
 export default async function ReadmePage() {
   const readmePath = path.join(process.cwd(), '..', 'README.md');
