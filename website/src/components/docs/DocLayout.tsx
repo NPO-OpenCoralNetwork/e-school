@@ -17,14 +17,14 @@ import {
   ArrowUp,
   Users
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { SearchModal } from '@/components/docs/SearchModal';
+import { LucideIcon } from 'lucide-react';
 
 interface DocSection {
   id: string;
   title: string;
   href: string;
-  icon: any;
+  icon: LucideIcon;
   children?: DocSection[];
 }
 

@@ -91,12 +91,30 @@ export default function DocsPage() {
       priority: "medium",
       docs: [
         {
-          title: "サービス詳細",
-          description: "大人・子ども・法人向けサービスの詳細",
-          href: "/docs/services",
+          title: "大人向けAIスクール",
+          description: "ビジネスパーソン向けAI活用集中講座",
+          href: "/docs/adult-school",
+          color: "bg-blue-500",
+          tags: ["大人", "AI", "ビジネス"],
+          readTime: "18分",
+          status: "準備中"
+        },
+        {
+          title: "子ども向けスクール",
+          description: "デジタル創造とAI体験学習プログラム",
+          href: "/docs/kids-school",
           color: "bg-green-500",
-          tags: ["サービス", "料金", "詳細"],
-          readTime: "16分",
+          tags: ["子ども", "創造", "体験"],
+          readTime: "15分",
+          status: "準備中"
+        },
+        {
+          title: "法人向けサービス",
+          description: "企業のDX推進・AI導入支援サービス",
+          href: "/docs/corporate",
+          color: "bg-purple-500",
+          tags: ["法人", "DX", "支援"],
+          readTime: "20分",
           status: "準備中"
         }
       ]
@@ -104,28 +122,19 @@ export default function DocsPage() {
     {
       id: "development",
       title: "開発ガイド",
-      description: "開発環境のセットアップとデプロイ手順",
-      icon: Settings,
-      priority: "medium",
+      description: "開発環境・技術仕様・API設計",
+      icon: Code,
+      priority: "low",
       docs: [
         {
           title: "セットアップガイド",
           description: "開発環境構築からデプロイまでの完全ガイド",
           href: "/docs/setup",
-          color: "bg-purple-500",
+          color: "bg-indigo-500",
           tags: ["開発", "セットアップ", "デプロイ"],
           readTime: "30分",
           status: "準備中"
-        }
-      ]
-    },
-    {
-      id: "api",
-      title: "API仕様",
-      description: "将来実装予定のAPI設計とエンドポイント仕様",
-      icon: Code,
-      priority: "low",
-      docs: [
+        },
         {
           title: "API仕様書",
           description: "認証・エンドポイント・データモデル仕様",

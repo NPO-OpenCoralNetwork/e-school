@@ -80,12 +80,12 @@ export default async function ApiPage() {
         <div className="mt-12 p-6 bg-gray-800 rounded-lg border border-gray-700">
           <h3 className="text-lg font-semibold text-white mb-4">参考実装</h3>
           <div className="bg-gray-900 rounded-lg p-4 font-mono text-sm overflow-x-auto">
-            <div className="text-gray-400">// Next.js API Route例</div>
+            <div className="text-gray-400">{`// Next.js API Route例`}</div>
             <div className="text-blue-400">export async function</div>
             <div className="text-yellow-400"> POST</div>
             <div className="text-white">(request: Request) {`{`}</div>
             <div className="text-gray-300 ml-2">const body = await request.json()</div>
-            <div className="text-gray-300 ml-2">// 認証・バリデーション・処理</div>
+            <div className="text-gray-300 ml-2">{`// 認証・バリデーション・処理`}</div>
             <div className="text-blue-400 ml-2">return</div>
             <div className="text-white ml-2"> NextResponse.json(result)</div>
             <div className="text-white">{`}`}</div>

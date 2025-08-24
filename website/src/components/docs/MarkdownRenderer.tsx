@@ -7,7 +7,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import Link from 'next/link';
 import { ExternalLink, Copy, Check } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import mermaid from 'mermaid';
 
 interface MarkdownRendererProps {
@@ -17,7 +17,7 @@ interface MarkdownRendererProps {
 
 // Mermaidズームモーダルコンポーネント
 function MermaidZoomModal({ svg, isOpen, onClose }: { svg: string; isOpen: boolean; onClose: () => void }) {
-  const [scale, setScale] = useState(1.5);
+  const [scale, setScale] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
@@ -30,7 +30,7 @@ function MermaidZoomModal({ svg, isOpen, onClose }: { svg: string; isOpen: boole
       
       e.preventDefault();
       const delta = e.deltaY > 0 ? -0.1 : 0.1;
-      setScale(prev => Math.max(0.5, Math.min(4, prev + delta)));
+      setScale(prev => Math.max(1, Math.min(6, prev + delta)));
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -89,41 +89,47 @@ function MermaidZoomModal({ svg, isOpen, onClose }: { svg: string; isOpen: boole
 
   return (
     <div 
-      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex flex-col"
       onClick={onClose}
     >
+      {/* ヘッダー */}
+      <div className="flex items-center justify-between p-4 bg-gray-900/95 border-b border-gray-700 flex-shrink-0">
+        <div className="text-sm text-gray-300">
+          ズーム: {Math.round(scale * 100)}% | スクロールで拡大・縮小 | ドラッグで移動 | ESCキーで閉じる
+        </div>
+        <button
+          onClick={onClose}
+          className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
+        >
+          <span className="text-gray-400 hover:text-white text-xl">×</span>
+        </button>
+      </div>
+
+      {/* 図表エリア - 全画面使用 */}
       <div 
         ref={modalRef}
-        className="relative w-[95vw] h-[95vh] bg-gray-900 rounded-2xl border border-gray-700 overflow-hidden"
+        className="flex-1 overflow-hidden flex items-center justify-center relative bg-gray-900/50"
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* ヘッダー */}
-        <div className="flex items-center justify-between p-4 bg-gray-800 border-b border-gray-700">
-          <div className="text-sm text-gray-300">
-            ズーム: {Math.round(scale * 100)}% | スクロールで拡大・縮小 | ドラッグで移動
-          </div>
-          <button
-            onClick={onClose}
-            className="p-2 hover:bg-gray-700 rounded-lg transition-colors"
-          >
-            <span className="text-gray-400 hover:text-white">✕</span>
-          </button>
-        </div>
-
-        {/* 図表エリア */}
         <div 
-          className="p-8 overflow-hidden h-[calc(95vh-4rem)] flex items-center justify-center relative"
-          style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-        >
-          <div 
-            ref={contentRef}
-            className="transition-transform duration-200 ease-out select-none"
-            style={{ 
-              transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
-              transformOrigin: 'center center'
-            }}
-            dangerouslySetInnerHTML={{ __html: svg }}
-          />
+          ref={contentRef}
+          className="transition-transform duration-200 ease-out select-none"
+          style={{ 
+            transform: `translate(${position.x}px, ${position.y}px) scale(${scale})`,
+            transformOrigin: 'center center'
+          }}
+          dangerouslySetInnerHTML={{ __html: svg }}
+        />
+      </div>
+
+      {/* フッター - 操作ヒント */}
+      <div className="p-3 bg-gray-900/95 border-t border-gray-700 text-center flex-shrink-0">
+        <div className="flex justify-center space-x-8 text-xs text-gray-400">
+          <span>🖱️ ドラッグで移動</span>
+          <span>🔍 スクロールでズーム</span>
+          <span>⌨️ ESCで閉じる</span>
+          <span>🖱️ 外側クリックで閉じる</span>
         </div>
       </div>
     </div>
@@ -135,8 +141,15 @@ function MermaidDiagram({ chart }: { chart: string }) {
   const [svg, setSvg] = useState<string>('');
   const [error, setError] = useState<string>('');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+    
     const renderDiagram = async () => {
       try {
         mermaid.initialize({
@@ -162,7 +175,7 @@ function MermaidDiagram({ chart }: { chart: string }) {
     };
 
     renderDiagram();
-  }, [chart]);
+  }, [chart, isClient]);
 
   if (error) {
     return (
@@ -171,6 +184,16 @@ function MermaidDiagram({ chart }: { chart: string }) {
         <pre className="text-xs text-red-200 mt-2 overflow-auto">
           {chart}
         </pre>
+      </div>
+    );
+  }
+
+  if (!isClient) {
+    return (
+      <div className="mermaid-container my-8 p-4 bg-gray-800 rounded-lg border border-gray-700">
+        <div className="flex justify-center items-center h-32">
+          <div className="text-gray-400">図表を読み込み中...</div>
+        </div>
       </div>
     );
   }
@@ -253,21 +276,92 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
               {children}
             </h1>
           ),
-          h2: ({ children, ...props }) => (
-            <h2 className="text-3xl font-semibold text-white mt-8 mb-4 pb-2 border-b border-gray-800" {...props}>
-              {children}
-            </h2>
-          ),
-          h3: ({ children, ...props }) => (
-            <h3 className="text-2xl font-semibold text-gray-100 mt-6 mb-3" {...props}>
-              {children}
-            </h3>
-          ),
-          h4: ({ children, ...props }) => (
-            <h4 className="text-xl font-medium text-gray-200 mt-5 mb-2" {...props}>
-              {children}
-            </h4>
-          ),
+          h2: ({ children, ...props }) => {
+            const childText = typeof children === 'string' ? children : children?.toString() || '';
+            let bgColor = 'bg-gray-800';
+            let borderColor = 'border-gray-600';
+            let textColor = 'text-white';
+            let icon = '📄';
+            
+            // セクション別の色分け
+            if (childText.includes('日本教育の歴史') || childText.includes('現状の課題')) {
+              bgColor = 'bg-blue-900/30';
+              borderColor = 'border-blue-500/50';
+              textColor = 'text-blue-100';
+              icon = '📊';
+            } else if (childText.includes('本プロジェクトの位置づけ')) {
+              bgColor = 'bg-purple-900/30';
+              borderColor = 'border-purple-500/50';
+              textColor = 'text-purple-100';
+              icon = '🎯';
+            } else if (childText.includes('教育理論に基づく')) {
+              bgColor = 'bg-green-900/30';
+              borderColor = 'border-green-500/50';
+              textColor = 'text-green-100';
+              icon = '📚';
+            }
+            
+            return (
+              <div className={`${bgColor} border ${borderColor} rounded-lg p-4 mt-8 mb-6`} {...props}>
+                <h2 className={`text-2xl font-semibold ${textColor} flex items-center space-x-3`}>
+                  <span className="text-2xl">{icon}</span>
+                  <span>{children}</span>
+                </h2>
+              </div>
+            );
+          },
+          h3: ({ children, ...props }) => {
+            const childText = typeof children === 'string' ? children : children?.toString() || '';
+            
+            // 時代区分の特別な処理
+            if (/^\d+\..*戦後|ゆとり教育|学力重視|現在/.test(childText)) {
+              let accentColor = 'border-l-blue-500 bg-blue-900/10';
+              
+              if (childText.includes('ゆとり教育')) {
+                accentColor = 'border-l-orange-500 bg-orange-900/10';
+              } else if (childText.includes('学力重視')) {
+                accentColor = 'border-l-red-500 bg-red-900/10';
+              } else if (childText.includes('現在')) {
+                accentColor = 'border-l-green-500 bg-green-900/10';
+              }
+              
+              return (
+                <div className={`${accentColor} border-l-4 pl-4 py-2 mt-6 mb-4`} {...props}>
+                  <h3 className="text-xl font-bold text-white flex items-center space-x-2">
+                    <span className="text-2xl">📅</span>
+                    <span>{children}</span>
+                  </h3>
+                </div>
+              );
+            }
+            
+            return (
+              <h3 className="text-xl font-semibold text-gray-100 mt-6 mb-3" {...props}>
+                {children}
+              </h3>
+            );
+          },
+          h4: ({ children, ...props }) => {
+            const childText = typeof children === 'string' ? children : children?.toString() || '';
+            
+            // 教育理論の特別な処理
+            if (childText.includes('教育理論：')) {
+              return (
+                <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-3 mt-4 mb-3" {...props}>
+                  <h4 className="text-lg font-medium text-yellow-300 flex items-center space-x-2">
+                    <span className="text-xl">🧠</span>
+                    <span>{children}</span>
+                  </h4>
+                </div>
+              );
+            }
+            
+            return (
+              <h4 className="text-lg font-medium text-gray-200 mt-5 mb-2" {...props}>
+                {children}
+              </h4>
+            );
+          },
           h5: ({ children, ...props }) => (
             <h5 className="text-lg font-medium text-gray-200 mt-4 mb-2" {...props}>
               {children}
@@ -288,20 +382,77 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
 
           // リスト
           ul: ({ children, ...props }) => (
-            <ul className="list-disc list-inside text-gray-300 space-y-2 mb-4 ml-4" {...props}>
+            <ul className="space-y-3 mb-6" {...props}>
               {children}
             </ul>
           ),
           ol: ({ children, ...props }) => (
-            <ol className="list-decimal list-inside text-gray-300 space-y-2 mb-4 ml-4" {...props}>
+            <ol className="space-y-3 mb-6" {...props}>
               {children}
             </ol>
           ),
-          li: ({ children, ...props }) => (
-            <li className="text-gray-300" {...props}>
-              {children}
-            </li>
-          ),
+          li: ({ children, ...props }) => {
+            const extractText = (node: any): string => {
+              if (typeof node === 'string') return node;
+              if (typeof node === 'number') return String(node);
+              if (Array.isArray(node)) return node.map(extractText).join('');
+              if (node && typeof node === 'object' && node.props) {
+                return extractText(node.props.children);
+              }
+              return String(node);
+            };
+            
+            const text = extractText(children);
+            
+            // ✓/✗マークの特別な処理
+            if (text.startsWith('✓')) {
+              return (
+                <li className="flex items-start space-x-3 p-3 bg-green-900/20 border border-green-700/30 rounded-lg" {...props}>
+                  <span className="text-green-400 text-xl flex-shrink-0">✓</span>
+                  <span className="text-green-100 font-medium">{text.substring(1).trim()}</span>
+                </li>
+              );
+            }
+            
+            if (text.startsWith('✗')) {
+              return (
+                <li className="flex items-start space-x-3 p-3 bg-red-900/20 border border-red-700/30 rounded-lg" {...props}>
+                  <span className="text-red-400 text-xl flex-shrink-0">✗</span>
+                  <span className="text-red-100 font-medium">{text.substring(1).trim()}</span>
+                </li>
+              );
+            }
+            
+            // 番号付きリストかどうかチェック
+            const isNumberedList = props.node?.parent?.tagName === 'ol';
+            
+            if (isNumberedList) {
+              return (
+                <li className="flex items-start space-x-3 p-3 bg-blue-900/10 border border-blue-700/20 rounded-lg text-blue-100" {...props}>
+                  <span className="text-blue-400 font-bold flex-shrink-0">•</span>
+                  <span>{children}</span>
+                </li>
+              );
+            }
+            
+            // 重要な項目をハイライト
+            if (text.includes('国家戦略') || text.includes('成果') || text.includes('問題点') || text.includes('教訓')) {
+              return (
+                <li className="flex items-start space-x-3 p-3 bg-yellow-900/10 border border-yellow-700/20 rounded-lg" {...props}>
+                  <span className="text-yellow-400 text-lg flex-shrink-0">⭐</span>
+                  <span className="text-yellow-100 font-medium">{children}</span>
+                </li>
+              );
+            }
+            
+            // 通常のリスト項目
+            return (
+              <li className="flex items-start space-x-3 p-2 text-gray-300" {...props}>
+                <span className="text-gray-500 flex-shrink-0 mt-1">•</span>
+                <span>{children}</span>
+              </li>
+            );
+          },
 
           // 強調
           strong: ({ children, ...props }) => (
@@ -321,7 +472,23 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
             const language = match ? match[1] : '';
             
             if (!inline && match) {
-              const codeString = String(children).replace(/\n$/, '');
+              // childrenを文字列に正しく変換（デバッグ付き）
+              let codeString = '';
+              
+              // より堅牢なchildren処理
+              const extractText = (node: any): string => {
+                if (typeof node === 'string') return node;
+                if (typeof node === 'number') return String(node);
+                if (Array.isArray(node)) return node.map(extractText).join('');
+                if (node && typeof node === 'object' && node.props) {
+                  return extractText(node.props.children);
+                }
+                return String(node);
+              };
+              
+              codeString = extractText(children);
+              
+              codeString = codeString.replace(/\n$/, '');
               
               // Mermaidの場合は特別処理
               if (language === 'mermaid') {
@@ -360,9 +527,22 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
               );
             }
 
+            // インラインコードの処理
+            const extractText = (node: any): string => {
+              if (typeof node === 'string') return node;
+              if (typeof node === 'number') return String(node);
+              if (Array.isArray(node)) return node.map(extractText).join('');
+              if (node && typeof node === 'object' && node.props) {
+                return extractText(node.props.children);
+              }
+              return String(node);
+            };
+            
+            const inlineCode = extractText(children);
+            
             return (
               <code className="bg-gray-800 text-blue-300 px-2 py-1 rounded text-sm font-mono" {...props}>
-                {children}
+                {inlineCode}
               </code>
             );
           },
