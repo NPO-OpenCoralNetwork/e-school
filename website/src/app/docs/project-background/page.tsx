@@ -226,44 +226,6 @@ export default function ProjectBackgroundPage() {
           </div>
         </section>
 
-        {/* 実装戦略 */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">🚀 10の実装原則</h2>
-          
-          <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mb-6">
-            <h3 className="text-xl font-semibold mb-4 text-white">理念を現実にする実証的アプローチ</h3>
-            <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <Badge className="bg-blue-600 min-w-fit">原則1</Badge>
-                <div>
-                  <h4 className="font-semibold text-white">段階的導入</h4>
-                  <p className="text-sm text-gray-300">小規模実証から段階的に拡大</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <Badge className="bg-green-600 min-w-fit">原則2</Badge>
-                <div>
-                  <h4 className="font-semibold text-white">定量的評価</h4>
-                  <p className="text-sm text-gray-300">KPIによる客観的効果測定</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <Badge className="bg-purple-600 min-w-fit">原則3</Badge>
-                <div>
-                  <h4 className="font-semibold text-white">持続可能性</h4>
-                  <p className="text-sm text-gray-300">長期的運営を見据えた設計</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <Badge className="bg-orange-600 min-w-fit">原則4</Badge>
-                <div>
-                  <h4 className="font-semibold text-white">包括的支援</h4>
-                  <p className="text-sm text-gray-300">学習困難児への配慮</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* マークダウンコンテンツ */}
         <MarkdownRenderer content={content} />
