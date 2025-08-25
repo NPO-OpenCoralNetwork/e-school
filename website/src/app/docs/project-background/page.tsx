@@ -183,6 +183,46 @@ export default function ProjectBackgroundPage() {
                 </div>
               </div>
             </Card>
+            
+            {/* 参考資料・出典 */}
+            <Card className="p-4 bg-gray-900 border-gray-700">
+              <h4 className="font-semibold mb-3 text-gray-400 text-sm">📚 参考資料・出典</h4>
+              <div className="space-y-2 text-xs">
+                <div>
+                  <span className="text-gray-500">文科省「令和の日本型学校教育」の構築を目指して：</span>
+                  <a 
+                    href="https://www.mext.go.jp/b_menu/shingi/chukyo/chukyo3/079/sonota/1412985.htm" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 underline ml-1"
+                  >
+                    中央教育審議会答申（令和3年1月）
+                  </a>
+                </div>
+                <div>
+                  <span className="text-gray-500">個別最適な学びと協働的な学びの一体的な充実：</span>
+                  <a 
+                    href="https://www.mext.go.jp/a_menu/shotou/zyouhou/detail/mext_00117.html" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 underline ml-1"
+                  >
+                    GIGAスクール構想の実現
+                  </a>
+                </div>
+                <div>
+                  <span className="text-gray-500">Society 5.0に向けた人材育成：</span>
+                  <a 
+                    href="https://www.mext.go.jp/component/a_menu/other/detail/__icsFiles/afieldfile/2018/06/06/1405844_002.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300 underline ml-1"
+                  >
+                    文部科学省政策文書
+                  </a>
+                </div>
+              </div>
+            </Card>
           </div>
         </section>
 
