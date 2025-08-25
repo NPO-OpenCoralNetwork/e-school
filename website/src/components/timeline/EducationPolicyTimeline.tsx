@@ -229,30 +229,6 @@ export default function EducationPolicyTimeline() {
               次世代の教育モデルを実現します。
             </p>
             
-            {/* 過去の問題点から学ぶ教訓 */}
-            <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
-              <h5 className="font-bold text-red-400 mb-3">歴史から学ぶ重要な教訓</h5>
-              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-300">
-                <div>
-                  <p className="font-medium text-red-300">過去の共通問題</p>
-                  <ul className="mt-2 space-y-1 text-xs">
-                    <li>• 理念と現場実践の乖離</li>
-                    <li>• 教員研修・理解不足</li>
-                    <li>• 評価システムの未整備</li>
-                    <li>• 段階的導入の失敗</li>
-                  </ul>
-                </div>
-                <div>
-                  <p className="font-medium text-green-300">AI Creator Labの革新的アプローチ</p>
-                  <ul className="mt-2 space-y-1 text-xs">
-                    <li>• 科学的根拠に基づくハイブリッド学習設計</li>
-                    <li>• 学力評価を超えた探究力・思考力の育成</li>
-                    <li>• AI補完による効率的メンター体制の実現</li>
-                    <li>• 人間的つながりを重視したコミュニティ形成</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
             
             <div className="flex justify-center gap-4 flex-wrap">
               <Badge className="bg-blue-500/20 text-blue-300 border-blue-500/30">
