@@ -156,6 +156,18 @@ export default function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
+            {/* 教育理念 */}
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/philosophy"
+                  className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
+                  教育理念
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
             {/* ドキュメント */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
@@ -256,6 +268,11 @@ export default function Header() {
             </div>
 
             <div className="pt-4 border-t space-y-2">
+              <Link href="/philosophy" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white hover:bg-gray-800">
+                  教育理念
+                </Button>
+              </Link>
               <Link href="/docs" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="ghost" className="w-full justify-start text-gray-300 hover:text-white hover:bg-gray-800">
                   ドキュメント

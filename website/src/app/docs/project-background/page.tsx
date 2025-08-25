@@ -4,6 +4,7 @@ import MarkdownRenderer from '@/components/docs/MarkdownRenderer';
 import { DocLayout } from '@/components/docs/DocLayout';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
+import EducationPolicyTimeline from '@/components/timeline/EducationPolicyTimeline';
 
 export default function ProjectBackgroundPage() {
   const filePath = path.join(process.cwd(), '..', 'docs', 'PROJECT_BACKGROUND.md');
@@ -70,28 +71,59 @@ export default function ProjectBackgroundPage() {
             <p className="mb-4 text-gray-300">戦後復興から現在までの教育政策を体系的に分析し、現在の課題と解決策を導出</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Card className="p-6 bg-gray-700 border-gray-600">
-              <h4 className="font-semibold mb-4 text-blue-400">主要な政策転換点</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>• 1947年：教育基本法制定</li>
-                <li>• 1960年代：高度成長期の教育拡大</li>
-                <li>• 1980年代：臨時教育審議会</li>
-                <li>• 2002年：ゆとり教育の本格導入</li>
-                <li>• 2020年：新学習指導要領</li>
-              </ul>
-            </Card>
-            <Card className="p-6 bg-gray-700 border-gray-600">
-              <h4 className="font-semibold mb-4 text-orange-400">現在の課題</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>• 教育格差の拡大</li>
-                <li>• 不登校児童の増加</li>
-                <li>• 教員の働き方改革</li>
-                <li>• デジタル化の遅れ</li>
-                <li>• 個別最適化の必要性</li>
-              </ul>
-            </Card>
+          {/* 縦型タイムラインコンポーネント */}
+          <div className="mb-8">
+            <EducationPolicyTimeline />
           </div>
+
+          {/* 現在の課題 */}
+          <Card className="p-6 bg-gray-700 border-gray-600">
+            <h4 className="font-semibold mb-4 text-orange-400">現在直面している課題</h4>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-orange-400 mt-2"></div>
+                <div>
+                  <p className="font-medium text-white">教育格差の拡大</p>
+                  <p className="text-xs text-gray-400 mt-1">経済格差が学習機会の差に直結</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-orange-400 mt-2"></div>
+                <div>
+                  <p className="font-medium text-white">不登校児童の増加</p>
+                  <p className="text-xs text-gray-400 mt-1">30万人を超える不登校問題</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-orange-400 mt-2"></div>
+                <div>
+                  <p className="font-medium text-white">教員の働き方改革</p>
+                  <p className="text-xs text-gray-400 mt-1">過重労働と人材不足の深刻化</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-orange-400 mt-2"></div>
+                <div>
+                  <p className="font-medium text-white">デジタル化の遅れ</p>
+                  <p className="text-xs text-gray-400 mt-1">OECD最下位レベルのICT活用</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-orange-400 mt-2"></div>
+                <div>
+                  <p className="font-medium text-white">個別最適化の必要性</p>
+                  <p className="text-xs text-gray-400 mt-1">一斉教育の限界が顕在化</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-orange-400 mt-2"></div>
+                <div>
+                  <p className="font-medium text-white">グローバル競争力</p>
+                  <p className="text-xs text-gray-400 mt-1">国際的な学力低下傾向</p>
+                </div>
+              </div>
+            </div>
+          </Card>
         </section>
 
         {/* ゆとり教育の教訓 */}

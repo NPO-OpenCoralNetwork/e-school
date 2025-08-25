@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Users, Building2, ArrowRight, Star, CheckCircle } from "lucide-react";
+import { Brain, Users, Building2, ArrowRight, Star, CheckCircle, Target, Lightbulb, Clock, BookOpen, BarChart } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -250,6 +250,145 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 教育理念セクション */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                科学的根拠に基づく
+              </span><br />
+              <span className="text-white">統合的学習理論</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              行動主義・認知主義・構成主義を融合したハイブリッドアプローチで、
+              AIを「学びの鏡」として活用し、確実な成長を実現
+            </p>
+          </div>
+
+          {/* 3段階アウトプットシステム */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8 text-white">
+              <Target className="inline-block mr-2 text-blue-400" />
+              3段階アウトプットシステム
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              <Card className="bg-gray-800/50 border-blue-500/30 hover:border-blue-500/50 transition-all">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-blue-500/20 rounded-lg">
+                      <Clock className="w-5 h-5 text-blue-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">即時アウトプット</h4>
+                      <p className="text-sm text-gray-400">0-1時間</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-3">学習直後の感覚・気づきを言語化</p>
+                  <ul className="space-y-1 text-sm text-gray-400">
+                    <li>• リフレクティブ・ライティング</li>
+                    <li>• AIとの対話で思考整理</li>
+                    <li>• 新鮮な気づきの記録</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-800/50 border-green-500/30 hover:border-green-500/50 transition-all">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-green-500/20 rounded-lg">
+                      <BookOpen className="w-5 h-5 text-green-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">短期アウトプット</h4>
+                      <p className="text-sm text-gray-400">24-72時間</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-3">分散学習による記憶定着</p>
+                  <ul className="space-y-1 text-sm text-gray-400">
+                    <li>• 遅延再生効果の活用</li>
+                    <li>• AIによる復習リマインダー</li>
+                    <li>• 実践課題への応用</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-800/50 border-purple-500/30 hover:border-purple-500/50 transition-all">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-purple-500/20 rounded-lg">
+                      <BarChart className="w-5 h-5 text-purple-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white">長期アウトプット</h4>
+                      <p className="text-sm text-gray-400">1週間後</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-3">深い理解の確認と実践</p>
+                  <ul className="space-y-1 text-sm text-gray-400">
+                    <li>• スキルの実践適用</li>
+                    <li>• 成長の可視化</li>
+                    <li>• ポートフォリオ作成</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* AIの役割 */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8 text-white">
+              <Brain className="inline-block mr-2 text-purple-400" />
+              AIの教育的役割：学びの鏡として
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              <Card className="bg-gray-800/50 border-gray-700 hover:border-purple-500/50 transition-all">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-purple-400 mb-2">セルフ・リフレクション支援</h4>
+                  <p className="text-gray-300 text-sm mb-3">24時間365日利用可能な振り返りパートナー</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">中立的フィードバック</span>
+                    <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">無限の忍耐</span>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-800/50 border-gray-700 hover:border-purple-500/50 transition-all">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-purple-400 mb-2">ソーシャル・リフレクション</h4>
+                  <p className="text-gray-300 text-sm mb-3">他者視点のシミュレーション</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">多角的な質問</span>
+                    <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">偏りのない視点</span>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-800/50 border-gray-700 hover:border-purple-500/50 transition-all">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-purple-400 mb-2">メタ認知コーチ</h4>
+                  <p className="text-gray-300 text-sm mb-3">認知の歪み検出と修正</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">客観的評価</span>
+                    <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">成長マインド</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center">
+            <Link href="/philosophy">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-xl transition-all">
+                教育理念を詳しく見る
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
