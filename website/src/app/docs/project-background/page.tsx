@@ -126,34 +126,6 @@ export default function ProjectBackgroundPage() {
           </Card>
         </section>
 
-        {/* ゆとり教育の教訓 */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">⚠️ ゆとり教育の失敗から学ぶ</h2>
-          
-          <div className="bg-yellow-900 border border-yellow-700 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold mb-2 text-yellow-300">📊 失敗要因の分析</h4>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h5 className="font-semibold text-red-300 mb-2">構造的問題</h5>
-                <ul className="space-y-1 text-sm text-gray-300">
-                  <li>• 現場との理念共有不足</li>
-                  <li>• 評価システムの未整備</li>
-                  <li>• 教員研修の不十分さ</li>
-                  <li>• 保護者理解の欠如</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-semibold text-green-300 mb-2">本プロジェクトの対策</h5>
-                <ul className="space-y-1 text-sm text-gray-300">
-                  <li>• 段階的導入と検証</li>
-                  <li>• 定量的効果測定</li>
-                  <li>• 継続的な研修体制</li>
-                  <li>• 全ステークホルダー参加</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* 文科省方針との整合性 */}
         <section className="mb-12">
