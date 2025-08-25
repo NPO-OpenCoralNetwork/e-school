@@ -9,6 +9,7 @@ interface TimelineItem {
   title: string;
   description: string;
   impact: string;
+  problems?: string[];
   icon: React.ReactNode;
   color: string;
   bgColor: string;
@@ -22,6 +23,11 @@ export default function EducationPolicyTimeline() {
       title: '教育基本法制定',
       description: '戦後民主主義教育の礎',
       impact: '「人格の完成」を教育の目的に',
+      problems: [
+        '急速な制度転換による現場の混乱',
+        '教員の意識改革の遅れ',
+        '資源不足による教育格差'
+      ],
       icon: <ScrollText className="w-5 h-5" />,
       color: 'text-gray-400',
       bgColor: 'bg-gray-500/20',
@@ -32,6 +38,11 @@ export default function EducationPolicyTimeline() {
       title: '高度成長期の教育拡大',
       description: '工業社会の人材需要に対応',
       impact: '高校進学率90%超、大学進学率上昇',
+      problems: [
+        '詰め込み教育による受験戦争激化',
+        '画一的な人材育成',
+        '個性や創造性の軽視'
+      ],
       icon: <Users className="w-5 h-5" />,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/20',
@@ -42,6 +53,11 @@ export default function EducationPolicyTimeline() {
       title: '臨時教育審議会',
       description: '個性重視の教育改革',
       impact: '「生涯学習」概念の導入',
+      problems: [
+        '理念と実践の乖離',
+        '評価システムの未整備',
+        '教員研修の不足'
+      ],
       icon: <Lightbulb className="w-5 h-5" />,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/20',
@@ -52,6 +68,11 @@ export default function EducationPolicyTimeline() {
       title: 'ゆとり教育本格導入',
       description: '「生きる力」の育成重視',
       impact: '総合的な学習の時間創設',
+      problems: [
+        '学力低下への懸念と批判',
+        '現場教員の理解不足',
+        '保護者・社会の不安拡大'
+      ],
       icon: <RefreshCw className="w-5 h-5" />,
       color: 'text-green-400',
       bgColor: 'bg-green-500/20',
@@ -62,6 +83,11 @@ export default function EducationPolicyTimeline() {
       title: '新学習指導要領',
       description: '主体的・対話的で深い学び',
       impact: 'プログラミング教育必修化',
+      problems: [
+        'ICT環境の地域格差',
+        '指導できる教員の不足',
+        'コロナ禍での実施困難'
+      ],
       icon: <BookOpen className="w-5 h-5" />,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/20',
@@ -72,6 +98,11 @@ export default function EducationPolicyTimeline() {
       title: 'AI戦略・Society 5.0',
       description: 'デジタル人材25万人育成',
       impact: '全高校生・大学生がAI基礎習得',
+      problems: [
+        '急速な技術変化への対応遅れ',
+        '指導人材の絶対的不足',
+        '企業・教育機関の連携不足'
+      ],
       icon: <Cpu className="w-5 h-5" />,
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/20',
@@ -141,12 +172,25 @@ export default function EducationPolicyTimeline() {
                   <p className="text-gray-300 text-sm mb-3">
                     {item.description}
                   </p>
-                  <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${item.bgColor}`}>
+                  <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${item.bgColor} mb-3`}>
                     <Target className="w-3 h-3" />
                     <span className="text-xs text-gray-400">
                       {item.impact}
                     </span>
                   </div>
+                  {item.problems && (
+                    <div className="mt-3 pt-3 border-t border-gray-700">
+                      <p className="text-xs font-semibold text-red-400 mb-2">🚨 問題点</p>
+                      <ul className="space-y-1">
+                        {item.problems.map((problem, idx) => (
+                          <li key={idx} className="text-xs text-gray-400 flex items-start gap-1">
+                            <span className="text-red-400 mt-0.5">•</span>
+                            <span>{problem}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </Card>
 
@@ -172,20 +216,50 @@ export default function EducationPolicyTimeline() {
 
       {/* 総括メッセージ */}
       <div className="mt-20 text-center">
-        <Card className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-purple-500/30 max-w-3xl mx-auto">
+        <Card className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-purple-500/30 max-w-4xl mx-auto">
           <div className="p-8">
-            <h4 className="text-xl font-bold text-white mb-4">
+            <h4 className="text-xl font-bold text-white mb-6">
               70年の教育改革の集大成として
             </h4>
             <p className="text-gray-300 mb-6">
               戦後の民主主義教育から始まり、高度成長期の量的拡大、個性重視の質的転換、
-              そして現在のデジタル革命まで。AI Creator Labは、この歴史的蓄積の上に立ち、
+              そして現在のデジタル革命まで。各時代の<span className="text-red-400 font-bold">問題点を踏まえ</span>、
+              AI Creator Labは、この歴史的蓄積の上に立ち、
               <span className="text-purple-400 font-bold">科学的根拠とAI技術</span>を融合させた
               次世代の教育モデルを実現します。
             </p>
+            
+            {/* 過去の問題点から学ぶ教訓 */}
+            <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+              <h5 className="font-bold text-red-400 mb-3">歴史から学ぶ重要な教訓</h5>
+              <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-300">
+                <div>
+                  <p className="font-medium text-red-300">過去の共通問題</p>
+                  <ul className="mt-2 space-y-1 text-xs">
+                    <li>• 理念と現場実践の乖離</li>
+                    <li>• 教員研修・理解不足</li>
+                    <li>• 評価システムの未整備</li>
+                    <li>• 段階的導入の失敗</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-medium text-green-300">AI Creator Labの革新的アプローチ</p>
+                  <ul className="mt-2 space-y-1 text-xs">
+                    <li>• 科学的根拠に基づくハイブリッド学習設計</li>
+                    <li>• 学力評価を超えた探究力・思考力の育成</li>
+                    <li>• AI補完による効率的メンター体制の実現</li>
+                    <li>• 人間的つながりを重視したコミュニティ形成</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
             <div className="flex justify-center gap-4 flex-wrap">
               <Badge className="bg-blue-500/20 text-blue-300 border-blue-500/30">
                 歴史的正統性
+              </Badge>
+              <Badge className="bg-red-500/20 text-red-300 border-red-500/30">
+                失敗からの学び
               </Badge>
               <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30">
                 政策との整合性
