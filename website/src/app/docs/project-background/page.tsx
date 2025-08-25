@@ -513,8 +513,710 @@ export default function ProjectBackgroundPage() {
           </div>
         </section>
 
-        {/* マークダウンコンテンツ */}
-        <MarkdownRenderer content={content} />
+        {/* 本プロジェクトの位置づけ */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-white">🎯 本プロジェクトの位置づけ</h2>
+          
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-4">なぜ今、AI Creator Labが必要なのか</h3>
+          </div>
+
+          {/* 3つの主要な理由 */}
+          <div className="grid gap-8 mb-12">
+            {/* 1. 文科省方針の先行実装 */}
+            <Card className="p-8 bg-gray-800 border-gray-600">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-blue-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">
+                  1
+                </div>
+                <h4 className="text-xl font-bold text-blue-400">文科省方針の先行実装</h4>
+              </div>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  国が推進する<strong className="text-blue-400">「個別最適な学び」</strong>と<strong className="text-green-400">「協働的な学び」</strong>の二つの方針は、
+                  多くの教育現場で実装が遅れています。
+                </p>
+                <div className="bg-blue-900/20 rounded-lg p-4">
+                  <p>本プロジェクトは、<strong className="text-blue-300">NPOとしてサードプレイスの強みを活かし、小さく始めることができる環境</strong>で、これらの理念を実現します。</p>
+                </div>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div className="text-center p-4 bg-gray-900 rounded-lg">
+                    <div className="text-blue-400 font-bold mb-1">プラットフォーム化</div>
+                    <div className="text-sm">システム化で標準化</div>
+                  </div>
+                  <div className="text-center p-4 bg-gray-900 rounded-lg">
+                    <div className="text-green-400 font-bold mb-1">ハイブリッド型</div>
+                    <div className="text-sm">オンライン＆対面</div>
+                  </div>
+                  <div className="text-center p-4 bg-gray-900 rounded-lg">
+                    <div className="text-purple-400 font-bold mb-1">新学習体験</div>
+                    <div className="text-sm">従来校では困難</div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* 2. 誰でも使える教育プラットフォームの実現 */}
+            <Card className="p-8 bg-gray-800 border-gray-600">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-green-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">
+                  2
+                </div>
+                <h4 className="text-xl font-bold text-green-400">誰でも使える教育プラットフォームの実現</h4>
+              </div>
+              
+              <div className="mb-6">
+                <h5 className="text-lg font-semibold mb-4 text-green-300">包括的なアクセシビリティ設計</h5>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div className="bg-green-900/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl mb-2">👩‍🏫</div>
+                    <div className="text-green-400 font-bold mb-1">教育者向け</div>
+                    <div className="text-xs text-gray-400">技術知識不要で直感的操作</div>
+                  </div>
+                  <div className="bg-blue-900/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl mb-2">👨‍🎓</div>
+                    <div className="text-blue-400 font-bold mb-1">学習者向け</div>
+                    <div className="text-xs text-gray-400">年齢・レベル問わずアクセス</div>
+                  </div>
+                  <div className="bg-purple-900/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl mb-2">👨‍👩‍👧‍👦</div>
+                    <div className="text-purple-400 font-bold mb-1">保護者向け</div>
+                    <div className="text-xs text-gray-400">進捗確認・学習サポート</div>
+                  </div>
+                  <div className="bg-orange-900/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl mb-2">🏛️</div>
+                    <div className="text-orange-400 font-bold mb-1">地域社会向け</div>
+                    <div className="text-xs text-gray-400">公民館等と連携可能</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-900 rounded-lg p-6">
+                <h5 className="text-lg font-semibold mb-4 text-cyan-400">プラットフォーム技術仕様</h5>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div>
+                    <h6 className="font-semibold mb-2 text-white">ユーザビリティ最優先</h6>
+                    <ul className="text-sm space-y-1 text-gray-300">
+                      <li>• 直感的操作</li>
+                      <li>• アクセシビリティ準拠</li>
+                      <li>• 多言語対応</li>
+                      <li>• あらゆるデバイス対応</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h6 className="font-semibold mb-2 text-white">教育者支援</h6>
+                    <ul className="text-sm space-y-1 text-gray-300">
+                      <li>• プログラミング不要</li>
+                      <li>• 豊富なテンプレート</li>
+                      <li>• 自動評価システム</li>
+                      <li>• 学習分析ダッシュボード</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h6 className="font-semibold mb-2 text-white">柔軟な運用</h6>
+                    <ul className="text-sm space-y-1 text-gray-300">
+                      <li>• クラウド完結</li>
+                      <li>• オンライン・対面ハイブリッド</li>
+                      <li>• 小規模～大規模対応</li>
+                      <li>• 組織応じたカスタマイズ</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* 3. ゆとり教育の教訓を活かした設計 */}
+            <Card className="p-8 bg-gray-800 border-gray-600">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-purple-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">
+                  3
+                </div>
+                <h4 className="text-xl font-bold text-purple-400">ゆとり教育の教訓を活かした設計</h4>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* 失敗の原因 */}
+                <div className="bg-red-900/20 rounded-lg p-6">
+                  <h5 className="text-lg font-semibold mb-4 text-red-300">ゆとり教育が失敗した原因</h5>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <span className="text-red-400 text-xl">✗</span>
+                      <span className="text-gray-300">理念だけで実装方法が不明確</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-red-400 text-xl">✗</span>
+                      <span className="text-gray-300">教師へのサポート不足</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-red-400 text-xl">✗</span>
+                      <span className="text-gray-300">評価基準の欠如</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-red-400 text-xl">✗</span>
+                      <span className="text-gray-300">現場への丸投げ</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 本プロジェクトの解決策 */}
+                <div className="bg-green-900/20 rounded-lg p-6">
+                  <h5 className="text-lg font-semibold mb-4 text-green-300">本プロジェクトの解決策</h5>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-400 text-xl">✓</span>
+                      <span className="text-gray-300">AI技術による具体的な実装方法</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-400 text-xl">✓</span>
+                      <span className="text-gray-300">自動化による教師の負担軽減</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-400 text-xl">✓</span>
+                      <span className="text-gray-300">データに基づく明確な評価基準</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-400 text-xl">✓</span>
+                      <span className="text-gray-300">段階的な導入プロセス</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* 実装戦略：理念を現実にする10の原則 */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-white">📄 実装戦略：理念を現実にする10の原則</h2>
+          
+          <div className="grid gap-6">
+            {/* 原則 1: 具体的な方法論の提供 */}
+            <Card className="p-6 bg-gray-800 border-gray-600">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-blue-600 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold">
+                  1
+                </div>
+                <h4 className="text-xl font-bold text-blue-400">具体的な方法論の提供</h4>
+              </div>
+              <div className="mb-4 text-gray-300">
+                <p className="mb-4">AIによる自動化と標準化で、探究学習を誰でも実践できるシステムを構築</p>
+                <div className="bg-gray-900 rounded-lg p-4">
+                  <h5 className="font-semibold mb-3 text-cyan-400">探究学習テンプレート例</h5>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <ul className="space-y-2">
+                        <li><span className="text-blue-400">問題設定:</span> 「なぜ〇〇は△△なのか？」</li>
+                        <li><span className="text-green-400">仮説形成:</span> 「もし〇〇なら△△になるはず」</li>
+                        <li><span className="text-purple-400">実験設計:</span> 「〇〇を調べるために△△をする」</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <ul className="space-y-2">
+                        <li><span className="text-orange-400">データ収集:</span> 「観察・記録・分析の方法」</li>
+                        <li><span className="text-pink-400">結論導出:</span> 「結果から分かったこと」</li>
+                        <li><span className="text-cyan-400">段階支援:</span> 初級80%→中級50%→上級20%</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* 原則 2: 明確な評価基準 */}
+            <Card className="p-6 bg-gray-800 border-gray-600">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-green-600 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold">
+                  2
+                </div>
+                <h4 className="text-xl font-bold text-green-400">明確な評価基準</h4>
+              </div>
+              <div className="mb-4 text-gray-300">
+                <p className="mb-4">ルーブリック評価システムによる客観的・段階的評価</p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-blue-900/20 rounded-lg p-4">
+                    <h5 className="font-semibold mb-3 text-blue-400">探究力評価</h5>
+                    <div className="space-y-3">
+                      <div className="bg-blue-800/20 rounded p-2">
+                        <div className="font-medium text-blue-300">レベル1（初級）</div>
+                        <div className="text-xs text-gray-400 mt-1">与えられた問いに答える・基本情報収集・簡単な観察記録</div>
+                      </div>
+                      <div className="bg-blue-700/20 rounded p-2">
+                        <div className="font-medium text-blue-300">レベル2（中級）</div>
+                        <div className="text-xs text-gray-400 mt-1">自分で問いを立てる・複数情報源比較・データ整理分析</div>
+                      </div>
+                      <div className="bg-blue-600/20 rounded p-2">
+                        <div className="font-medium text-blue-300">レベル3（上級）</div>
+                        <div className="text-xs text-gray-400 mt-1">独創的問い・情報批判的評価・新知見創出</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-purple-900/20 rounded-lg p-4">
+                    <h5 className="font-semibold mb-3 text-purple-400">協働力評価</h5>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+                        <span>他者の意見を聞く姿勢</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+                        <span>自分の考えを伝える力</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+                        <span>合意形成への貢献</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-2 h-2 rounded-full bg-purple-400"></div>
+                        <span>リーダーシップ/フォロワーシップ</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* 原則 3: 教師の負担軽減 */}
+            <Card className="p-6 bg-gray-800 border-gray-600">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-purple-600 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold">
+                  3
+                </div>
+                <h4 className="text-xl font-bold text-purple-400">教師の負担軽減</h4>
+              </div>
+              <div className="mb-4 text-gray-300">
+                <p className="mb-4">AI支援による自動化で教師の役割をより創造的・人間的な部分に集中</p>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-gray-600">
+                        <th className="text-left py-3 px-4 text-gray-300">従来の教師の仕事</th>
+                        <th className="text-left py-3 px-4 text-blue-300">AI Creator Labでの自動化</th>
+                        <th className="text-left py-3 px-4 text-green-300">教師の新しい役割</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-gray-300">
+                      <tr className="border-b border-gray-700">
+                        <td className="py-3 px-4">個別の学習計画作成</td>
+                        <td className="py-3 px-4 text-blue-300">✓ AIが自動生成</td>
+                        <td className="py-3 px-4 text-green-300">計画の確認・調整</td>
+                      </tr>
+                      <tr className="border-b border-gray-700">
+                        <td className="py-3 px-4">ドリルの採点</td>
+                        <td className="py-3 px-4 text-blue-300">✓ 自動採点・分析</td>
+                        <td className="py-3 px-4 text-green-300">つまずきへの個別対応</td>
+                      </tr>
+                      <tr className="border-b border-gray-700">
+                        <td className="py-3 px-4">学習進捗の記録</td>
+                        <td className="py-3 px-4 text-blue-300">✓ 自動ログ・可視化</td>
+                        <td className="py-3 px-4 text-green-300">保護者との対話</td>
+                      </tr>
+                      <tr>
+                        <td className="py-3 px-4">教材の準備</td>
+                        <td className="py-3 px-4 text-blue-300">✓ AI推薦・自動生成</td>
+                        <td className="py-3 px-4 text-green-300">創造的な活動の設計</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </Card>
+
+            {/* 原則 4: 段階的導入プロセス */}
+            <Card className="p-6 bg-gray-800 border-gray-600">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-orange-600 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold">
+                  4
+                </div>
+                <h4 className="text-xl font-bold text-orange-400">段階的導入プロセス</h4>
+              </div>
+              <div className="mb-4 text-gray-300">
+                <p className="mb-6">3段階の慎重なステップで確実に成果を積み上げ</p>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="bg-red-600 rounded-lg p-4 mb-4">
+                      <div className="text-white font-bold text-lg mb-2">Step 1</div>
+                      <div className="text-red-200 text-sm">基礎固め（2ヶ月）</div>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="bg-red-900/20 rounded p-2">効果的反復学習導入</div>
+                      <div className="bg-red-900/20 rounded p-2">個別診断実施</div>
+                      <div className="bg-red-900/20 rounded p-2">基礎データ収集</div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-yellow-600 rounded-lg p-4 mb-4">
+                      <div className="text-white font-bold text-lg mb-2">Step 2</div>
+                      <div className="text-yellow-200 text-sm">拡張（3ヶ月）</div>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="bg-yellow-900/20 rounded p-2">探究活動開始</div>
+                      <div className="bg-yellow-900/20 rounded p-2">グループ学習導入</div>
+                      <div className="bg-yellow-900/20 rounded p-2">効果測定</div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-600 rounded-lg p-4 mb-4">
+                      <div className="text-white font-bold text-lg mb-2">Step 3</div>
+                      <div className="text-green-200 text-sm">統合（6ヶ月〜）</div>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="bg-green-900/20 rounded p-2">完全個別最適化</div>
+                      <div className="bg-green-900/20 rounded p-2">地域連携</div>
+                      <div className="bg-green-900/20 rounded p-2">成果発表</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* 原則 5-10 のコンパクト表示 */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="p-6 bg-gray-800 border-gray-600">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-pink-600 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold text-sm">5</div>
+                  <h4 className="text-lg font-bold text-pink-400">保護者の理解と参画</h4>
+                </div>
+                <p className="text-sm text-gray-300 mb-3">リアルタイムダッシュボード・保護者教育プログラム・参画機会提供</p>
+              </Card>
+              
+              <Card className="p-6 bg-gray-800 border-gray-600">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-cyan-600 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold text-sm">6</div>
+                  <h4 className="text-lg font-bold text-cyan-400">データ駆動型改善</h4>
+                </div>
+                <p className="text-sm text-gray-300 mb-3">PDCAサイクルの自動化・AIによる分析・継続的プログラム調整</p>
+              </Card>
+
+              <Card className="p-6 bg-gray-800 border-gray-600">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-indigo-600 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold text-sm">7</div>
+                  <h4 className="text-lg font-bold text-indigo-400">現場教師との協働</h4>
+                </div>
+                <p className="text-sm text-gray-300 mb-3">AI＝効率化、人間＝感情サポート・創造活動・倫理判断の役割分担</p>
+              </Card>
+
+              <Card className="p-6 bg-gray-800 border-gray-600">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold text-sm">8</div>
+                  <h4 className="text-lg font-bold text-red-400">柔軟な学習環境</h4>
+                </div>
+                <p className="text-sm text-gray-300 mb-3">フルオンライン・ハイブリッド・対面重視・カスタム対応の選択肢</p>
+              </Card>
+
+              <Card className="p-6 bg-gray-800 border-gray-600">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-teal-600 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold text-sm">9</div>
+                  <h4 className="text-lg font-bold text-teal-400">エビデンスベース検証</h4>
+                </div>
+                <p className="text-sm text-gray-300 mb-3">学術的検証プロセス・第三者評価・国際比較・政策提言</p>
+              </Card>
+
+              <Card className="p-6 bg-gray-800 border-gray-600">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="bg-emerald-600 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold text-sm">10</div>
+                  <h4 className="text-lg font-bold text-emerald-400">持続可能な財務</h4>
+                </div>
+                <p className="text-sm text-gray-300 mb-3">B2C・B2B・公的資金の多層的収益構造で長期運営を保証</p>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* 期待される社会的インパクト */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-white">💡 期待される社会的インパクト</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-8 bg-gradient-to-br from-blue-900/30 to-cyan-900/30 border-blue-600">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-3xl">🎯</div>
+                <h4 className="text-xl font-bold text-blue-400">教育格差の解消</h4>
+              </div>
+              <div className="space-y-3 text-gray-300">
+                <div className="bg-red-900/20 rounded-lg p-3">
+                  <p className="text-red-300 font-medium mb-1">現状</p>
+                  <p className="text-sm">経済格差による教育機会の不平等</p>
+                </div>
+                <div className="bg-green-900/20 rounded-lg p-3">
+                  <p className="text-green-300 font-medium mb-1">解決</p>
+                  <p className="text-sm">スライディングスケール料金制度とAI個別最適化により、すべての子どもに質の高い教育を提供</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-gradient-to-br from-purple-900/30 to-pink-900/30 border-purple-600">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-3xl">🏠</div>
+                <h4 className="text-xl font-bold text-purple-400">不登校・学習困難児への支援</h4>
+              </div>
+              <div className="space-y-3 text-gray-300">
+                <div className="bg-red-900/20 rounded-lg p-3">
+                  <p className="text-red-300 font-medium mb-1">現状</p>
+                  <p className="text-sm">画一的な学校教育に適応できない子どもの増加</p>
+                </div>
+                <div className="bg-green-900/20 rounded-lg p-3">
+                  <p className="text-green-300 font-medium mb-1">解決</p>
+                  <p className="text-sm">個別最適化とサードプレイス型の居場所提供</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-gradient-to-br from-green-900/30 to-teal-900/30 border-green-600">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-3xl">👩‍🏫</div>
+                <h4 className="text-xl font-bold text-green-400">教員の働き方改革</h4>
+              </div>
+              <div className="space-y-3 text-gray-300">
+                <div className="bg-red-900/20 rounded-lg p-3">
+                  <p className="text-red-300 font-medium mb-1">現状</p>
+                  <p className="text-sm">教員の多忙化と疲弊</p>
+                </div>
+                <div className="bg-green-900/20 rounded-lg p-3">
+                  <p className="text-green-300 font-medium mb-1">解決</p>
+                  <p className="text-sm">AI自動化による負担軽減と本質的な教育活動への集中</p>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="p-8 bg-gradient-to-br from-orange-900/30 to-red-900/30 border-orange-600">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-3xl">🇯🇵</div>
+                <h4 className="text-xl font-bold text-orange-400">日本教育のモデルケース</h4>
+              </div>
+              <div className="space-y-3 text-gray-300">
+                <div className="bg-red-900/20 rounded-lg p-3">
+                  <p className="text-red-300 font-medium mb-1">現状</p>
+                  <p className="text-sm">文科省方針の実装遅れ</p>
+                </div>
+                <div className="bg-green-900/20 rounded-lg p-3">
+                  <p className="text-green-300 font-medium mb-1">解決</p>
+                  <p className="text-sm">成功事例の創出と全国展開の基盤構築</p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* 成功指標（KPI） */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-white">📊 成功指標（KPI）</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* 教育効果指標 */}
+            <Card className="p-8 bg-gray-800 border-gray-600">
+              <h3 className="text-xl font-bold mb-6 text-green-400">教育効果指標</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-4 bg-blue-900/20 rounded-lg">
+                  <div>
+                    <div className="font-medium text-white">学習継続率</div>
+                    <div className="text-xs text-gray-400">現状: 一般塾60% → 目標: 85%</div>
+                  </div>
+                  <div className="text-2xl font-bold text-blue-400">85%</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-green-900/20 rounded-lg">
+                  <div>
+                    <div className="font-medium text-white">学力向上率</div>
+                    <div className="text-xs text-gray-400">標準テストでの平均向上</div>
+                  </div>
+                  <div className="text-2xl font-bold text-green-400">30%</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-purple-900/20 rounded-lg">
+                  <div>
+                    <div className="font-medium text-white">メタ認知能力向上</div>
+                    <div className="text-xs text-gray-400">ルーブリック評価による測定</div>
+                  </div>
+                  <div className="text-2xl font-bold text-purple-400">有意差</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-orange-900/20 rounded-lg">
+                  <div>
+                    <div className="font-medium text-white">協働スキル</div>
+                    <div className="text-xs text-gray-400">アンケート調査での実感</div>
+                  </div>
+                  <div className="text-2xl font-bold text-orange-400">80%</div>
+                </div>
+              </div>
+            </Card>
+
+            {/* 社会的インパクト指標 */}
+            <Card className="p-8 bg-gray-800 border-gray-600">
+              <h3 className="text-xl font-bold mb-6 text-cyan-400">社会的インパクト指標（3年後目標）</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center p-4 bg-cyan-900/20 rounded-lg">
+                  <div className="font-medium text-white">受講者数</div>
+                  <div className="text-2xl font-bold text-cyan-400">3,000名</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-blue-900/20 rounded-lg">
+                  <div className="font-medium text-white">不登校児童支援率</div>
+                  <div className="text-2xl font-bold text-blue-400">30%</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-green-900/20 rounded-lg">
+                  <div className="font-medium text-white">教員負担軽減</div>
+                  <div className="text-2xl font-bold text-green-400">40%</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-purple-900/20 rounded-lg">
+                  <div className="font-medium text-white">他地域展開</div>
+                  <div className="text-2xl font-bold text-purple-400">10拠点</div>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-pink-900/20 rounded-lg">
+                  <div className="font-medium text-white">プラットフォーム満足度</div>
+                  <div className="text-2xl font-bold text-pink-400">4.5/5</div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* ビジョン */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-white">🌟 ビジョン</h2>
+          
+          <Card className="p-8 bg-gradient-to-br from-indigo-900/30 to-purple-900/30 border-purple-600 mb-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-purple-400 mb-4">ミッション</h3>
+              <p className="text-lg text-gray-300 italic">
+                「誰でも使える教育プラットフォームを通じて、AIと人間の教師が協働し、<br />
+                一人ひとりの可能性を最大限に引き出す包括的な教育エコシステムを創造する」
+              </p>
+            </div>
+          </Card>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* 3年後の姿 */}
+            <Card className="p-8 bg-gray-800 border-gray-600">
+              <h3 className="text-xl font-bold mb-6 text-blue-400">3年後の姿</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">包括的教育プラットフォーム</p>
+                    <p className="text-sm text-gray-400">あらゆる教育者が直感的に使えるシステム</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">全国展開</p>
+                    <p className="text-sm text-gray-400">10拠点で3,000名の学習者、50校の教育機関が利用</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-purple-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">教育格差解消</p>
+                    <p className="text-sm text-gray-400">経済状況や地域に関係なく質の高い教育を提供</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-orange-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">教育者支援</p>
+                    <p className="text-sm text-gray-400">1,000名以上の教育者がプラットフォームを活用</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-pink-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">政策提言</p>
+                    <p className="text-sm text-gray-400">文科省方針の実装モデルとして認知</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* 10年後の展望 */}
+            <Card className="p-8 bg-gray-800 border-gray-600">
+              <h3 className="text-xl font-bold mb-6 text-cyan-400">10年後の展望</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-cyan-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">グローバルプラットフォーム</p>
+                    <p className="text-sm text-gray-400">アジア圏への国際展開、多言語対応</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">大規模運用</p>
+                    <p className="text-sm text-gray-400">100万人の学習者と1万校の教育機関をサポート</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">世界標準</p>
+                    <p className="text-sm text-gray-400">日本発の包括的教育プラットフォームとして認知</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-purple-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">教育DX</p>
+                    <p className="text-sm text-gray-400">あらゆる教育者がAI技術を活用できる環境を実現</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 rounded-full bg-pink-400 mt-2 flex-shrink-0"></div>
+                  <div>
+                    <p className="font-medium text-white">社会基盤</p>
+                    <p className="text-sm text-gray-400">Society 5.0時代の人材育成インフラとして機能</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* 結論 */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-6 text-white">📝 結論</h2>
+          
+          <Card className="p-8 bg-gradient-to-br from-gray-800 to-gray-900 border-gray-600">
+            <div className="space-y-6 text-gray-300">
+              <p className="text-lg">
+                <strong className="text-white">AI Creator Lab</strong>は、日本の教育が70年かけて試行錯誤してきた
+                <strong className="text-red-400">「行動主義」</strong>
+                <strong className="text-blue-400">「認知主義」</strong>
+                <strong className="text-green-400">「構成主義」</strong>の統合を、
+                誰でも使える包括的な教育プラットフォームとして実現します。
+              </p>
+              
+              <div className="bg-blue-900/20 rounded-lg p-6">
+                <h4 className="text-xl font-bold text-blue-400 mb-4">包括的アクセシビリティ</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>教育者は技術知識不要で直感的に利用可能</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>学習者は年齢・能力・特性に関係なくアクセス</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-400 mt-1">•</span>
+                    <span>あらゆる教育機関で導入・カスタマイズが可能</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-green-900/20 rounded-lg p-6">
+                <h4 className="text-xl font-bold text-green-400 mb-4">実装重視の設計</h4>
+                <p>
+                  文科省が掲げる<strong className="text-blue-400">「個別最適な学び」</strong>と<strong className="text-purple-400">「協働的な学び」</strong>を、
+                  理念ではなく具体的に使えるシステムとして提供し、ゆとり教育の失敗から学んだ
+                  <strong className="text-orange-400">「実装方法の明確化」</strong>を重視しています。
+                </p>
+              </div>
+
+              <div className="text-center p-6 bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-lg">
+                <p className="text-lg font-semibold text-purple-300">
+                  これは単なる学習塾ではなく、すべての教育者が活用できるプラットフォームを通じて、<br />
+                  <strong className="text-pink-400">日本の教育改革を民間から推進する社会変革プロジェクト</strong>です。
+                </p>
+              </div>
+            </div>
+          </Card>
+        </section>
 
         {/* 関連リンク */}
         <section className="mt-12">
