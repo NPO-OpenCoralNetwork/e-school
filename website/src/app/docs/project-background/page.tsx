@@ -7,7 +7,7 @@ import { Card } from '@/components/ui/card';
 import EducationPolicyTimeline from '@/components/timeline/EducationPolicyTimeline';
 
 export default function ProjectBackgroundPage() {
-  const filePath = path.join(process.cwd(), '..', 'docs', 'PROJECT_BACKGROUND.md');
+  const filePath = path.join(process.cwd(), 'docs', 'PROJECT_BACKGROUND.md');
   let content = '';
   
   try {
@@ -676,7 +676,7 @@ export default function ProjectBackgroundPage() {
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="text-green-400 text-xl">✓</span>
-                      <span className="text-gray-300">段階的な導入プロセス</span>
+                      <span className="text-gray-300">統合実装プロセス</span>
                     </div>
                   </div>
                 </div>
@@ -821,49 +821,104 @@ export default function ProjectBackgroundPage() {
               </div>
             </Card>
 
-            {/* 原則 4: 段階的導入プロセス */}
+            {/* 原則 4: 統合的初期実装プロセス */}
             <Card className="p-6 bg-gray-800 border-gray-600">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-orange-600 rounded-full w-10 h-10 flex items-center justify-center text-white font-bold">
                   4
                 </div>
-                <h4 className="text-xl font-bold text-orange-400">段階的導入プロセス</h4>
+                <h4 className="text-xl font-bold text-orange-400">統合実装プロセス</h4>
               </div>
               <div className="mb-4 text-gray-300">
-                <p className="mb-6">3段階の慎重なステップで確実に成果を積み上げ</p>
-                <div className="grid md:grid-cols-3 gap-6">
+                <p className="mb-6">全機能を有機的に統合したホリスティック（全人的）学習体験を提供</p>
+                <div className="grid md:grid-cols-4 gap-4">
                   <div className="text-center">
-                    <div className="bg-red-600 rounded-lg p-4 mb-4">
-                      <div className="text-white font-bold text-lg mb-2">Step 1</div>
-                      <div className="text-red-200 text-sm">基礎固め（2ヶ月）</div>
+                    <div className="bg-blue-600 rounded-lg p-4 mb-4">
+                      <div className="text-white font-bold text-lg mb-2">Phase 1</div>
+                      <div className="text-blue-200 text-sm">Big Five AI診断</div>
                     </div>
                     <div className="space-y-2 text-sm">
-                      <div className="bg-red-900/20 rounded p-2">効果的反復学習導入</div>
-                      <div className="bg-red-900/20 rounded p-2">個別診断実施</div>
-                      <div className="bg-red-900/20 rounded p-2">基礎データ収集</div>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="bg-yellow-600 rounded-lg p-4 mb-4">
-                      <div className="text-white font-bold text-lg mb-2">Step 2</div>
-                      <div className="text-yellow-200 text-sm">拡張（3ヶ月）</div>
-                    </div>
-                    <div className="space-y-2 text-sm">
-                      <div className="bg-yellow-900/20 rounded p-2">探究活動開始</div>
-                      <div className="bg-yellow-900/20 rounded p-2">グループ学習導入</div>
-                      <div className="bg-yellow-900/20 rounded p-2">効果測定</div>
+                      <div className="bg-blue-900/20 rounded p-2">性格特性分析</div>
+                      <div className="bg-blue-900/20 rounded p-2">学習スタイル特定</div>
+                      <div className="bg-blue-900/20 rounded p-2">パーソナライズ基盤</div>
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="bg-green-600 rounded-lg p-4 mb-4">
-                      <div className="text-white font-bold text-lg mb-2">Step 3</div>
-                      <div className="text-green-200 text-sm">統合（6ヶ月〜）</div>
+                      <div className="text-white font-bold text-lg mb-2">Phase 2</div>
+                      <div className="text-green-200 text-sm">AI対話目標設定</div>
                     </div>
                     <div className="space-y-2 text-sm">
-                      <div className="bg-green-900/20 rounded p-2">完全個別最適化</div>
-                      <div className="bg-green-900/20 rounded p-2">地域連携</div>
-                      <div className="bg-green-900/20 rounded p-2">成果発表</div>
+                      <div className="bg-green-900/20 rounded p-2">SMART目標創出</div>
+                      <div className="bg-green-900/20 rounded p-2">オープン質問対話</div>
+                      <div className="bg-green-900/20 rounded p-2">自然な目標発見</div>
                     </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-purple-600 rounded-lg p-4 mb-4">
+                      <div className="text-white font-bold text-lg mb-2">Phase 3</div>
+                      <div className="text-purple-200 text-sm">質的成長可視化</div>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="bg-purple-900/20 rounded p-2">AIフィードバック</div>
+                      <div className="bg-purple-900/20 rounded p-2">デジタルバッジ</div>
+                      <div className="bg-purple-900/20 rounded p-2">ゲーミフィケーション</div>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-pink-600 rounded-lg p-4 mb-4">
+                      <div className="text-white font-bold text-lg mb-2">Phase 4</div>
+                      <div className="text-pink-200 text-sm">AIリフレクション</div>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                      <div className="bg-pink-900/20 rounded p-2">対話型振り返り</div>
+                      <div className="bg-pink-900/20 rounded p-2">メタ認知育成</div>
+                      <div className="bg-pink-900/20 rounded p-2">継続的成長支援</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6 space-y-4">
+                  <div className="p-4 bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg">
+                    <h5 className="text-lg font-semibold text-cyan-300 mb-3 text-center">ホリスティック学習の4領域</h5>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm">
+                      <div className="space-y-2">
+                        <div className="flex items-start gap-2">
+                          <span className="text-blue-400">🧠</span>
+                          <div>
+                            <span className="font-medium text-blue-300">認知面：</span>
+                            <span className="text-gray-300">知識習得・思考スキル・問題解決</span>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-green-400">💚</span>
+                          <div>
+                            <span className="font-medium text-green-300">情意面：</span>
+                            <span className="text-gray-300">感情理解・自己効力感・動機づけ</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-start gap-2">
+                          <span className="text-purple-400">🤝</span>
+                          <div>
+                            <span className="font-medium text-purple-300">社会面：</span>
+                            <span className="text-gray-300">協働・コミュニケーション・共感力</span>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-pink-400">🎯</span>
+                          <div>
+                            <span className="font-medium text-pink-300">メタ認知面：</span>
+                            <span className="text-gray-300">学習方略・自己調整・振り返り</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4 bg-gradient-to-r from-cyan-900/20 to-pink-900/20 rounded-lg">
+                    <p className="text-center text-cyan-300 font-medium">
+                      ✨ 4つの学習領域が同時に相互作用しながら発達する学習環境をAIで自動化・個別最適化
+                    </p>
                   </div>
                 </div>
               </div>

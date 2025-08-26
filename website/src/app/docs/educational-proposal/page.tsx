@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { FileText, Users, Lightbulb, Target, TrendingUp, BookOpen, ChevronRight, GraduationCap } from 'lucide-react';
 
 export default function EducationalProposalPage() {
-  const filePath = path.join(process.cwd(), '..', 'docs', 'EDUCATIONAL_PROPOSAL.md');
+  const filePath = path.join(process.cwd(), 'docs', 'EDUCATIONAL_PROPOSAL.md');
   let content = '';
   
   try {

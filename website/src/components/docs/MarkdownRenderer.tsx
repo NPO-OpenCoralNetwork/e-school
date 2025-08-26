@@ -424,7 +424,7 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
             }
             
             // 番号付きリストかどうかチェック
-            const isNumberedList = props.node?.parent?.tagName === 'ol';
+            const isNumberedList = (props.node as any)?.parent?.tagName === 'ol';
             
             if (isNumberedList) {
               return (
@@ -467,7 +467,8 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
           ),
 
           // コードブロック（Mermaid対応）
-          code: ({ node, inline, className, children, ...props }) => {
+          code: ({ node, className, children, ...props }: any) => {
+            const inline = (props as any).inline;
             const match = /language-(\w+)/.exec(className || '');
             const language = match ? match[1] : '';
             
@@ -608,7 +609,7 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
               );
             }
             
-            if (isInternal) {
+            if (isInternal && href) {
               return (
                 <Link href={href} className="text-blue-400 hover:text-blue-300 transition-colors" {...props}>
                   {children}

@@ -4,7 +4,7 @@ import { DocLayout } from '@/components/docs/DocLayout';
 import MarkdownRenderer from '@/components/docs/MarkdownRenderer';
 
 export default async function ReadmePage() {
-  const readmePath = path.join(process.cwd(), '..', 'README.md');
+  const readmePath = path.join(process.cwd(), 'docs', 'README.md');
   const content = await fs.readFile(readmePath, 'utf8');
 
   return (

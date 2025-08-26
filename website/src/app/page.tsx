@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Brain, Users, Building2, ArrowRight, Star, CheckCircle, Target, Lightbulb, Clock, BookOpen, BarChart } from "lucide-react";
+import { Brain, Users, Building2, ArrowRight, Star, CheckCircle, Target, Clock, BookOpen, BarChart } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -488,7 +488,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4">
-                  "3日間でChatGPTを業務に活用できるようになりました。作業効率が3倍になり、残業時間も大幅に削減できました。"
+                  &ldquo;3日間でChatGPTを業務に活用できるようになりました。作業効率が3倍になり、残業時間も大幅に削減できました。&rdquo;
                 </p>
                 <div className="font-semibold text-white">田中さん（30代・営業職）</div>
               </CardContent>
@@ -501,7 +501,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4">
-                  "息子が楽しそうにプログラミングを学んでいます。創造力と論理的思考力が身についているのを感じます。"
+                  &ldquo;息子が楽しそうにプログラミングを学んでいます。創造力と論理的思考力が身についているのを感じます。&rdquo;
                 </p>
                 <div className="font-semibold text-white">佐藤さん（保護者）</div>
               </CardContent>
@@ -514,7 +514,7 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4">
-                  "AI研修により社員のスキルが向上し、業務プロセスの自動化で年間2000万円のコスト削減を実現できました。"
+                  &ldquo;AI研修により社員のスキルが向上し、業務プロセスの自動化で年間2000万円のコスト削減を実現できました。&rdquo;
                 </p>
                 <div className="font-semibold text-white">IT企業CEO</div>
               </CardContent>

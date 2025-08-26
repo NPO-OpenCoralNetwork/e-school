@@ -152,16 +152,16 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               <div className="mt-4 text-sm text-gray-500">
                 <p>検索のヒント:</p>
                 <ul className="mt-2 space-y-1">
-                  <li>• "セットアップ" - 環境構築手順</li>
-                  <li>• "API" - API仕様書</li>
-                  <li>• "子ども" - 子ども向けサービス</li>
-                  <li>• "企業" - 法人向けサービス</li>
+                  <li>• &ldquo;セットアップ&rdquo; - 環境構築手順</li>
+                  <li>• &ldquo;API&rdquo; - API仕様書</li>
+                  <li>• &ldquo;子ども&rdquo; - 子ども向けサービス</li>
+                  <li>• &ldquo;企業&rdquo; - 法人向けサービス</li>
                 </ul>
               </div>
             </div>
           ) : results.length === 0 ? (
             <div className="p-8 text-center">
-              <p className="text-gray-400 mb-2">"{query}" の検索結果が見つかりません</p>
+              <p className="text-gray-400 mb-2">&ldquo;{query}&rdquo; の検索結果が見つかりません</p>
               <p className="text-sm text-gray-500">
                 別のキーワードで検索してみてください
               </p>

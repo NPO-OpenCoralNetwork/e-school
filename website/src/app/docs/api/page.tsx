@@ -4,7 +4,7 @@ import { DocLayout } from '@/components/docs/DocLayout';
 import MarkdownRenderer from '@/components/docs/MarkdownRenderer';
 
 export default async function ApiPage() {
-  const apiPath = path.join(process.cwd(), '..', 'docs', 'API_SPECIFICATION.md');
+  const apiPath = path.join(process.cwd(), 'docs', 'API_SPECIFICATION.md');
   const content = await fs.readFile(apiPath, 'utf8');
 
   return (

@@ -83,6 +83,7 @@ const docSections: DocSection[] = [
 interface DocLayoutProps {
   children: React.ReactNode;
   title?: string;
+  description?: string;
 }
 
 export function DocLayout({ children, title }: DocLayoutProps) {

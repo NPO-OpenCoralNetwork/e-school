@@ -4,7 +4,7 @@ import { DocLayout } from '@/components/docs/DocLayout';
 import MarkdownRenderer from '@/components/docs/MarkdownRenderer';
 
 export default async function SetupPage() {
-  const setupPath = path.join(process.cwd(), '..', 'docs', 'SETUP_GUIDE.md');
+  const setupPath = path.join(process.cwd(), 'docs', 'SETUP_GUIDE.md');
   const content = await fs.readFile(setupPath, 'utf8');
 
   return (

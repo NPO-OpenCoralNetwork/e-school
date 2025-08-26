@@ -4,7 +4,7 @@ import { DocLayout } from '@/components/docs/DocLayout';
 import MarkdownRenderer from '@/components/docs/MarkdownRenderer';
 
 export default async function ServicesPage() {
-  const servicesPath = path.join(process.cwd(), '..', 'docs', 'SERVICES.md');
+  const servicesPath = path.join(process.cwd(), 'docs', 'SERVICES.md');
   const content = await fs.readFile(servicesPath, 'utf8');
 
   return (

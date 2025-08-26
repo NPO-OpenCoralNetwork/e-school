@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 
 export default function EducationalTheoryPage() {
-  const filePath = path.join(process.cwd(), '..', 'docs', 'educational-theory.md');
+  const filePath = path.join(process.cwd(), 'docs', 'educational-theory.md');
   let content = '';
   
   try {

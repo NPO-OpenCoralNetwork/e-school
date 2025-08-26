@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 
 export default function AiMetacognitiveReflectionPage() {
-  const filePath = path.join(process.cwd(), '..', 'docs', 'ai-metacognitive-reflection.md');
+  const filePath = path.join(process.cwd(), 'docs', 'ai-metacognitive-reflection.md');
   let content = '';
   
   try {
