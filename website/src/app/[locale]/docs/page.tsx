@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { useState, useMemo } from "react";
+import { useTranslations } from 'next-intl';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, Code, Settings, FileText, Search, Download, Menu, X, Home, ArrowRight, Clock, Users, Star } from "lucide-react";
@@ -9,75 +10,76 @@ import { BookOpen, Code, Settings, FileText, Search, Download, Menu, X, Home, Ar
 export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const t = useTranslations('docs');
 
   const documentSections = [
     {
       id: "overview",
-      title: "プロジェクト概要",
-      description: "AI Creator Labの全体像とプロジェクト構成",
+      title: t('sections.overview.title'),
+      description: t('sections.overview.description'),
       icon: BookOpen,
       priority: "high",
       docs: [
         {
-          title: "プロジェクト背景書",
-          description: "日本教育の歴史的変遷と本プロジェクトの位置づけ",
+          title: t('documents.projectBackground.title'),
+          description: t('documents.projectBackground.description'),
           href: "/docs/project-background",
           color: "bg-indigo-500",
-          tags: ["教育史", "背景", "理論"],
-          readTime: "15分",
+          tags: [t('documents.projectBackground.tag1'), t('documents.projectBackground.tag2'), t('documents.projectBackground.tag3')],
+          readTime: "15 min read",
           status: "完成"
         },
         {
-          title: "教育事業企画書",
-          description: "文科省方針を先行実装するハイブリッド学習塾",
+          title: t('documents.educationalProposal.title'),
+          description: t('documents.educationalProposal.description'),
           href: "/docs/educational-proposal",
           color: "bg-cyan-500",
-          tags: ["企画書", "文科省", "ハイブリッド"],
-          readTime: "20分",
+          tags: [t('documents.educationalProposal.tag1'), t('documents.educationalProposal.tag2'), t('documents.educationalProposal.tag3')],
+          readTime: "20 min read",
           status: "完成"
         },
         {
-          title: "README",
-          description: "プロジェクト概要・技術スタック・セットアップ手順",
+          title: t('documents.readme.title'),
+          description: t('documents.readme.description'),
           href: "/docs/readme",
           color: "bg-blue-500",
-          tags: ["概要", "技術", "セットアップ"],
-          readTime: "8分",
+          tags: [t('documents.readme.tag1'), t('documents.readme.tag2'), t('documents.readme.tag3')],
+          readTime: "8 min read",
           status: "完成"
         }
       ]
     },
     {
       id: "strategy",
-      title: "事業戦略",
-      description: "NPO法人×株式会社連携戦略と助成金活用",
+      title: t('sections.strategy.title'),
+      description: t('sections.strategy.description'),
       icon: FileText,
       priority: "high",
       docs: [
         {
-          title: "連携戦略ガイド",
-          description: "NPO法人×株式会社の最適な法人構造設計",
+          title: t('documents.strategyGuide.title'),
+          description: t('documents.strategyGuide.description'),
           href: "/docs/strategy",
           color: "bg-purple-600",
-          tags: ["NPO", "連携", "法人"],
+          tags: [t('documents.strategyGuide.tag1'), t('documents.strategyGuide.tag2'), t('documents.strategyGuide.tag3')],
           readTime: "18分",
           status: "準備中"
         },
         {
-          title: "助成金活用ガイド",
-          description: "利用可能な助成金制度の詳細情報",
+          title: t('documents.grantsGuide.title'),
+          description: t('documents.grantsGuide.description'),
           href: "/docs/grants",
           color: "bg-green-600",
-          tags: ["助成金", "制度", "活用"],
+          tags: [t('documents.grantsGuide.tag1'), t('documents.grantsGuide.tag2'), t('documents.grantsGuide.tag3')],
           readTime: "25分",
           status: "準備中"
         },
         {
-          title: "事業企画書",
-          description: "AI Creator Lab Tokyo 30日間立ち上げ計画",
+          title: t('documents.businessPlan.title'),
+          description: t('documents.businessPlan.description'),
           href: "/docs/business-plan",
           color: "bg-orange-600",
-          tags: ["企画", "立ち上げ", "30日"],
+          tags: [t('documents.businessPlan.tag1'), t('documents.businessPlan.tag2'), t('documents.businessPlan.tag3')],
           readTime: "22分",
           status: "準備中"
         }
@@ -85,35 +87,35 @@ export default function DocsPage() {
     },
     {
       id: "services",
-      title: "サービス詳細",
-      description: "各事業の詳細なサービス内容と料金体系",
+      title: t('sections.services.title'),
+      description: t('sections.services.description'),
       icon: Users,
       priority: "medium",
       docs: [
         {
-          title: "大人向けAIスクール",
-          description: "ビジネスパーソン向けAI活用集中講座",
+          title: t('documents.adultSchool.title'),
+          description: t('documents.adultSchool.description'),
           href: "/docs/adult-school",
           color: "bg-blue-500",
-          tags: ["大人", "AI", "ビジネス"],
+          tags: [t('documents.adultSchool.tag1'), t('documents.adultSchool.tag2'), t('documents.adultSchool.tag3')],
           readTime: "18分",
           status: "準備中"
         },
         {
-          title: "子ども向けスクール",
-          description: "デジタル創造とAI体験学習プログラム",
+          title: t('documents.kidsSchool.title'),
+          description: t('documents.kidsSchool.description'),
           href: "/docs/kids-school",
           color: "bg-green-500",
-          tags: ["子ども", "創造", "体験"],
+          tags: [t('documents.kidsSchool.tag1'), t('documents.kidsSchool.tag2'), t('documents.kidsSchool.tag3')],
           readTime: "15分",
           status: "準備中"
         },
         {
-          title: "法人向けサービス",
-          description: "企業のDX推進・AI導入支援サービス",
+          title: t('documents.corporateService.title'),
+          description: t('documents.corporateService.description'),
           href: "/docs/corporate",
           color: "bg-purple-500",
-          tags: ["法人", "DX", "支援"],
+          tags: [t('documents.corporateService.tag1'), t('documents.corporateService.tag2'), t('documents.corporateService.tag3')],
           readTime: "20分",
           status: "準備中"
         }
@@ -121,26 +123,26 @@ export default function DocsPage() {
     },
     {
       id: "development",
-      title: "開発ガイド",
-      description: "開発環境・技術仕様・API設計",
+      title: t('sections.development.title'),
+      description: t('sections.development.description'),
       icon: Code,
       priority: "low",
       docs: [
         {
-          title: "セットアップガイド",
-          description: "開発環境構築からデプロイまでの完全ガイド",
+          title: t('documents.setupGuide.title'),
+          description: t('documents.setupGuide.description'),
           href: "/docs/setup",
           color: "bg-indigo-500",
-          tags: ["開発", "セットアップ", "デプロイ"],
+          tags: [t('documents.setupGuide.tag1'), t('documents.setupGuide.tag2'), t('documents.setupGuide.tag3')],
           readTime: "30分",
           status: "準備中"
         },
         {
-          title: "API仕様書",
-          description: "認証・エンドポイント・データモデル仕様",
+          title: t('documents.apiSpec.title'),
+          description: t('documents.apiSpec.description'),
           href: "/docs/api",
           color: "bg-orange-500",
-          tags: ["API", "仕様", "エンドポイント"],
+          tags: [t('documents.apiSpec.tag1'), t('documents.apiSpec.tag2'), t('documents.apiSpec.tag3')],
           readTime: "35分",
           status: "準備中"
         }
@@ -167,10 +169,10 @@ export default function DocsPage() {
     acc + section.docs.filter(doc => doc.status === "完成").length, 0);
 
   const quickLinks = [
-    { name: "はじめに", href: "/docs/project-background", icon: BookOpen },
-    { name: "セットアップ", href: "/docs/setup", icon: Settings },
-    { name: "API仕様", href: "/docs/api", icon: Code },
-    { name: "お問い合わせ", href: "/contact", icon: Users }
+    { name: t('gettingStarted'), href: "/docs/project-background", icon: BookOpen },
+    { name: t('setup'), href: "/docs/setup", icon: Settings },
+    { name: t('apiSpecs'), href: "/docs/api", icon: Code },
+    { name: t('contact'), href: "/contact", icon: Users }
   ];
 
   return (
@@ -182,10 +184,10 @@ export default function DocsPage() {
             <div className="flex items-center space-x-4">
               <Link href="/" className="flex items-center text-gray-400 hover:text-white transition-colors">
                 <Home className="w-4 h-4 mr-2" />
-                ホーム
+                {t('home')}
               </Link>
               <ArrowRight className="w-4 h-4 text-gray-600" />
-              <span className="text-white font-medium">ドキュメント</span>
+              <span className="text-white font-medium">{t('documentation')}</span>
             </div>
             
             {/* モバイルメニューボタン */}
@@ -200,26 +202,26 @@ export default function DocsPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
-                AI Creator Lab ドキュメント
+                {t('title')}
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              学術的根拠から技術仕様まで、当学習塾のAIシステムに関する詳細情報
+              {t('subtitle')}
             </p>
 
             {/* ステータスバッジ */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="bg-gray-800 rounded-full px-4 py-2 flex items-center space-x-2">
                 <FileText className="w-4 h-4 text-blue-400" />
-                <span className="text-sm text-gray-300">総文書数: {totalDocs}</span>
+                <span className="text-sm text-gray-300">{t('totalDocs')}: {totalDocs}</span>
               </div>
               <div className="bg-gray-800 rounded-full px-4 py-2 flex items-center space-x-2">
                 <Star className="w-4 h-4 text-green-400" />
-                <span className="text-sm text-gray-300">完成: {completedDocs}/{totalDocs}</span>
+                <span className="text-sm text-gray-300">{t('completed')}: {completedDocs}/{totalDocs}</span>
               </div>
               <div className="bg-gray-800 rounded-full px-4 py-2 flex items-center space-x-2">
                 <Clock className="w-4 h-4 text-yellow-400" />
-                <span className="text-sm text-gray-300">最終更新: 今日</span>
+                <span className="text-sm text-gray-300">{t('lastUpdated')}</span>
               </div>
             </div>
           </div>
@@ -237,7 +239,7 @@ export default function DocsPage() {
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                   <input
                     type="text"
-                    placeholder="文書を検索..."
+                    placeholder={t('searchPlaceholder')}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-9 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -247,7 +249,7 @@ export default function DocsPage() {
 
               {/* クイックリンク */}
               <div className="bg-gray-800 rounded-xl p-4 border border-gray-700">
-                <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wide">クイックリンク</h3>
+                <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wide">{t('quickLinks')}</h3>
                 <div className="space-y-2">
                   {quickLinks.map((link) => (
                     <Link
@@ -264,7 +266,7 @@ export default function DocsPage() {
 
               {/* セクション目次 */}
               <div className="bg-gray-800 rounded-xl p-4 border border-gray-700">
-                <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wide">セクション</h3>
+                <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wide">{t('sections')}</h3>
                 <div className="space-y-2">
                   {documentSections.map((section) => (
                     <a
@@ -286,11 +288,11 @@ export default function DocsPage() {
               <div className="space-y-3">
                 <Button variant="outline" className="w-full border-gray-600 text-gray-300 hover:bg-gray-700">
                   <Download className="w-4 h-4 mr-2" />
-                  PDFダウンロード
+                  {t('pdfDownload')}
                 </Button>
                 <Button variant="outline" className="w-full border-gray-600 text-gray-300 hover:bg-gray-700">
                   <FileText className="w-4 h-4 mr-2" />
-                  印刷用表示
+                  {t('printView')}
                 </Button>
               </div>
             </div>
@@ -326,8 +328,8 @@ export default function DocsPage() {
                         section.priority === 'medium' ? 'bg-yellow-900 text-yellow-300' :
                         'bg-gray-800 text-gray-300'
                       }`}>
-                        {section.priority === 'high' ? '高優先度' :
-                         section.priority === 'medium' ? '中優先度' : '低優先度'}
+                        {section.priority === 'high' ? t('highPriority') :
+                         section.priority === 'medium' ? t('mediumPriority') : t('lowPriority')}
                       </span>
                     </div>
                   </div>
@@ -346,7 +348,7 @@ export default function DocsPage() {
                                 doc.status === '完成' ? 'bg-green-900 text-green-300' :
                                 'bg-orange-900 text-orange-300'
                               }`}>
-                                {doc.status}
+                                {doc.status === '完成' ? t('completedStatus') : t('inProgress')}
                               </span>
                               <div className="flex items-center text-gray-400 text-xs">
                                 <Clock className="w-3 h-3 mr-1" />
@@ -373,7 +375,7 @@ export default function DocsPage() {
                         <CardContent className="pt-0">
                           <Link href={doc.href}>
                             <Button className="w-full bg-gray-700 hover:bg-blue-600 transition-all duration-300 group-hover:shadow-lg">
-                              ドキュメントを読む
+                              {t('readDocument')}
                               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                             </Button>
                           </Link>
@@ -387,12 +389,12 @@ export default function DocsPage() {
               {filteredSections.length === 0 && searchQuery && (
                 <div className="text-center py-12">
                   <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-2">検索結果が見つかりません</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('noResults')}</h3>
                   <p className="text-gray-400 mb-6">
-                    「{searchQuery}」に一致するドキュメントはありませんでした
+                    {t('noResultsDesc')} 「{searchQuery}」
                   </p>
                   <Button onClick={() => setSearchQuery("")} variant="outline">
-                    検索をクリア
+                    {t('clearSearch')}
                   </Button>
                 </div>
               )}
@@ -401,22 +403,21 @@ export default function DocsPage() {
             {/* フッターセクション */}
             <div className="mt-20 pt-8 border-t border-gray-700">
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 rounded-2xl p-8 text-center backdrop-blur-sm border border-gray-700">
-                <h3 className="text-2xl font-semibold text-white mb-4">サポートが必要ですか？</h3>
+                <h3 className="text-2xl font-semibold text-white mb-4">{t('needSupport')}</h3>
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                  ドキュメントで解決しない問題や、より詳細な情報が必要な場合は、<br />
-                  お気軽にお問い合わせください。専門チームがサポートします。
+                  {t('supportDesc')}
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Link href="/contact">
                     <Button className="bg-blue-600 hover:bg-blue-700">
                       <Users className="w-4 h-4 mr-2" />
-                      お問い合わせ
+                      {t('contact')}
                     </Button>
                   </Link>
                   <Link href="https://github.com/your-username/e-school/issues">
                     <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-700">
                       <Code className="w-4 h-4 mr-2" />
-                      GitHub Issues
+                      {t('githubIssues')}
                     </Button>
                   </Link>
                 </div>

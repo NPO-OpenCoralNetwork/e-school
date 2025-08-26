@@ -1,0 +1,408 @@
+{
+  "navigation": {
+    "home": "ホーム",
+    "docs": "ドキュメント",
+    "projectBackground": "プロジェクト背景",
+    "languageSwitcher": "言語切り替え",
+    "adultSchool": "大人向けスクール",
+    "kidsLab": "子ども向けスクール", 
+    "corporateServices": "法人向けサービス",
+    "philosophy": "教育理念",
+    "contact": "お問い合わせ",
+    "login": "ログイン",
+    "courses": "コース",
+    "practicalAISkills": "実践的なAIスキル習得",
+    "intensiveCourse": "3日間集中講座",
+    "chatgptClaude": "ChatGPT/Claude活用術",
+    "pricingPlans": "料金プラン",
+    "affordablePricing": "お得な価格設定",
+    "creativityAndTech": "創造性とテクノロジーの融合",
+    "ageBasedPrograms": "年齢別プログラム",
+    "elementary1to6": "小1〜高校生まで対応",
+    "locationsAccess": "拠点・アクセス", 
+    "publicCenterOnline": "公民館＋オンライン",
+    "corporateTraining": "企業研修・コンサル",
+    "comprehensiveDXSupport": "企業のDX推進を包括的にサポート",
+    "aiTrainingPrograms": "AI研修プログラム",
+    "customCorporateTraining": "カスタム企業研修",
+    "implementationConsulting": "導入コンサルティング",
+    "aiImplementationStrategy": "AI導入戦略策定"
+  },
+  "docs": {
+    "title": "AI Creator Lab ドキュメント",
+    "subtitle": "学術的根拠から技術仕様まで、当学習塾のAIシステムに関する詳細情報",
+    "home": "ホーム",
+    "documentation": "ドキュメント",
+    "searchPlaceholder": "文書を検索...",
+    "quickLinks": "クイックリンク",
+    "sections": "セクション",
+    "gettingStarted": "はじめに",
+    "setup": "セットアップ",
+    "apiSpecs": "API仕様",
+    "contact": "お問い合わせ",
+    "pdfDownload": "PDFダウンロード",
+    "printView": "印刷用表示",
+    "totalDocs": "総文書数",
+    "completed": "完成",
+    "lastUpdated": "最終更新: 今日",
+    "readDocument": "ドキュメントを読む",
+    "noResults": "検索結果が見つかりません",
+    "noResultsDesc": "に一致するドキュメントはありませんでした",
+    "clearSearch": "検索をクリア",
+    "needSupport": "サポートが必要ですか？",
+    "supportDesc": "ドキュメントで解決しない問題や、より詳細な情報が必要な場合は、お気軽にお問い合わせください。専門チームがサポートします。",
+    "githubIssues": "GitHub Issues",
+    "highPriority": "高優先度",
+    "mediumPriority": "中優先度",
+    "lowPriority": "低優先度",
+    "completedStatus": "完成",
+    "inProgress": "準備中",
+    "projectBackground": {
+      "title": "プロジェクト背景",
+      "description": "AI Creator Lab総合事業の背景と教育理念について詳しく説明します"
+    },
+    "sections": {
+      "overview": {
+        "title": "プロジェクト概要",
+        "description": "AI Creator Labとプロジェクト構造の全体像"
+      },
+      "strategy": {
+        "title": "事業戦略",
+        "description": "NPO×株式会社連携戦略と助成金活用"
+      },
+      "services": {
+        "title": "サービス詳細",
+        "description": "各事業の詳細なサービス内容と料金体系"
+      },
+      "development": {
+        "title": "開発ガイド",
+        "description": "開発環境・技術仕様・API設計"
+      }
+    },
+    "documents": {
+      "projectBackground": {
+        "title": "プロジェクト背景",
+        "description": "日本の教育における歴史的変遷とこのプロジェクトの位置づけ",
+        "tag1": "歴史",
+        "tag2": "背景",
+        "tag3": "理論"
+      },
+      "educationalProposal": {
+        "title": "教育事業提案書",
+        "description": "文科省政策を先行実装するハイブリッド学習塾",
+        "tag1": "提案書",
+        "tag2": "文科省",
+        "tag3": "ハイブリッド"
+      },
+      "readme": {
+        "title": "README",
+        "description": "プロジェクト概要、技術スタック、セットアップ手順",
+        "tag1": "概要",
+        "tag2": "技術",
+        "tag3": "セットアップ"
+      },
+      "strategyGuide": {
+        "title": "連携戦略ガイド",
+        "description": "NPO法人×株式会社の最適な法人構造設計",
+        "tag1": "NPO",
+        "tag2": "連携",
+        "tag3": "法人"
+      },
+      "grantsGuide": {
+        "title": "助成金活用ガイド",
+        "description": "利用可能な助成金制度の詳細情報",
+        "tag1": "助成金",
+        "tag2": "制度",
+        "tag3": "活用"
+      },
+      "businessPlan": {
+        "title": "事業企画書",
+        "description": "AI Creator Lab Tokyo 30日間立ち上げ計画",
+        "tag1": "企画",
+        "tag2": "立ち上げ",
+        "tag3": "30日"
+      },
+      "adultSchool": {
+        "title": "大人向けAIスクール",
+        "description": "ビジネスパーソン向けAI活用集中講座",
+        "tag1": "大人",
+        "tag2": "AI",
+        "tag3": "ビジネス"
+      },
+      "kidsSchool": {
+        "title": "子ども向けスクール",
+        "description": "デジタル創造とAI体験学習プログラム",
+        "tag1": "子ども",
+        "tag2": "創造",
+        "tag3": "体験"
+      },
+      "corporateService": {
+        "title": "法人向けサービス",
+        "description": "企業のDX推進・AI導入支援サービス",
+        "tag1": "法人",
+        "tag2": "DX",
+        "tag3": "支援"
+      },
+      "setupGuide": {
+        "title": "セットアップガイド",
+        "description": "開発環境構築からデプロイまでの完全ガイド",
+        "tag1": "開発",
+        "tag2": "セットアップ",
+        "tag3": "デプロイ"
+      },
+      "apiSpec": {
+        "title": "API仕様書",
+        "description": "認証・エンドポイント・データモデル仕様",
+        "tag1": "API",
+        "tag2": "仕様",
+        "tag3": "エンドポイント"
+      }
+    }
+  },
+  "philosophy": {
+    "badge": "教育理念",
+    "title": "AIを「学びの鏡」として",
+    "subtitle": "行動主義・認知主義・構成主義を統合したハイブリッド学習理論で、すべての人が自己の可能性を最大限に開花させる",
+    "governmentAlignment": {
+      "title": "政府方針との整合性",
+      "description": "日本政府が推進する重要政策と完全に整合し、国家戦略の実現を加速させます"
+    },
+    "society50": {
+      "title": "Society 5.0",
+      "subtitle": "人間中心の超スマート社会",
+      "source": "内閣府 第5期科学技術基本計画（2016年）",
+      "humanCentered": {
+        "title": "人間中心設計",
+        "description": "AIを道具として、人の可能性を最大限に引き出す"
+      },
+      "personalized": {
+        "title": "個別最適化",
+        "description": "一人ひとりの特性に応じた学習パスの提供"
+      },
+      "socialSolution": {
+        "title": "社会課題解決",
+        "description": "地域格差・教育格差の解消に貢献"
+      }
+    },
+    "aiStrategy": {
+      "title": "AI戦略2019",
+      "subtitle": "デジタル人材25万人育成計画",
+      "source": "内閣府・文部科学省（2019年3月）",
+      "goals": {
+        "title": "政府目標（2025年まで）",
+        "goal1": "年間25万人：AI活用人材",
+        "goal2": "年間2,000人：AIエキスパート",
+        "goal3": "全高校生・大学生がAI基礎習得"
+      },
+      "contribution": {
+        "title": "当プラットフォームの貢献",
+        "point1": "3日間集中講座で即戦力人材育成",
+        "point2": "小1〜高校生の段階的AI教育",
+        "point3": "企業研修で組織的スキルアップ"
+      }
+    },
+    "learningTheory": {
+      "title": "統合的学習理論アプローチ",
+      "behaviorist": {
+        "title": "行動主義的アプローチ",
+        "description": "習慣化メカニズムとスペースド・リピティションで確実な定着を実現",
+        "habit": "毎日のAI対話習慣の形成",
+        "spacedRepetition": "分散学習による長期記憶定着",
+        "immediateFeedback": "即時フィードバックシステム",
+        "gamification": "ストリーク機能とゲーミフィケーション"
+      },
+      "cognitivist": {
+        "title": "認知主義的アプローチ",
+        "description": "メタ認知の育成と情報処理プロセスの最適化",
+        "metacognition": "自己の学習プロセスの客観的理解",
+        "personalized": "Big Five性格分析による個別最適化",
+        "visualization": "学習進捗とパターンの見える化",
+        "informationProcessing": "効率的な情報処理スキームの構築"
+      },
+      "constructivist": {
+        "title": "構成主義的アプローチ",
+        "description": "学習者主導の知識構築と協働学習",
+        "inquiry": "学習者主導の問い立て",
+        "meaningConstruction": "個人の経験に基づく知識の構築",
+        "collaboration": "コミュニティでの対話と共創",
+        "experiential": "実践を通じた深い理解"
+      }
+    },
+    "outputSystem": {
+      "title": "3段階アウトプットシステム",
+      "immediate": {
+        "title": "即時アウトプット",
+        "timeframe": "0-1時間",
+        "description": "学習直後の感覚・気づきを言語化",
+        "point1": "リフレクティブ・ライティング",
+        "point2": "AIとの対話で思考整理",
+        "point3": "新鮮な気づきの記録"
+      },
+      "shortTerm": {
+        "title": "短期アウトプット",
+        "timeframe": "24-72時間",
+        "description": "分散学習による記憶定着",
+        "point1": "遅延再生効果の活用",
+        "point2": "AIによる復習リマインダー",
+        "point3": "実践課題への応用"
+      },
+      "longTerm": {
+        "title": "長期アウトプット",
+        "timeframe": "1週間後",
+        "description": "深い理解の確認と実践",
+        "point1": "スキルの実践適用",
+        "point2": "成長の可視化",
+        "point3": "ポートフォリオ作成"
+      }
+    },
+    "aiRole": {
+      "title": "AIの教育的役割：学びの鏡として",
+      "selfReflection": {
+        "title": "セルフ・リフレクション支援",
+        "description": "24時間365日利用可能な振り返りパートナー",
+        "neutral": "中立的フィードバック",
+        "patience": "無限の忍耐",
+        "consistency": "一貫性のある対応"
+      },
+      "socialReflection": {
+        "title": "ソーシャル・リフレクション代替",
+        "description": "他者視点のシミュレーション",
+        "multiPerspective": "多角的な質問生成",
+        "constructive": "建設的な対話",
+        "unbiased": "偏りのない視点"
+      },
+      "metacognitive": {
+        "title": "メタ認知コーチ",
+        "description": "認知の歪み検出と修正",
+        "dataBasedReflection": "客観的データに基づく振り返り",
+        "growthMindset": "成長マインドセット育成",
+        "learningOptimization": "学習戦略の最適化"
+      }
+    },
+    "bigFive": {
+      "title": "Big Five性格分析による個別最適化",
+      "openness": {
+        "title": "開放性",
+        "high": "高: 新しい概念への挑戦",
+        "low": "低: 構造化された学習"
+      },
+      "conscientiousness": {
+        "title": "誠実性",
+        "high": "高: 詳細な学習計画",
+        "low": "低: 柔軟なペース"
+      },
+      "extraversion": {
+        "title": "外向性",
+        "high": "高: グループワーク重視",
+        "low": "低: 個人学習重視"
+      },
+      "agreeableness": {
+        "title": "協調性",
+        "high": "高: チームプロジェクト",
+        "low": "低: 個人の成果重視"
+      },
+      "neuroticism": {
+        "title": "神経症傾向",
+        "high": "高: 頻繁な励まし",
+        "low": "低: チャレンジ課題"
+      }
+    },
+    "educationHistory": {
+      "title": "日本の教育政策 70年の変遷",
+      "subtitle": "時代の要請に応え、進化し続ける教育理念",
+      "timeline": {
+        "1947": {
+          "title": "教育基本法制定",
+          "description": "戦後民主主義教育の礎",
+          "goal": "「人格の完成」を教育の目的に",
+          "problems": {
+            "title": "🚨 問題点",
+            "point1": "急速な制度転換による現場の混乱",
+            "point2": "教員の意識改革の遅れ",
+            "point3": "資源不足による教育格差"
+          }
+        },
+        "1960s": {
+          "title": "高度成長期の教育拡大",
+          "description": "工業社会の人材需要に対応",
+          "goal": "高校進学率90%超、大学進学率上昇",
+          "problems": {
+            "title": "🚨 問題点",
+            "point1": "詰め込み教育による受験戦争激化",
+            "point2": "画一的な人材育成",
+            "point3": "個性や創造性の軽視"
+          }
+        },
+        "1980s": {
+          "title": "臨時教育審議会",
+          "description": "個性重視の教育改革",
+          "goal": "「生涯学習」概念の導入",
+          "problems": {
+            "title": "🚨 問題点",
+            "point1": "理念と実践の乖離",
+            "point2": "評価システムの未整備",
+            "point3": "教員研修の不足"
+          }
+        },
+        "2002": {
+          "title": "ゆとり教育本格導入",
+          "description": "「生きる力」の育成重視",
+          "goal": "総合的な学習の時間創設",
+          "problems": {
+            "title": "🚨 問題点",
+            "point1": "学力低下への懸念と批判",
+            "point2": "現場教員の理解不足",
+            "point3": "保護者・社会の不安拡大"
+          }
+        },
+        "2020": {
+          "title": "新学習指導要領",
+          "description": "主体的・対話的で深い学び",
+          "goal": "プログラミング教育必修化",
+          "problems": {
+            "title": "🚨 問題点",
+            "point1": "ICT環境の地域格差",
+            "point2": "指導できる教員の不足",
+            "point3": "コロナ禍での実施困難"
+          }
+        },
+        "2019-2025": {
+          "title": "AI戦略・Society 5.0",
+          "description": "デジタル人材25万人育成",
+          "goal": "全高校生・大学生がAI基礎習得",
+          "problems": {
+            "title": "🚨 問題点",
+            "point1": "急速な技術変化への対応遅れ",
+            "point2": "指導人材の絶対的不足",
+            "point3": "企業・教育機関の連携不足"
+          }
+        },
+        "now": {
+          "title": "AI Creator Lab",
+          "description": "統合的学習理論の実践",
+          "goal": "科学的根拠に基づく個別最適化"
+        }
+      },
+      "summary": {
+        "title": "70年の教育改革の集大成として",
+        "description": "戦後の民主主義教育から始まり、高度成長期の量的拡大、個性重視の質的転換、そして現在のデジタル革命まで。各時代の問題点を踏まえ、AI Creator Labは、この歴史的蓄積の上に立ち、科学的根拠とAI技術を融合させた次世代の教育モデルを実現します。",
+        "badges": {
+          "legitimacy": "歴史的正統性",
+          "learning": "失敗からの学び",
+          "alignment": "政策との整合性",
+          "innovation": "未来への革新"
+        }
+      }
+    },
+    "cta": {
+      "title": "科学的根拠に基づいた学習体験を始めましょう",
+      "subtitle": "あなたの個性に最適化された学習パスで、確実な成長を実現",
+      "button": "無料体験を始める"
+    }
+  },
+  "common": {
+    "japanese": "日本語",
+    "english": "English",
+    "switchLanguage": "言語"
+  }
+}

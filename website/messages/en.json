@@ -1,0 +1,408 @@
+{
+  "navigation": {
+    "home": "Home",
+    "docs": "Documentation",
+    "projectBackground": "Project Background",
+    "languageSwitcher": "Language Switcher",
+    "adultSchool": "Adult School",
+    "kidsLab": "Kids Lab", 
+    "corporateServices": "Corporate Services",
+    "philosophy": "Philosophy",
+    "contact": "Contact",
+    "login": "Login",
+    "courses": "Courses",
+    "practicalAISkills": "Practical AI Skills",
+    "intensiveCourse": "3-Day Intensive Course",
+    "chatgptClaude": "ChatGPT/Claude Mastery",
+    "pricingPlans": "Pricing Plans",
+    "affordablePricing": "Affordable Pricing",
+    "creativityAndTech": "Creativity & Technology Fusion",
+    "ageBasedPrograms": "Age-Based Programs",
+    "elementary1to6": "Elementary 1st-6th Grade",
+    "locationsAccess": "Locations & Access", 
+    "publicCenterOnline": "Public Center + Online",
+    "corporateTraining": "Corporate Training & Consulting",
+    "comprehensiveDXSupport": "Comprehensive DX Support",
+    "aiTrainingPrograms": "AI Training Programs",
+    "customCorporateTraining": "Custom Corporate Training",
+    "implementationConsulting": "Implementation Consulting",
+    "aiImplementationStrategy": "AI Implementation Strategy"
+  },
+  "docs": {
+    "title": "AI Creator Lab Documentation",
+    "subtitle": "Detailed information about our AI systems, from academic foundations to technical specifications",
+    "home": "Home",
+    "documentation": "Documentation",
+    "searchPlaceholder": "Search documents...",
+    "quickLinks": "Quick Links",
+    "sections": "Sections",
+    "gettingStarted": "Getting Started",
+    "setup": "Setup",
+    "apiSpecs": "API Specs",
+    "contact": "Contact",
+    "pdfDownload": "Download PDF",
+    "printView": "Print View",
+    "totalDocs": "Total documents",
+    "completed": "Completed",
+    "lastUpdated": "Last updated: Today",
+    "readDocument": "Read Document",
+    "noResults": "No search results found",
+    "noResultsDesc": "No documents matched",
+    "clearSearch": "Clear Search",
+    "needSupport": "Need Support?",
+    "supportDesc": "If you can't find what you're looking for or need more detailed information, feel free to contact us. Our expert team is here to help.",
+    "githubIssues": "GitHub Issues",
+    "highPriority": "High Priority",
+    "mediumPriority": "Medium Priority",
+    "lowPriority": "Low Priority",
+    "completedStatus": "Completed",
+    "inProgress": "In Progress",
+    "projectBackground": {
+      "title": "Project Background",
+      "description": "Historical transitions in Japanese education and positioning of this project"
+    },
+    "sections": {
+      "overview": {
+        "title": "Project Overview",
+        "description": "Complete picture of AI Creator Lab and project structure"
+      },
+      "strategy": {
+        "title": "Business Strategy",
+        "description": "NPO × Corporation collaboration strategy and grant utilization"
+      },
+      "services": {
+        "title": "Service Details",
+        "description": "Detailed service content and pricing system for each business"
+      },
+      "development": {
+        "title": "Development Guide",
+        "description": "Development environment, technical specifications, API design"
+      }
+    },
+    "documents": {
+      "projectBackground": {
+        "title": "Project Background",
+        "description": "Historical transitions in Japanese education and positioning of this project",
+        "tag1": "History",
+        "tag2": "Background",
+        "tag3": "Theory"
+      },
+      "educationalProposal": {
+        "title": "Educational Business Proposal",
+        "description": "Hybrid learning cram school implementing MEXT policies ahead of schedule",
+        "tag1": "Proposal",
+        "tag2": "MEXT",
+        "tag3": "Hybrid"
+      },
+      "readme": {
+        "title": "README",
+        "description": "Project overview, tech stack, and setup instructions",
+        "tag1": "Overview",
+        "tag2": "Technology",
+        "tag3": "Setup"
+      },
+      "strategyGuide": {
+        "title": "Partnership Strategy Guide",
+        "description": "Optimal corporate structure design for NPO×Corporation",
+        "tag1": "NPO",
+        "tag2": "Partnership",
+        "tag3": "Corporate"
+      },
+      "grantsGuide": {
+        "title": "Grant Utilization Guide",
+        "description": "Detailed information on available grant systems",
+        "tag1": "Grants",
+        "tag2": "System",
+        "tag3": "Utilization"
+      },
+      "businessPlan": {
+        "title": "Business Plan",
+        "description": "AI Creator Lab Tokyo 30-day launch plan",
+        "tag1": "Plan",
+        "tag2": "Launch",
+        "tag3": "30 days"
+      },
+      "adultSchool": {
+        "title": "Adult AI School",
+        "description": "AI utilization intensive course for business professionals",
+        "tag1": "Adult",
+        "tag2": "AI",
+        "tag3": "Business"
+      },
+      "kidsSchool": {
+        "title": "Kids School",
+        "description": "Digital creation and AI experience learning program",
+        "tag1": "Kids",
+        "tag2": "Creation",
+        "tag3": "Experience"
+      },
+      "corporateService": {
+        "title": "Corporate Services",
+        "description": "DX promotion and AI implementation support services",
+        "tag1": "Corporate",
+        "tag2": "DX",
+        "tag3": "Support"
+      },
+      "setupGuide": {
+        "title": "Setup Guide",
+        "description": "Complete guide from development environment setup to deployment",
+        "tag1": "Development",
+        "tag2": "Setup",
+        "tag3": "Deploy"
+      },
+      "apiSpec": {
+        "title": "API Specification",
+        "description": "Authentication, endpoints, and data model specifications",
+        "tag1": "API",
+        "tag2": "Specification",
+        "tag3": "Endpoints"
+      }
+    }
+  },
+  "philosophy": {
+    "badge": "Educational Philosophy",
+    "title": "AI as a 'Learning Mirror'",
+    "subtitle": "Maximizing everyone's potential through a hybrid learning theory that integrates behaviorism, cognitivism, and constructivism",
+    "governmentAlignment": {
+      "title": "Alignment with Government Policies",
+      "description": "Fully aligned with Japan's key government policies, accelerating national strategic initiatives"
+    },
+    "society50": {
+      "title": "Society 5.0",
+      "subtitle": "Human-Centered Super Smart Society",
+      "source": "Cabinet Office 5th Science and Technology Basic Plan (2016)",
+      "humanCentered": {
+        "title": "Human-Centered Design",
+        "description": "Using AI as a tool to maximize human potential"
+      },
+      "personalized": {
+        "title": "Personalization",
+        "description": "Providing learning paths tailored to individual characteristics"
+      },
+      "socialSolution": {
+        "title": "Social Problem Solving",
+        "description": "Contributing to eliminating regional and educational disparities"
+      }
+    },
+    "aiStrategy": {
+      "title": "AI Strategy 2019",
+      "subtitle": "250,000 Digital Talent Development Plan",
+      "source": "Cabinet Office & Ministry of Education (March 2019)",
+      "goals": {
+        "title": "Government Goals (by 2025)",
+        "goal1": "250,000 people annually: AI-skilled workforce",
+        "goal2": "2,000 people annually: AI experts",
+        "goal3": "All high school and university students to acquire AI basics"
+      },
+      "contribution": {
+        "title": "Platform Contribution",
+        "point1": "Developing ready-to-work talent through 3-day intensive courses",
+        "point2": "Gradual AI education from elementary to high school",
+        "point3": "Organizational skill enhancement through corporate training"
+      }
+    },
+    "learningTheory": {
+      "title": "Integrated Learning Theory Approach",
+      "behaviorist": {
+        "title": "Behaviorist Approach",
+        "description": "Ensuring retention through habit formation mechanisms and spaced repetition",
+        "habit": "Daily AI dialogue habit formation",
+        "spacedRepetition": "Long-term memory retention through distributed learning",
+        "immediateFeedback": "Immediate feedback system",
+        "gamification": "Streak features and gamification"
+      },
+      "cognitivist": {
+        "title": "Cognitivist Approach",
+        "description": "Developing metacognition and optimizing information processing",
+        "metacognition": "Objective understanding of one's learning process",
+        "personalized": "Personalization through Big Five personality analysis",
+        "visualization": "Visualizing learning progress and patterns",
+        "informationProcessing": "Building efficient information processing schemes"
+      },
+      "constructivist": {
+        "title": "Constructivist Approach",
+        "description": "Learner-driven knowledge construction and collaborative learning",
+        "inquiry": "Learner-led inquiry",
+        "meaningConstruction": "Knowledge construction based on personal experience",
+        "collaboration": "Dialogue and co-creation in community",
+        "experiential": "Deep understanding through practice"
+      }
+    },
+    "outputSystem": {
+      "title": "3-Stage Output System",
+      "immediate": {
+        "title": "Immediate Output",
+        "timeframe": "0-1 hours",
+        "description": "Verbalizing sensations and insights immediately after learning",
+        "point1": "Reflective writing",
+        "point2": "Organizing thoughts through AI dialogue",
+        "point3": "Recording fresh insights"
+      },
+      "shortTerm": {
+        "title": "Short-term Output",
+        "timeframe": "24-72 hours",
+        "description": "Memory retention through distributed learning",
+        "point1": "Utilizing delayed recall effect",
+        "point2": "AI-powered review reminders",
+        "point3": "Application to practical tasks"
+      },
+      "longTerm": {
+        "title": "Long-term Output",
+        "timeframe": "1 week later",
+        "description": "Confirming deep understanding and practice",
+        "point1": "Practical skill application",
+        "point2": "Growth visualization",
+        "point3": "Portfolio creation"
+      }
+    },
+    "aiRole": {
+      "title": "AI's Educational Role: As a Learning Mirror",
+      "selfReflection": {
+        "title": "Self-Reflection Support",
+        "description": "24/7 available reflection partner",
+        "neutral": "Neutral feedback",
+        "patience": "Infinite patience",
+        "consistency": "Consistent response"
+      },
+      "socialReflection": {
+        "title": "Social Reflection Alternative",
+        "description": "Simulating other perspectives",
+        "multiPerspective": "Multi-perspective question generation",
+        "constructive": "Constructive dialogue",
+        "unbiased": "Unbiased viewpoint"
+      },
+      "metacognitive": {
+        "title": "Metacognitive Coach",
+        "description": "Detecting and correcting cognitive distortions",
+        "dataBasedReflection": "Data-based objective reflection",
+        "growthMindset": "Cultivating growth mindset",
+        "learningOptimization": "Optimizing learning strategies"
+      }
+    },
+    "bigFive": {
+      "title": "Personalization through Big Five Personality Analysis",
+      "openness": {
+        "title": "Openness",
+        "high": "High: Challenging new concepts",
+        "low": "Low: Structured learning"
+      },
+      "conscientiousness": {
+        "title": "Conscientiousness",
+        "high": "High: Detailed learning plans",
+        "low": "Low: Flexible pacing"
+      },
+      "extraversion": {
+        "title": "Extraversion",
+        "high": "High: Group work focus",
+        "low": "Low: Individual learning focus"
+      },
+      "agreeableness": {
+        "title": "Agreeableness",
+        "high": "High: Team projects",
+        "low": "Low: Individual achievement focus"
+      },
+      "neuroticism": {
+        "title": "Neuroticism",
+        "high": "High: Frequent encouragement",
+        "low": "Low: Challenge tasks"
+      }
+    },
+    "educationHistory": {
+      "title": "70 Years of Japanese Education Policy Evolution",
+      "subtitle": "Educational philosophy that continues to evolve in response to the demands of the times",
+      "timeline": {
+        "1947": {
+          "title": "Fundamental Law of Education",
+          "description": "Foundation of post-war democratic education",
+          "goal": "'Development of personality' as the purpose of education",
+          "problems": {
+            "title": "🚨 Issues",
+            "point1": "Confusion on site due to rapid system transition",
+            "point2": "Delay in teachers' consciousness reform",
+            "point3": "Educational disparity due to resource shortage"
+          }
+        },
+        "1960s": {
+          "title": "Educational Expansion in High Growth Period",
+          "description": "Response to human resource needs of industrial society",
+          "goal": "High school enrollment rate over 90%, rising university enrollment",
+          "problems": {
+            "title": "🚨 Issues",
+            "point1": "Intensified examination war due to cramming education",
+            "point2": "Uniform human resource development",
+            "point3": "Neglect of individuality and creativity"
+          }
+        },
+        "1980s": {
+          "title": "Ad Hoc Council on Education",
+          "description": "Educational reform emphasizing individuality",
+          "goal": "Introduction of 'lifelong learning' concept",
+          "problems": {
+            "title": "🚨 Issues",
+            "point1": "Gap between ideals and practice",
+            "point2": "Inadequate evaluation system",
+            "point3": "Insufficient teacher training"
+          }
+        },
+        "2002": {
+          "title": "Full Implementation of Yutori Education",
+          "description": "Emphasis on cultivating 'zest for living'",
+          "goal": "Creation of integrated learning time",
+          "problems": {
+            "title": "🚨 Issues",
+            "point1": "Concerns and criticism about academic decline",
+            "point2": "Lack of understanding among field teachers",
+            "point3": "Growing anxiety among parents and society"
+          }
+        },
+        "2020": {
+          "title": "New Course of Study",
+          "description": "Active, interactive and deep learning",
+          "goal": "Mandatory programming education",
+          "problems": {
+            "title": "🚨 Issues",
+            "point1": "Regional disparity in ICT environment",
+            "point2": "Shortage of teachers who can provide guidance",
+            "point3": "Implementation difficulties due to COVID-19"
+          }
+        },
+        "2019-2025": {
+          "title": "AI Strategy & Society 5.0",
+          "description": "250,000 digital talent development",
+          "goal": "All high school and university students acquire AI basics",
+          "problems": {
+            "title": "🚨 Issues",
+            "point1": "Slow response to rapid technological change",
+            "point2": "Absolute shortage of instructional personnel",
+            "point3": "Lack of cooperation between companies and educational institutions"
+          }
+        },
+        "now": {
+          "title": "AI Creator Lab",
+          "description": "Practice of integrated learning theory",
+          "goal": "Personalization based on scientific evidence"
+        }
+      },
+      "summary": {
+        "title": "As the Culmination of 70 Years of Educational Reform",
+        "description": "From post-war democratic education to quantitative expansion during the high-growth period, qualitative transformation emphasizing individuality, and the current digital revolution. Learning from the issues of each era, AI Creator Lab realizes a next-generation educational model that combines scientific evidence and AI technology, building on this historical accumulation.",
+        "badges": {
+          "legitimacy": "Historical Legitimacy",
+          "learning": "Learning from Failures",
+          "alignment": "Policy Alignment",
+          "innovation": "Innovation for the Future"
+        }
+      }
+    },
+    "cta": {
+      "title": "Start Your Science-Based Learning Experience",
+      "subtitle": "Achieve reliable growth with a learning path optimized for your personality",
+      "button": "Start Free Trial"
+    }
+  },
+  "common": {
+    "japanese": "日本語",
+    "english": "English",
+    "switchLanguage": "Language"
+  }
+}

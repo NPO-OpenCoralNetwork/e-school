@@ -12,6 +12,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -184,6 +185,7 @@ export default function Header() {
 
         {/* 右側のボタン（デスクトップ） */}
         <div className="hidden md:flex items-center space-x-4">
+          {/* <LanguageSwitcher /> */}
           <Link href="/contact">
             <Button variant="ghost" className="text-gray-300 hover:text-white hover:bg-gray-800">お問い合わせ</Button>
           </Link>
