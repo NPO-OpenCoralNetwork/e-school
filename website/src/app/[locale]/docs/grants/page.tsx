@@ -22,7 +22,7 @@ export default function GrantsPage() {
 
         {/* 概要セクション */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">🎯 助成金活用戦略</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">助成金活用戦略</h2>
           
           <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mb-6">
             <h3 className="text-xl font-semibold mb-4 text-white">年間助成金獲得目標</h3>

@@ -29,7 +29,7 @@ export default function BusinessPlanPage() {
               <p className="text-sm text-gray-300">最速での事業立ち上げ戦略</p>
             </Card>
             <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer bg-gray-800 border-gray-700">
-              <h3 className="font-semibold mb-2 text-white">🎯 NPO法人特別戦略</h3>
+              <h3 className="font-semibold mb-2 text-white">NPO法人特別戦略</h3>
               <p className="text-sm text-gray-300">Google Ad Grants完全攻略</p>
             </Card>
             <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer bg-gray-800 border-gray-700">
@@ -216,7 +216,7 @@ export default function BusinessPlanPage() {
 
         {/* NPO法人特別戦略 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">🎯 NPO法人向け特別戦略</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">NPO法人向け特別戦略</h2>
           
           <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mb-6">
             <h3 className="text-xl font-semibold mb-4 text-white">NPO法人の強力な優位性</h3>
@@ -358,7 +358,7 @@ export default function BusinessPlanPage() {
 
         {/* 今すぐ始めるアクション */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">🎯 今すぐ始めるアクション</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">今すぐ始めるアクション</h2>
           
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="p-6 bg-red-900 border-red-700">

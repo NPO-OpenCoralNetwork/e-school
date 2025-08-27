@@ -100,7 +100,7 @@ export default function SmartGoalSetting({ personalityResults }: SmartGoalSettin
 
   const steps = [
     {
-      title: '🎯 目標の種類を選ぼう',
+      title: '目標の種類を選ぼう',
       description: 'どんなことにチャレンジしたい？',
       component: 'categorySelection'
     },
@@ -314,7 +314,7 @@ export default function SmartGoalSetting({ personalityResults }: SmartGoalSettin
             <CardContent className="space-y-4 p-6">
               <div className="bg-white rounded-lg p-4 border-2 border-gray-200">
                 <h3 className="font-bold text-lg mb-4 text-center">
-                  🎯 私のSMART目標
+                  私のSMART目標
                 </h3>
                 
                 <div className="space-y-3">
@@ -391,7 +391,7 @@ export default function SmartGoalSetting({ personalityResults }: SmartGoalSettin
     <div className="max-w-4xl mx-auto p-6">
       {/* ヘッダー */}
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold mb-2">🎯 SMART目標設定</h1>
+        <h1 className="text-3xl font-bold mb-2">SMART目標設定</h1>
         <p className="text-gray-600">AIのあいちゃんと一緒に、達成しやすい目標を作ろう！</p>
       </div>
 

@@ -152,7 +152,7 @@ export default function AIGrowthObservationDemo() {
 
       {/* 成長指標レジェンド */}
       <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-gray-700 p-6">
-        <h3 className="text-lg font-semibold text-white mb-4">🎯 {t('growthMetrics')}</h3>
+        <h3 className="text-lg font-semibold text-white mb-4">{t('growthMetrics')}</h3>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {Object.entries(growthDimensions).map(([key, dimension]) => (
             <div key={key} className="flex items-center gap-2 min-w-0">

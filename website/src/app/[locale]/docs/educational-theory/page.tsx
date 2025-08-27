@@ -120,7 +120,7 @@ export default function EducationalTheoryPage() {
 
         {/* 3つの教育理論詳細 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">🎯 各教育理論の詳細実装</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">各教育理論の詳細実装</h2>
           
           <div className="space-y-6">
             {/* 行動主義詳細 */}

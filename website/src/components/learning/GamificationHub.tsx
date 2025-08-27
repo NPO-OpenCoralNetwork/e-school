@@ -542,7 +542,7 @@ export default function GamificationHub({ studentId, studentName }: Gamification
       <Tabs value={selectedTab} onValueChange={setSelectedTab}>
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="profile">👤 プロフィール</TabsTrigger>
-          <TabsTrigger value="quests">🎯 クエスト</TabsTrigger>
+          <TabsTrigger value="quests">クエスト</TabsTrigger>
           <TabsTrigger value="badges">🏆 バッジ</TabsTrigger>
           <TabsTrigger value="leaderboard">📊 ランキング</TabsTrigger>
         </TabsList>

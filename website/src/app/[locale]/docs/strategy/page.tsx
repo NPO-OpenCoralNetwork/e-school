@@ -52,7 +52,7 @@ export default function StrategyPage() {
         {/* ナビゲーション */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer bg-gray-800 border-gray-700">
-            <h3 className="font-semibold mb-2 text-white">🎯 戦略概要</h3>
+            <h3 className="font-semibold mb-2 text-white">戦略概要</h3>
             <p className="text-sm text-gray-300">法人分離の全体構造とメリット</p>
           </Card>
           <Card className="p-4 hover:shadow-md transition-shadow cursor-pointer bg-gray-800 border-gray-700">
@@ -71,7 +71,7 @@ export default function StrategyPage() {
 
         {/* 戦略概要 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">🎯 戦略概要</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">戦略概要</h2>
           
           <div className="bg-gray-800 border border-gray-600 rounded-lg p-6 mb-6">
             <h3 className="text-xl font-semibold mb-4 text-white">法人分離の全体構造</h3>
@@ -287,7 +287,7 @@ export default function StrategyPage() {
 
         {/* 現在進行中の助成金申請 */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-white">🎯 現在進行中の助成金申請</h2>
+          <h2 className="text-3xl font-bold mb-6 text-white">現在進行中の助成金申請</h2>
           
           <div className="bg-green-900 border border-green-700 rounded-lg p-6 mb-6">
             <h3 className="text-xl font-semibold mb-4 text-green-300">申請中・開発中プロジェクト</h3>

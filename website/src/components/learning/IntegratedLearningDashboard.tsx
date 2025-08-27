@@ -352,7 +352,7 @@ export default function IntegratedLearningDashboard({ studentId, studentName }: 
               variant="outline"
             >
               <div>
-                <div className="font-semibold">🎯 目標を見直す</div>
+                <div className="font-semibold">目標を見直す</div>
                 <div className="text-sm text-gray-600">目標の進捗をチェック</div>
               </div>
             </Button>
@@ -382,7 +382,7 @@ export default function IntegratedLearningDashboard({ studentId, studentName }: 
         <TabsList className="grid w-full grid-cols-6">
           <TabsTrigger value="overview">📊 概要</TabsTrigger>
           <TabsTrigger value="personality">🧠 性格</TabsTrigger>
-          <TabsTrigger value="goals">🎯 目標</TabsTrigger>
+          <TabsTrigger value="goals">目標</TabsTrigger>
           <TabsTrigger value="growth">🌱 成長</TabsTrigger>
           <TabsTrigger value="gamification">🎮 ゲーム</TabsTrigger>
           <TabsTrigger value="journal">📓 ジャーナル</TabsTrigger>

@@ -156,7 +156,7 @@ export default function BigFiveDiagnostic() {
       agreeableness: {
         high: '🤗 思いやりがあって友だち思いの優しい人！',
         medium: '🤝 協調性と自己主張のバランスが取れています。',
-        low: '🎯 自分の意見をしっかり持った独立心旺盛な人。'
+        low: '自分の意見をしっかり持った独立心旺盛な人。'
       },
       neuroticism: {
         high: '💭 感受性が豊かで、いろいろなことを深く感じる人。',
@@ -263,7 +263,7 @@ export default function BigFiveDiagnostic() {
             }}
             className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-3 text-lg"
           >
-            🎯 次は目標を決めよう！
+            次は目標を決めよう！
           </Button>
         </div>
       </div>

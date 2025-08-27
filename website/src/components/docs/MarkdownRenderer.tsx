@@ -284,7 +284,7 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
             let bgColor = 'bg-gray-800';
             let borderColor = 'border-gray-600';
             let textColor = 'text-white';
-            let icon = '📄';
+            let icon = '';
             
             // セクション別の色分け
             if (childText.includes('日本教育の歴史') || childText.includes('現状の課題')) {
@@ -296,7 +296,7 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
               bgColor = 'bg-purple-900/30';
               borderColor = 'border-purple-500/50';
               textColor = 'text-purple-100';
-              icon = '🎯';
+              icon = '';
             } else if (childText.includes('教育理論に基づく')) {
               bgColor = 'bg-green-900/30';
               borderColor = 'border-green-500/50';

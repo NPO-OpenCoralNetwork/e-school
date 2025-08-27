@@ -344,7 +344,7 @@ export default function PersonalityBasedChatDemo() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-green-300 mb-2">🎯 適応的対話</h4>
+            <h4 className="font-semibold text-green-300 mb-2">適応的対話</h4>
             <ul className="space-y-1 text-gray-300">
               <li>• 性格に応じた質問スタイル調整</li>
               <li>• 個別最適化されたフィードバック</li>
