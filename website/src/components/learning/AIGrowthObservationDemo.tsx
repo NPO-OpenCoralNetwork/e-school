@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -17,82 +18,86 @@ interface ChatMessage {
   insights?: string[];
 }
 
-const mockChatHistory: ChatMessage[] = [
+const getMockChatHistory = (t: any): ChatMessage[] => [
   {
     id: '1',
     type: 'ai',
-    content: 'こんにちは！\n今日はどんなことを学びましたか？',
+    content: t('chat.messages.ai1'),
     timestamp: new Date('2024-01-15 14:00'),
   },
   {
     id: '2',
     type: 'student',
-    content: 'プログラミングでゲームを作りました。\nでも、うまくいかない部分が\nたくさんあって...',
+    content: t('chat.messages.student1'),
     timestamp: new Date('2024-01-15 14:01'),
   },
   {
     id: '3',
     type: 'ai',
-    content: '最後まで取り組んだのが素晴らしいです！\n今日は前より大きな声で発表できてました。\n難しかった部分はどこですか？',
+    content: t('chat.messages.ai2'),
     timestamp: new Date('2024-01-15 14:02'),
     growthObservation: {
       dimension: 'confidence',
-      change: '発表時の声の大きさ\n20%向上',
-      badge: '自信アップ'
+      change: t('growth.confidence.change'),
+      badge: t('growth.confidence.badge')
     }
   },
   {
     id: '4',
     type: 'student',
-    content: 'キャラクターの動きを作るところです。\nでも、友だちのアイデアを聞いて、\n新しい方法を思いつきました！',
+    content: t('chat.messages.student2'),
     timestamp: new Date('2024-01-15 14:03'),
   },
   {
     id: '5',
     type: 'ai',
-    content: 'すごい！友だちの意見を聞いて活かす\nなんて、とても上手な協働ですね。\n質問する回数も増えています。\n新しい方法はどんなものですか？',
+    content: t('chat.messages.ai3'),
     timestamp: new Date('2024-01-15 14:04'),
     growthObservation: {
       dimension: 'collaboration',
-      change: '他者の意見を活用する\n行動が増加',
-      badge: '協力プロ'
+      change: t('growth.collaboration.change'),
+      badge: t('growth.collaboration.badge')
     },
     insights: [
-      '他者に相談する頻度：\n3週間で40%増加',
-      '創造的解決策：今週3回\n（先週は1回）'
+      t('insights.consultation'),
+      t('insights.creative')
     ]
   },
   {
     id: '6',
     type: 'student',
-    content: '物理演算を使って、もっとリアルな\n動きを作ってみようと思います。\n難しそうだけど、やってみたいです。',
+    content: t('chat.messages.student3'),
     timestamp: new Date('2024-01-15 14:05'),
   },
   {
     id: '7',
     type: 'ai',
-    content: '挑戦する姿勢が素晴らしいです！\n3週間前と比べて説明が上手に\nなりましたね。物理演算、面白そうです！\nどんな動きを作りたいですか？',
+    content: t('chat.messages.ai4'),
     timestamp: new Date('2024-01-15 14:06'),
     growthObservation: {
       dimension: 'creativity',
-      change: '新アイデアへの\n挑戦意欲向上',
-      badge: '探求者'
+      change: t('growth.creativity.change'),
+      badge: t('growth.creativity.badge')
     }
   }
 ];
 
-const growthDimensions = {
-  confidence: { name: '自信・積極性', color: 'bg-purple-500', icon: '🌟' },
-  creativity: { name: '創造性・表現力', color: 'bg-pink-500', icon: '🎨' },
-  collaboration: { name: '協働・思いやり', color: 'bg-blue-500', icon: '🤝' },
-  criticalThinking: { name: '論理的思考', color: 'bg-green-500', icon: '🧠' },
-  communication: { name: 'コミュニケーション', color: 'bg-orange-500', icon: '💬' }
-};
+const getGrowthDimensions = (t: any) => ({
+  confidence: { name: t('dimensions.confidence'), color: 'bg-purple-500', icon: '🌟' },
+  creativity: { name: t('dimensions.creativity'), color: 'bg-pink-500', icon: '🎨' },
+  collaboration: { name: t('dimensions.collaboration'), color: 'bg-blue-500', icon: '🤝' },
+  criticalThinking: { name: t('dimensions.criticalThinking'), color: 'bg-green-500', icon: '🧠' },
+  communication: { name: t('dimensions.communication'), color: 'bg-orange-500', icon: '💬' }
+});
 
 export default function AIGrowthObservationDemo() {
+  const t = useTranslations('aiGrowthDemo');
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+  
+  const mockChatHistory = getMockChatHistory(t);
+  const growthDimensions = getGrowthDimensions(t);
 
   useEffect(() => {
     if (isPlaying && currentIndex < mockChatHistory.length) {
@@ -125,8 +130,8 @@ export default function AIGrowthObservationDemo() {
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       {/* ヘッダー */}
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold text-white">AIによる成長観察システム</h2>
-        <p className="text-gray-300">リアルタイムで子どもの質的成長を観察・可視化・報酬化</p>
+        <h2 className="text-3xl font-bold text-white">{t('title')}</h2>
+        <p className="text-gray-300">{t('subtitle')}</p>
         
         <div className="flex justify-center gap-4">
           <button
@@ -134,20 +139,20 @@ export default function AIGrowthObservationDemo() {
             disabled={isPlaying}
             className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:opacity-90 disabled:opacity-50 transition-all"
           >
-            {isPlaying ? `デモ実行中... (${messages.length}/${mockChatHistory.length})` : 'デモ開始'}
+            {isPlaying ? `${t('demoRunning')} (${messages.length}/${mockChatHistory.length})` : t('startDemo')}
           </button>
           <button
             onClick={resetDemo}
             className="px-6 py-3 bg-gray-700 text-white rounded-xl font-semibold hover:bg-gray-600 transition-all"
           >
-            リセット
+            {t('reset')}
           </button>
         </div>
       </div>
 
       {/* 成長指標レジェンド */}
       <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-gray-700 p-6">
-        <h3 className="text-lg font-semibold text-white mb-4">🎯 多次元成長指標</h3>
+        <h3 className="text-lg font-semibold text-white mb-4">🎯 {t('growthMetrics')}</h3>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
           {Object.entries(growthDimensions).map(([key, dimension]) => (
             <div key={key} className="flex items-center gap-2 min-w-0">
@@ -164,7 +169,7 @@ export default function AIGrowthObservationDemo() {
           <div className="space-y-4 max-h-96 overflow-y-auto">
             {messages.length === 0 && !isPlaying && (
               <div className="text-center text-gray-400 py-8">
-                <p>「デモ開始」ボタンを押してAI成長観察システムの動作を確認してください</p>
+                <p>{t('demoInstructions')}</p>
               </div>
             )}
             {messages.map((message) => (
@@ -187,7 +192,7 @@ export default function AIGrowthObservationDemo() {
                       {message.type === 'ai' ? '🤖' : '👤'}
                     </div>
                     <span className="text-sm font-medium text-gray-300">
-                      {message.type === 'ai' ? 'AI先生' : '生徒'}
+                      {message.type === 'ai' ? t('aiTeacher') : t('student')}
                     </span>
                     <span className="text-xs text-gray-500">
                       {message.timestamp.toLocaleTimeString('ja-JP', { 
@@ -205,7 +210,7 @@ export default function AIGrowthObservationDemo() {
                     <div className="mt-3 p-3 bg-green-900/30 border border-green-500/30 rounded-lg">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-green-400">📈</span>
-                        <span className="text-sm font-semibold text-green-300">成長を検出！</span>
+                        <span className="text-sm font-semibold text-green-300">{t('growthDetected')}</span>
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-start gap-2 flex-wrap">
@@ -236,7 +241,7 @@ export default function AIGrowthObservationDemo() {
                     <div className="mt-3 p-3 bg-purple-900/30 border border-purple-500/30 rounded-lg">
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-purple-400">🔍</span>
-                        <span className="text-sm font-semibold text-purple-300">パターン分析</span>
+                        <span className="text-sm font-semibold text-purple-300">{t('patternAnalysis')}</span>
                       </div>
                       <ul className="space-y-1">
                         {message.insights.map((insight, index) => (
@@ -264,7 +269,7 @@ export default function AIGrowthObservationDemo() {
                 🏆
               </div>
               <div>
-                <p className="text-green-300 font-semibold">獲得バッジ</p>
+                <p className="text-green-300 font-semibold">{t('stats.badgesEarned')}</p>
                 <p className="text-2xl font-bold text-white">3個</p>
               </div>
             </div>
@@ -276,7 +281,7 @@ export default function AIGrowthObservationDemo() {
                 📈
               </div>
               <div>
-                <p className="text-blue-300 font-semibold">成長検出</p>
+                <p className="text-blue-300 font-semibold">{t('stats.growthDetected')}</p>
                 <p className="text-2xl font-bold text-white">5回</p>
               </div>
             </div>
@@ -288,7 +293,7 @@ export default function AIGrowthObservationDemo() {
                 🧠
               </div>
               <div>
-                <p className="text-purple-300 font-semibold">AIインサイト</p>
+                <p className="text-purple-300 font-semibold">{t('stats.aiInsights')}</p>
                 <p className="text-2xl font-bold text-white">2件</p>
               </div>
             </div>
@@ -298,22 +303,22 @@ export default function AIGrowthObservationDemo() {
 
       {/* 技術説明 */}
       <Card className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 border-gray-700 p-6">
-        <h3 className="text-lg font-semibold text-white mb-4">🤖 AI観察技術</h3>
+        <h3 className="text-lg font-semibold text-white mb-4">🤖 {t('aiTechnology')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div>
-            <h4 className="font-semibold text-blue-300 mb-2">🎤 音声・対話分析</h4>
+            <h4 className="font-semibold text-blue-300 mb-2">🎤 {t('technology.audioAnalysis')}</h4>
             <ul className="space-y-1 text-gray-300 text-sm whitespace-pre-line">
-              <li>• 声の大きさ・トーンから\n自信度測定</li>
-              <li>• 発言頻度・積極性の数値化</li>
-              <li>• 説明の明瞭さ・相手理解度</li>
+              <li>• {t('technology.audioFeatures.confidence')}</li>
+              <li>• {t('technology.audioFeatures.participation')}</li>
+              <li>• {t('technology.audioFeatures.clarity')}</li>
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold text-green-300 mb-2">📝 内容・行動分析</h4>
+            <h4 className="font-semibold text-green-300 mb-2">📝 {t('technology.contentAnalysis')}</h4>
             <ul className="space-y-1 text-gray-300 text-sm whitespace-pre-line">
-              <li>• アイデアの独創性・\n多様性評価</li>
-              <li>• 協働行動・支援行動の検出</li>
-              <li>• 振り返りの質・自己洞察力</li>
+              <li>• {t('technology.contentFeatures.creativity')}</li>
+              <li>• {t('technology.contentFeatures.collaboration')}</li>
+              <li>• {t('technology.contentFeatures.reflection')}</li>
             </ul>
           </div>
         </div>

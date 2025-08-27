@@ -515,5 +515,74 @@
       "commentEducator": "Educator Support",
       "commentDeployment": "Flexible Operations"
     }
+  },
+  "aiGrowthDemo": {
+    "title": "AI Growth Observation System",
+    "subtitle": "Real-time observation, visualization, and gamification of children's qualitative growth",
+    "startDemo": "Start Demo",
+    "demoRunning": "Demo Running...",
+    "reset": "Reset",
+    "growthMetrics": "Multi-dimensional Growth Metrics",
+    "demoInstructions": "Click 'Start Demo' button to see the AI Growth Observation System in action",
+    "aiTeacher": "AI Teacher",
+    "student": "Student",
+    "growthDetected": "Growth Detected!",
+    "patternAnalysis": "Pattern Analysis",
+    "aiTechnology": "AI Observation Technology",
+    "dimensions": {
+      "confidence": "Confidence",
+      "creativity": "Creativity",
+      "collaboration": "Collaboration",
+      "criticalThinking": "Logic",
+      "communication": "Communication"
+    },
+    "chat": {
+      "messages": {
+        "ai1": "Hello!\nWhat did you learn today?",
+        "student1": "I made a game with programming.\nBut there were many parts\nthat didn't work well...",
+        "ai2": "Great job sticking with it till the end!\nYou spoke louder in today's presentation.\nWhich part was difficult?",
+        "student2": "Making character movements.\nBut I heard my friend's idea and\ncame up with a new method!",
+        "ai3": "Amazing! Using your friend's ideas\nshows great collaboration.\nYou're asking more questions too.\nWhat's this new method?",
+        "student3": "I want to use physics simulation\nto make more realistic movement.\nIt looks hard, but I want to try.",
+        "ai4": "Your challenging spirit is wonderful!\nYour explanations are much better\nthan 3 weeks ago. Physics sounds interesting!\nWhat kind of movement do you want to create?"
+      }
+    },
+    "growth": {
+      "confidence": {
+        "change": "Voice volume in presentations\nincreased by 20%",
+        "badge": "Confidence Boost"
+      },
+      "collaboration": {
+        "change": "Increased behavior of\nutilizing others' opinions",
+        "badge": "Collaboration Pro"
+      },
+      "creativity": {
+        "change": "Enhanced willingness to\nchallenge new ideas",
+        "badge": "Explorer"
+      }
+    },
+    "insights": {
+      "consultation": "Consultation frequency:\nincreased 40% in 3 weeks",
+      "creative": "Creative solutions: 3 times this week\n(1 time last week)"
+    },
+    "stats": {
+      "badgesEarned": "Badges Earned",
+      "growthDetected": "Growth Detected",
+      "aiInsights": "AI Insights"
+    },
+    "technology": {
+      "audioAnalysis": "Audio & Dialogue Analysis",
+      "contentAnalysis": "Content & Behavior Analysis",
+      "audioFeatures": {
+        "confidence": "Measure confidence from\nvoice volume & tone",
+        "participation": "Quantify speaking frequency & initiative",
+        "clarity": "Evaluate explanation clarity & understanding"
+      },
+      "contentFeatures": {
+        "creativity": "Assess idea originality &\ndiversity evaluation",
+        "collaboration": "Detect collaborative & supportive behaviors",
+        "reflection": "Evaluate reflection quality & self-insight"
+      }
+    }
   }
 }
