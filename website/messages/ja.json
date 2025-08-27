@@ -515,5 +515,74 @@
       "commentEducator": "教育者支援",
       "commentDeployment": "柔軟な運用"
     }
+  },
+  "aiGrowthDemo": {
+    "title": "AIによる成長観察システム",
+    "subtitle": "リアルタイムで子どもの質的成長を観察・可視化・報酬化",
+    "startDemo": "デモ開始",
+    "demoRunning": "デモ実行中...",
+    "reset": "リセット",
+    "growthMetrics": "多次元成長指標",
+    "demoInstructions": "「デモ開始」ボタンを押してAI成長観察システムの動作を確認してください",
+    "aiTeacher": "AI先生",
+    "student": "生徒",
+    "growthDetected": "成長を検出！",
+    "patternAnalysis": "パターン分析",
+    "aiTechnology": "AI観察技術",
+    "dimensions": {
+      "confidence": "自信・積極性",
+      "creativity": "創造性・表現力",
+      "collaboration": "協働・思いやり",
+      "criticalThinking": "論理的思考",
+      "communication": "コミュニケーション"
+    },
+    "chat": {
+      "messages": {
+        "ai1": "こんにちは！\n今日はどんなことを学びましたか？",
+        "student1": "プログラミングでゲームを作りました。\nでも、うまくいかない部分が\nたくさんあって...",
+        "ai2": "最後まで取り組んだのが素晴らしいです！\n今日は前より大きな声で発表できてました。\n難しかった部分はどこですか？",
+        "student2": "キャラクターの動きを作るところです。\nでも、友だちのアイデアを聞いて、\n新しい方法を思いつきました！",
+        "ai3": "すごい！友だちの意見を聞いて活かす\nなんて、とても上手な協働ですね。\n質問する回数も増えています。\n新しい方法はどんなものですか？",
+        "student3": "物理演算を使って、もっとリアルな\n動きを作ってみようと思います。\n難しそうだけど、やってみたいです。",
+        "ai4": "挑戦する姿勢が素晴らしいです！\n3週間前と比べて説明が上手に\nなりましたね。物理演算、面白そうです！\nどんな動きを作りたいですか？"
+      }
+    },
+    "growth": {
+      "confidence": {
+        "change": "発表時の声の大きさ\n20%向上",
+        "badge": "自信アップ"
+      },
+      "collaboration": {
+        "change": "他者の意見を活用する\n行動が増加",
+        "badge": "協力プロ"
+      },
+      "creativity": {
+        "change": "新アイデアへの\n挑戦意欲向上",
+        "badge": "探求者"
+      }
+    },
+    "insights": {
+      "consultation": "他者に相談する頻度：\n3週間で40%増加",
+      "creative": "創造的解決策：今週3回\n（先週は1回）"
+    },
+    "stats": {
+      "badgesEarned": "獲得バッジ",
+      "growthDetected": "成長検出",
+      "aiInsights": "AIインサイト"
+    },
+    "technology": {
+      "audioAnalysis": "音声・対話分析",
+      "contentAnalysis": "内容・行動分析",
+      "audioFeatures": {
+        "confidence": "声の大きさ・トーンから\n自信度測定",
+        "participation": "発言頻度・積極性の数値化",
+        "clarity": "説明の明瞭さ・相手理解度"
+      },
+      "contentFeatures": {
+        "creativity": "アイデアの独創性・\n多様性評価",
+        "collaboration": "協働行動・支援行動の検出",
+        "reflection": "振り返りの質・自己洞察力"
+      }
+    }
   }
 }
