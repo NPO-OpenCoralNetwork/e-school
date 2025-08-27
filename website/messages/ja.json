@@ -35,7 +35,7 @@
     "documentation": "ドキュメント",
     "searchPlaceholder": "文書を検索...",
     "quickLinks": "クイックリンク",
-    "sections": "セクション",
+    "sectionsTitle": "セクション",
     "gettingStarted": "はじめに",
     "setup": "セットアップ",
     "apiSpecs": "API仕様",
@@ -156,6 +156,40 @@
         "tag1": "API",
         "tag2": "仕様",
         "tag3": "エンドポイント"
+      }
+    },
+    "layout": {
+      "documentation": "ドキュメント",
+      "search": "検索",
+      "backToMain": "メインサイトに戻る",
+      "previousPage": "前のページ",
+      "nextPage": "次のページ",
+      "backToTop": "ページトップに戻る",
+      "sections": {
+        "overview": {
+          "title": "プロジェクト概要",
+          "projectBackground": "プロジェクト背景書",
+          "educationalProposal": "教育事業企画書",
+          "readme": "README"
+        },
+        "strategy": {
+          "title": "事業戦略",
+          "partnershipStrategy": "連携戦略ガイド",
+          "grantsGuide": "助成金活用ガイド",
+          "businessPlan": "事業企画書"
+        },
+        "services": {
+          "title": "サービス詳細",
+          "details": "サービス詳細"
+        },
+        "development": {
+          "title": "開発ガイド",
+          "setupGuide": "セットアップガイド"
+        },
+        "api": {
+          "title": "API仕様",
+          "specification": "API仕様書"
+        }
       }
     }
   },
@@ -404,5 +438,82 @@
     "japanese": "日本語",
     "english": "English",
     "switchLanguage": "言語"
+  },
+  "platformFeatures": {
+    "badge": "プラットフォームの特徴",
+    "title": "誰でも使える包括的設計",
+    "subtitle": "技術的ハードルを取り除き、すべての教育者が活用できるインクルーシブな学習プラットフォーム",
+    "visualView": "ビジュアル表示",
+    "design": {
+      "title": "ユーザビリティ最優先",
+      "subtitle": "誰でも使える直感的な設計",
+      "features": {
+        "intuitive": {
+          "value": "直感的操作",
+          "description": "ITスキル不問\n誰でも簡単操作"
+        },
+        "accessible": {
+          "value": "アクセシビリティ準拠",
+          "description": "視覚・聴覚・運動機能\nすべてに配慮した設計"
+        },
+        "multilingual": {
+          "value": "多言語対応",
+          "description": "日本語・英語など\n多言語サポート"
+        },
+        "responsive": {
+          "value": "全デバイス対応",
+          "description": "スマホ・タブレット・PC\nすべてで最適体験"
+        }
+      }
+    },
+    "educatorTools": {
+      "title": "教育者支援",
+      "subtitle": "プログラミング不要で豊富な機能",
+      "features": {
+        "noCoding": {
+          "value": "プログラミング不要",
+          "description": "コード不要で\nコンテンツ作成・管理"
+        },
+        "templateLibrary": {
+          "value": "豊富なテンプレート",
+          "description": "すぐ使える\n高品質教材テンプレート"
+        },
+        "autoAssessment": {
+          "value": "自動評価システム",
+          "description": "AI自動採点\n＋フィードバック"
+        },
+        "progressAnalytics": {
+          "value": "学習分析ダッシュボード",
+          "description": "進捗・成果を\n可視化する分析ツール"
+        }
+      }
+    },
+    "deployment": {
+      "title": "柔軟な運用",
+      "subtitle": "あらゆる規模・形態に対応",
+      "features": {
+        "cloud": {
+          "value": "クラウド完結",
+          "description": "保守・運用不要\nすぐに開始可能"
+        },
+        "hybrid": {
+          "value": "ハイブリッド対応",
+          "description": "オンライン・対面\n自由に組み合わせ"
+        },
+        "scalable": {
+          "value": "柔軟スケール対応",
+          "description": "少人数～数千人\n規模に応じて拡張"
+        },
+        "customizable": {
+          "value": "カスタマイズ対応",
+          "description": "組織ニーズに応じた\n機能・UI調整"
+        }
+      }
+    },
+    "codeView": {
+      "commentDesign": "ユーザビリティ最優先",
+      "commentEducator": "教育者支援",
+      "commentDeployment": "柔軟な運用"
+    }
   }
 }

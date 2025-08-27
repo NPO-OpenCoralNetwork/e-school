@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { 
   Menu, 
   X, 
@@ -28,54 +29,54 @@ interface DocSection {
   children?: DocSection[];
 }
 
-const docSections: DocSection[] = [
+const getDocSections = (t: any): DocSection[] => [
   {
     id: 'overview',
-    title: 'プロジェクト概要',
+    title: t('sections.overview.title'),
     href: '/docs/project-background',
     icon: BookOpen,
     children: [
-      { id: 'project-background', title: 'プロジェクト背景書', href: '/docs/project-background', icon: FileText },
-      { id: 'educational-proposal', title: '教育事業企画書', href: '/docs/educational-proposal', icon: FileText },
-      { id: 'readme', title: 'README', href: '/docs/readme', icon: FileText },
+      { id: 'project-background', title: t('sections.overview.projectBackground'), href: '/docs/project-background', icon: FileText },
+      { id: 'educational-proposal', title: t('sections.overview.educationalProposal'), href: '/docs/educational-proposal', icon: FileText },
+      { id: 'readme', title: t('sections.overview.readme'), href: '/docs/readme', icon: FileText },
     ]
   },
   {
     id: 'strategy',
-    title: '事業戦略',
+    title: t('sections.strategy.title'),
     href: '/docs/strategy',
     icon: FileText,
     children: [
-      { id: 'strategy', title: '連携戦略ガイド', href: '/docs/strategy', icon: FileText },
-      { id: 'grants', title: '助成金活用ガイド', href: '/docs/grants', icon: FileText },
-      { id: 'business-plan', title: '事業企画書', href: '/docs/business-plan', icon: FileText },
+      { id: 'strategy', title: t('sections.strategy.partnershipStrategy'), href: '/docs/strategy', icon: FileText },
+      { id: 'grants', title: t('sections.strategy.grantsGuide'), href: '/docs/grants', icon: FileText },
+      { id: 'business-plan', title: t('sections.strategy.businessPlan'), href: '/docs/business-plan', icon: FileText },
     ]
   },
   {
     id: 'services',
-    title: 'サービス詳細',
+    title: t('sections.services.title'),
     href: '/docs/services',
     icon: Users,
     children: [
-      { id: 'services', title: 'サービス詳細', href: '/docs/services', icon: FileText },
+      { id: 'services', title: t('sections.services.details'), href: '/docs/services', icon: FileText },
     ]
   },
   {
     id: 'development',
-    title: '開発ガイド',
+    title: t('sections.development.title'),
     href: '/docs/setup',
     icon: Settings,
     children: [
-      { id: 'setup', title: 'セットアップガイド', href: '/docs/setup', icon: Settings },
+      { id: 'setup', title: t('sections.development.setupGuide'), href: '/docs/setup', icon: Settings },
     ]
   },
   {
     id: 'api',
-    title: 'API仕様',
+    title: t('sections.api.title'),
     href: '/docs/api',
     icon: Code,
     children: [
-      { id: 'api', title: 'API仕様書', href: '/docs/api', icon: Code },
+      { id: 'api', title: t('sections.api.specification'), href: '/docs/api', icon: Code },
     ]
   },
 ];
@@ -91,6 +92,7 @@ export function DocLayout({ children, title }: DocLayoutProps) {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations('docs.layout');
 
   // スクロール監視
   useEffect(() => {
@@ -119,6 +121,8 @@ export function DocLayout({ children, title }: DocLayoutProps) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const docSections = getDocSections(t);
+  
   const getAllDocs = () => {
     const allDocs: DocSection[] = [];
     docSections.forEach(section => {
@@ -171,7 +175,7 @@ export function DocLayout({ children, title }: DocLayoutProps) {
             className="flex items-center space-x-2 px-3 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-gray-300"
           >
             <Search className="h-4 w-4" />
-            <span className="hidden sm:inline text-sm">検索</span>
+            <span className="hidden sm:inline text-sm">{t('search')}</span>
             <span className="hidden sm:inline text-xs text-gray-500">⌘K</span>
           </button>
         </div>
@@ -188,7 +192,7 @@ export function DocLayout({ children, title }: DocLayoutProps) {
             {/* サイドバーヘッダー */}
             <div className="p-4 border-b border-gray-700 lg:hidden">
               <div className="flex items-center justify-between">
-                <h2 className="text-lg font-semibold text-white">ドキュメント</h2>
+                <h2 className="text-lg font-semibold text-white">{t('documentation')}</h2>
                 <button
                   onClick={() => setSidebarOpen(false)}
                   className="text-gray-400 hover:text-white"
@@ -273,7 +277,7 @@ export function DocLayout({ children, title }: DocLayoutProps) {
             {/* サイドバーフッター */}
             <div className="p-4 border-t border-gray-700">
               <Link href="/" className="text-sm text-gray-400 hover:text-white transition-colors">
-                ← メインサイトに戻る
+                ← {t('backToMain')}
               </Link>
             </div>
           </div>
@@ -302,7 +306,7 @@ export function DocLayout({ children, title }: DocLayoutProps) {
                   >
                     <ChevronLeft className="h-4 w-4 text-gray-400 group-hover:text-white" />
                     <div className="text-left">
-                      <div className="text-sm text-gray-400">前のページ</div>
+                      <div className="text-sm text-gray-400">{t('previousPage')}</div>
                       <div className="text-white font-medium">{prevDoc.title}</div>
                     </div>
                   </Link>
@@ -316,7 +320,7 @@ export function DocLayout({ children, title }: DocLayoutProps) {
                     className="flex items-center space-x-2 px-4 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors group text-right"
                   >
                     <div className="text-right">
-                      <div className="text-sm text-gray-400">次のページ</div>
+                      <div className="text-sm text-gray-400">{t('nextPage')}</div>
                       <div className="text-white font-medium">{nextDoc.title}</div>
                     </div>
                     <ChevronRight className="h-4 w-4 text-gray-400 group-hover:text-white" />
@@ -333,7 +337,7 @@ export function DocLayout({ children, title }: DocLayoutProps) {
         <button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 z-50"
-          title="ページトップに戻る"
+          title={t('backToTop')}
         >
           <ArrowUp className="h-5 w-5" />
         </button>

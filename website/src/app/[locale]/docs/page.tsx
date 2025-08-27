@@ -266,7 +266,7 @@ export default function DocsPage() {
 
               {/* セクション目次 */}
               <div className="bg-gray-800 rounded-xl p-4 border border-gray-700">
-                <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wide">{t('sections')}</h3>
+                <h3 className="text-white font-semibold mb-3 text-sm uppercase tracking-wide">{t('sectionsTitle')}</h3>
                 <div className="space-y-2">
                   {documentSections.map((section) => (
                     <a

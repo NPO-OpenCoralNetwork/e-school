@@ -9,6 +9,9 @@ import Link from 'next/link';
 import { ExternalLink, Copy, Check } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
 import mermaid from 'mermaid';
+import PlatformFeaturesUI from './PlatformFeaturesUI';
+import AIGrowthObservationDemo from '../learning/AIGrowthObservationDemo';
+import PersonalityBasedChatDemo from '../learning/PersonalityBasedChatDemo';
 
 interface MarkdownRendererProps {
   content: string;
@@ -495,6 +498,33 @@ export default function MarkdownRenderer({ content, className = "" }: MarkdownRe
               if (language === 'mermaid') {
                 return (
                   <MermaidDiagram key={codeString} chart={codeString} />
+                );
+              }
+
+              // TypeScriptコードでInclusivePlatformインターフェースが含まれている場合はUIコンポーネントを表示
+              if (language === 'typescript' && codeString.includes('interface InclusivePlatform')) {
+                return (
+                  <div key={codeString} className="my-8">
+                    <PlatformFeaturesUI />
+                  </div>
+                );
+              }
+
+              // TypeScriptコードでQualitativeGrowthSystemインターフェースが含まれている場合はAI成長観察デモを表示
+              if (language === 'typescript' && codeString.includes('interface QualitativeGrowthSystem')) {
+                return (
+                  <div key={codeString} className="my-8">
+                    <AIGrowthObservationDemo />
+                  </div>
+                );
+              }
+
+              // YAML形式でAI対話設計が含まれている場合はパーソナリティベースのチャットデモを表示
+              if (language === 'yaml' && codeString.includes('AI対話設計:')) {
+                return (
+                  <div key={codeString} className="my-8">
+                    <PersonalityBasedChatDemo />
+                  </div>
                 );
               }
               

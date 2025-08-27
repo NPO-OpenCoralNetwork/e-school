@@ -35,7 +35,7 @@
     "documentation": "Documentation",
     "searchPlaceholder": "Search documents...",
     "quickLinks": "Quick Links",
-    "sections": "Sections",
+    "sectionsTitle": "Sections",
     "gettingStarted": "Getting Started",
     "setup": "Setup",
     "apiSpecs": "API Specs",
@@ -156,6 +156,40 @@
         "tag1": "API",
         "tag2": "Specification",
         "tag3": "Endpoints"
+      }
+    },
+    "layout": {
+      "documentation": "Documentation",
+      "search": "Search",
+      "backToMain": "Back to Main Site",
+      "previousPage": "Previous Page",
+      "nextPage": "Next Page",
+      "backToTop": "Back to Top",
+      "sections": {
+        "overview": {
+          "title": "Project Overview",
+          "projectBackground": "Project Background",
+          "educationalProposal": "Educational Proposal",
+          "readme": "README"
+        },
+        "strategy": {
+          "title": "Business Strategy",
+          "partnershipStrategy": "Partnership Strategy Guide",
+          "grantsGuide": "Grants Guide",
+          "businessPlan": "Business Plan"
+        },
+        "services": {
+          "title": "Service Details",
+          "details": "Service Details"
+        },
+        "development": {
+          "title": "Development Guide",
+          "setupGuide": "Setup Guide"
+        },
+        "api": {
+          "title": "API Specification",
+          "specification": "API Specification"
+        }
       }
     }
   },
@@ -404,5 +438,82 @@
     "japanese": "日本語",
     "english": "English",
     "switchLanguage": "Language"
+  },
+  "platformFeatures": {
+    "badge": "Platform Features",
+    "title": "Universal Inclusive Design",
+    "subtitle": "Removing technical barriers to create an inclusive learning platform that all educators can utilize",
+    "visualView": "Visual Display",
+    "design": {
+      "title": "Usability First",
+      "subtitle": "Intuitive design that anyone can use",
+      "features": {
+        "intuitive": {
+          "value": "Intuitive Operation",
+          "description": "Easy-to-use interface\nregardless of IT skills"
+        },
+        "accessible": {
+          "value": "Accessibility Compliant",
+          "description": "Inclusive design for\nvisual, auditory & motor needs"
+        },
+        "multilingual": {
+          "value": "Multi-language Support",
+          "description": "Japanese, English\nand more languages"
+        },
+        "responsive": {
+          "value": "All Device Compatible",
+          "description": "Optimal experience on\nsmartphones, tablets & PCs"
+        }
+      }
+    },
+    "educatorTools": {
+      "title": "Educator Support",
+      "subtitle": "Rich functionality without programming",
+      "features": {
+        "noCoding": {
+          "value": "No Programming Required",
+          "description": "Create & manage content\nwithout writing code"
+        },
+        "templateLibrary": {
+          "value": "Rich Templates",
+          "description": "High-quality educational\ntemplates ready to use"
+        },
+        "autoAssessment": {
+          "value": "Auto Assessment System",
+          "description": "AI-powered grading\n& feedback system"
+        },
+        "progressAnalytics": {
+          "value": "Learning Analytics",
+          "description": "Visualize learning\nprogress & outcomes"
+        }
+      }
+    },
+    "deployment": {
+      "title": "Flexible Operations",
+      "subtitle": "Supporting all scales and formats",
+      "features": {
+        "cloud": {
+          "value": "Cloud-Complete",
+          "description": "Start immediately\nno maintenance needed"
+        },
+        "hybrid": {
+          "value": "Hybrid Learning",
+          "description": "Combine online &\nin-person classes freely"
+        },
+        "scalable": {
+          "value": "Flexible Scaling",
+          "description": "Scale from small groups\nto thousands as needed"
+        },
+        "customizable": {
+          "value": "Custom Solutions",
+          "description": "Features & UI tailored\nto organizational needs"
+        }
+      }
+    },
+    "codeView": {
+      "commentDesign": "Usability First",
+      "commentEducator": "Educator Support",
+      "commentDeployment": "Flexible Operations"
+    }
   }
 }
